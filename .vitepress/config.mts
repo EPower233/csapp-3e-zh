@@ -28,6 +28,9 @@ export default defineConfig({
   },
   themeConfig: {
     sidebar,
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/EPower233/csapp-3e-zh' },
+    ],
     search: {
       provider: 'local',
       options: {
