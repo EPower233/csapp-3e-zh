@@ -14,11 +14,17 @@ const oneDarkProMix = JSON.parse(
   fs.readFileSync(path.join(__dirname, 'themes', 'OneDark-Pro-mix.json'), 'utf-8'),
 )
 
+const base = process.env.PAGES_BASE_PATH || '/'
+
 export default defineConfig({
-  base: process.env.PAGES_BASE_PATH || '/',
+  base,
   lang: 'zh-CN',
   title: '深入理解计算机系统',
   description: '《深入理解计算机系统（原书第3版）》分章阅读版',
+  head: [
+    ['link', { rel: 'stylesheet', href: `${base}fonts/jetbrains-maple-mono/regular/result.css` }],
+    ['link', { rel: 'stylesheet', href: `${base}fonts/jetbrains-maple-mono/bold/result.css` }],
+  ],
   markdown: {
     math: true,
     lineNumbers: true,

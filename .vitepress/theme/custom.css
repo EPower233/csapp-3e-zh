@@ -7,11 +7,19 @@ html.dark {
 }
 
 :root {
+  --vp-font-family-mono: 'JetBrains Maple Mono', ui-monospace, 'Menlo', 'Monaco', 'Consolas',
+    'Liberation Mono', 'Courier New', monospace;
   --vp-code-block-bg: #fafafa;
 }
 
 :root.dark {
   --vp-code-block-bg: #282c34;
+}
+
+.vp-doc code,
+.vp-doc pre,
+.vp-doc div[class*="language-"] {
+  font-variant-ligatures: contextual;
 }
 
 .vp-doc img[src$='.svg'] {
