@@ -1,0 +1,12 @@
+# Installed dependencies
+node_modules/
+
+# VitePress output and cache
+/.vitepress/dist/
+/.vitepress/cache/
+/.vitepress/.temp/
+
+# Local editor and operating-system files
+.obsidian/
+.DS_Store
+Thumbs.db

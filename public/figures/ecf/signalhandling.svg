@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="676" height="210" overflow="hidden" viewBox="0 0 676 210" class="csapp-figure" role="img" aria-labelledby="csapp-ecf-signalhandling-title" fill="var(--c-000000)"><title id="csapp-ecf-signalhandling-title">图 8-27</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+}</style><g transform="translate(1 -10)"><path d="M259.167 14.5001 259.167 70.8334 257.833 70.8334 257.833 14.5001ZM262.5 69.5 258.5 77.5 254.5 69.5001Z"/><path d="M259.5 77.8334 504.833 77.8335 504.833 79.1668 259.5 79.1667ZM503.5 74.5002 511.5 78.5002 503.5 82.5002Z"/><path d="M0.666667-1.24984e-06 0.666759 49.3333-0.666574 49.3333-0.666667 1.24984e-06ZM4.00009 48 0.000104987 56-3.99991 48Z" transform="matrix(-1 0 0 1 511.5 79.5001)"/><path d="M506.391 133.158 265.968 93.2494 266.186 91.9341 506.609 131.842ZM266.737 96.7561 259.5 91.5 268.047 88.8641Z"/><path d="M259.167 92.4928 260.094 177.826 258.761 177.841 257.833 92.5073ZM263.413 176.457 259.5 184.5 255.413 176.544Z"/><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-style="italic" font-weight="400" font-size="21" transform="translate(287.5 40)" x="85.789" y="12.500" text-anchor="middle" data-csapp-zh=""><tspan x="85.789" y="0.000">（2）控制传递到</tspan><tspan x="85.789" y="25.000">信号处理程序</tspan></text><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-style="italic" font-weight="400" font-size="21" transform="translate(527.499 102)" x="58.375" y="12.500" text-anchor="middle" data-csapp-zh=""><tspan x="58.375" y="0.000">（3）信号处</tspan><tspan x="58.375" y="25.000">理程序运行</tspan></text><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-style="italic" font-weight="400" font-size="21" transform="translate(293.667 150)" x="82.883" y="25.500" text-anchor="middle" data-csapp-zh=""><tspan x="82.883" y="0.000">（4）信号处理程</tspan><tspan x="82.883" y="25.000">序返回到下一条</tspan><tspan x="82.883" y="51.000">指令</tspan></text><text font-family="Arial,Arial_MSFontService,sans-serif" font-style="italic" font-weight="400" font-size="21" transform="translate(214.933 74)">I</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-style="italic" font-weight="400" font-size="14" transform="translate(220.933 78)">curr</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-style="italic" font-weight="400" font-size="21" transform="translate(214.933 95)">I</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-style="italic" font-weight="400" font-size="14" transform="translate(220.933 99)">next</text><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-style="italic" font-weight="400" font-size="21" transform="translate(20.6658 38)" x="88.023" y="12.500" text-anchor="middle" data-csapp-zh=""><tspan x="88.023" y="0.000">（1）进程接收到</tspan><tspan x="88.023" y="25.000">信号</tspan></text></g></svg>

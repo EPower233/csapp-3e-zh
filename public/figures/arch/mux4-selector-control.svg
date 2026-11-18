@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="502" height="217" viewBox="0 0 502 217" role="img" aria-labelledby="title desc">
+<title id="title">四选一多路复用器的选择控制</title><desc id="desc">Control 将两位 code 转为 s1 和 s0，控制 MUX4 从 D、C、B、A 中选择 Out4。</desc>
+<style>
+svg { --ink:#202737; --muted:#45546b; --line:#536680; --accent:#245a9b;
+      --soft:#e3effb; --strong:#b6d4f5; --panel:#f3f6fa;
+      --grid:#bec8d7; }
+@media (prefers-color-scheme:dark) {
+  svg { --ink:#e6edf7; --muted:#becbdd; --line:#94a9c6; --accent:#8abdfb;
+        --soft:#243753; --strong:#3b5b86; --panel:#202933;
+        --grid:#53647b; }
+}
+text { fill:var(--ink); font-family:system-ui,"Microsoft YaHei","PingFang SC",
+       "Noto Sans CJK SC",sans-serif; dominant-baseline:middle; }
+.mono { font-family:"Cascadia Mono",Consolas,"Microsoft YaHei",monospace; }
+.muted { fill:var(--muted); }
+</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="var(--line)"/></marker></defs>
+<rect x="111" y="24" width="117" height="54" rx="8" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="169.5" y="51" font-size="17" text-anchor="middle" class="mono" font-weight="400">Control</text>
+<text x="25" y="51" font-size="17" text-anchor="start" class="mono" font-weight="400">code</text>
+<path d="M76,51 L111,51" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="302" y="91" width="101" height="109" rx="8" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="352.5" y="145" font-size="18" text-anchor="middle" class="mono" font-weight="400">MUX4</text>
+<text x="247" y="112" font-size="16" text-anchor="middle" class="mono" font-weight="400">D</text>
+<path d="M263,112 L302,112" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="247" y="133" font-size="16" text-anchor="middle" class="mono" font-weight="400">C</text>
+<path d="M263,133 L302,133" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="247" y="155" font-size="16" text-anchor="middle" class="mono" font-weight="400">B</text>
+<path d="M263,155 L302,155" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="247" y="178" font-size="16" text-anchor="middle" class="mono" font-weight="400">A</text>
+<path d="M263,178 L302,178" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M228,38 H369 V91 M228,63 H342 V91" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 4"/>
+<text x="242" y="28" font-size="15" text-anchor="start" class="mono" font-weight="400">s1</text>
+<text x="242" y="53" font-size="15" text-anchor="start" class="mono" font-weight="400">s0</text>
+<path d="M403,144 L443,144" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="450" y="144" font-size="16" text-anchor="start" class="mono" font-weight="400">Out4</text>
+</svg>

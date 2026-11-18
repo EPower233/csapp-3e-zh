@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="876" height="203" viewBox="0 0 876 203" role="img" aria-labelledby="title desc">
+<title id="title">单写端口写回逻辑</title><desc id="desc">流水线寄存器 W 提供 stat、icode、valE、valM、dstE、dstM。dstM 参与写回值选择，合并后输出 w_valE 和 w_dstE。</desc>
+<style>
+svg { --ink:#202737; --muted:#45546b; --line:#536680; --accent:#245a9b;
+      --soft:#e3effb; --strong:#b6d4f5; --panel:#f3f6fa;
+      --grid:#bec8d7; }
+@media (prefers-color-scheme:dark) {
+  svg { --ink:#e6edf7; --muted:#becbdd; --line:#94a9c6; --accent:#8abdfb;
+        --soft:#243753; --strong:#3b5b86; --panel:#202933;
+        --grid:#53647b; }
+}
+text { fill:var(--ink); font-family:system-ui,"Microsoft YaHei","PingFang SC",
+       "Noto Sans CJK SC",sans-serif; dominant-baseline:middle; }
+.mono { font-family:"Cascadia Mono",Consolas,"Microsoft YaHei",monospace; }
+.muted { fill:var(--muted); }
+</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="var(--line)"/></marker></defs>
+<rect x="18" y="162" width="47" height="28" rx="0" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="41.5" y="176" font-size="15" text-anchor="middle" class="mono" font-weight="400">W</text>
+<rect x="65" y="162" width="47" height="28" rx="0" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+<text x="88.5" y="176" font-size="15" text-anchor="middle" class="mono" font-weight="400">stat</text>
+<rect x="112" y="162" width="54" height="28" rx="0" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+<text x="139.0" y="176" font-size="15" text-anchor="middle" class="mono" font-weight="400">icode</text>
+<rect x="166" y="162" width="137" height="28" rx="0" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="303" y="162" width="108" height="28" rx="0" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+<text x="357.0" y="176" font-size="15" text-anchor="middle" class="mono" font-weight="400">valE</text>
+<rect x="411" y="162" width="105" height="28" rx="0" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+<text x="463.5" y="176" font-size="15" text-anchor="middle" class="mono" font-weight="400">valM</text>
+<rect x="516" y="162" width="47" height="28" rx="0" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="563" y="162" width="63" height="28" rx="0" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+<text x="594.5" y="176" font-size="15" text-anchor="middle" class="mono" font-weight="400">dstE</text>
+<rect x="626" y="162" width="63" height="28" rx="0" fill="none" stroke="var(--line)" stroke-width="1.5"/>
+<text x="657.5" y="176" font-size="15" text-anchor="middle" class="mono" font-weight="400">dstM</text>
+<rect x="689" y="162" width="98" height="28" rx="0" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="69" y="91" width="51" height="32" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="94.5" y="107.0" font-size="16" text-anchor="middle" class="mono" font-weight="650">Stat</text>
+<rect x="353" y="99" width="85" height="38" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="395.5" y="118.0" font-size="16" text-anchor="middle" class="mono" font-weight="650">valE</text>
+<rect x="564" y="53" width="99" height="40" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="613.5" y="73.0" font-size="16" text-anchor="middle" class="mono" font-weight="650">dstE</text>
+<path d="M94,162 V123" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M94,91 V67" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M139,162 V146 H62" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M375,162 V137" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M424,162 V137" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M594,162 V93" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M653,162 V93" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M653,119 H438" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M396,99 V19 H789" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M613,53 V42 H789" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<circle cx="653" cy="119" r="2.6" fill="var(--line)" stroke="none" stroke-width="1.5"/>
+<text x="94" y="56" font-size="15" text-anchor="middle" class="mono" font-weight="400">Stat</text>
+<text x="57" y="146" font-size="13" text-anchor="end" class="mono" font-weight="400">W_icode</text>
+<text x="797" y="19" font-size="17" text-anchor="start" class="mono" font-weight="400">w_valE</text>
+<text x="797" y="42" font-size="17" text-anchor="start" class="mono" font-weight="400">w_dstE</text>
+</svg>

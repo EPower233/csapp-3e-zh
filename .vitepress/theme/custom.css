@@ -1,0 +1,14 @@
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+.vp-doc img[src$='.svg'] {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "csapp-vitepress-split",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "preview": "vitepress preview ."
+  },
+  "devDependencies": {
+    "markdown-it-footnote": "4.0.0",
+    "markdown-it-mathjax3": "^4.0.0",
+    "vitepress": "^1.6.4",
+    "vitepress-theme-teek": "^1.6.3"
+  }
+}
