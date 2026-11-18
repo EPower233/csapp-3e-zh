@@ -1,8 +1,18 @@
+import fs from 'node:fs'
+import path from 'node:path'
 import { defineConfig } from 'vitepress'
 import { fileURLToPath } from 'node:url'
 import headingLinks from './heading-links.mts'
 import footnote from 'markdown-it-footnote'
 import sidebar from './book-sidebar.json'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const oneLightProMix = JSON.parse(
+  fs.readFileSync(path.join(__dirname, 'themes', 'OneLight-Pro-mix.json'), 'utf-8'),
+)
+const oneDarkProMix = JSON.parse(
+  fs.readFileSync(path.join(__dirname, 'themes', 'OneDark-Pro-mix.json'), 'utf-8'),
+)
 
 export default defineConfig({
   base: process.env.PAGES_BASE_PATH || '/',
@@ -11,6 +21,11 @@ export default defineConfig({
   description: '《深入理解计算机系统（原书第3版）》分章阅读版',
   markdown: {
     math: true,
+    lineNumbers: true,
+    theme: {
+      light: oneLightProMix,
+      dark: oneDarkProMix,
+    },
     config: (md) => {
       md.use(footnote)
       md.use(headingLinks, fileURLToPath(new URL('..', import.meta.url)))

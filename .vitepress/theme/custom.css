@@ -6,9 +6,25 @@ html.dark {
   color-scheme: dark;
 }
 
+:root {
+  --vp-code-block-bg: #fafafa;
+}
+
+:root.dark {
+  --vp-code-block-bg: #282c34;
+}
+
 .vp-doc img[src$='.svg'] {
   display: block;
   margin: 1rem auto;
   max-width: 100%;
   height: auto;
+}
+
+html[code-block] .vp-doc div[class*="language-"]::before {
+  display: none !important;
+}
+
+html[code-block] .vp-doc div[class*="language-"] span.lang {
+  left: 16px !important;
 }
