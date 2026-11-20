@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="240" overflow="hidden" viewBox="0 0 450 240" class="csapp-figure" role="img" aria-labelledby="csapp-arch-eg-pipe3-key-title" fill="var(--c-000000)"><title id="csapp-arch-eg-pipe3-key-title">Figure 4.34</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  --c-5f5f5f: #5f5f5f;
+  --c-66ccff: #66ccff;
+  --c-c0c0c0: #c0c0c0;
+  --c-ffffff: #ffffff;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-5f5f5f: #c0c0c0;
+  --c-66ccff: #1e5682;
+  --c-c0c0c0: #4b4b4b;
+  --c-ffffff: #1e232c;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+  --c-5f5f5f: #5f5f5f;
+  --c-66ccff: #66ccff;
+  --c-c0c0c0: #c0c0c0;
+  --c-ffffff: #ffffff;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-5f5f5f: #c0c0c0;
+  --c-66ccff: #1e5682;
+  --c-c0c0c0: #4b4b4b;
+  --c-ffffff: #1e232c;
+}</style><g transform="translate(-111 -172)"><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(345.5 394)" x="22.945" y="0.000" text-anchor="middle">Time</text><rect x="112" y="216" width="88" height="32" fill="var(--c-ffffff)"/><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(164.6 238)">I1</text><rect x="112" y="248" width="88" height="32" fill="var(--c-ffffff)"/><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(164.6 270)">I2</text><rect x="112" y="280" width="88" height="32" fill="var(--c-ffffff)"/><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(164.6 302)">I3</text><rect x="208.5" y="217.5" width="64" height="32" stroke="var(--c-000000)" stroke-miterlimit="8" fill="var(--c-5f5f5f)"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(232.917 241)">A</text><rect x="272.5" y="217.5" width="64" height="32" stroke="var(--c-000000)" stroke-miterlimit="8" fill="var(--c-5f5f5f)"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(296.917 241)">B</text><rect x="336.5" y="217.5" width="64" height="32" stroke="var(--c-000000)" stroke-miterlimit="8" fill="var(--c-5f5f5f)"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(360.333 241)">C</text><rect x="272.5" y="249.5" width="64" height="32" stroke="var(--c-000000)" stroke-miterlimit="8" fill="var(--c-66ccff)"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(296.917 273)">A</text><rect x="336.5" y="249.5" width="64" height="32" stroke="var(--c-000000)" stroke-miterlimit="8" fill="var(--c-66ccff)"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(360.917 273)">B</text><rect x="400.5" y="249.5" width="64" height="32" stroke="var(--c-000000)" stroke-miterlimit="8" fill="var(--c-66ccff)"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(424.333 273)">C</text><rect x="336.5" y="281.5" width="64" height="32" stroke="var(--c-000000)" stroke-miterlimit="8" fill="var(--c-c0c0c0)"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(360.917 305)">A</text><rect x="400.5" y="281.5" width="64" height="32" stroke="var(--c-000000)" stroke-miterlimit="8" fill="var(--c-c0c0c0)"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(424.917 305)">B</text><rect x="464.5" y="281.5" width="64" height="32" stroke="var(--c-000000)" stroke-miterlimit="8" fill="var(--c-c0c0c0)"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(488.333 305)">C</text><path d="M208.5 337.5 528.5 337.5" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><path d="M208.5 329.5 208.5 345.5" stroke="var(--c-000000)" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><path d="M272.5 329.5 272.5 345.5" stroke="var(--c-000000)" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><path d="M336.5 329.5 336.5 345.5" stroke="var(--c-000000)" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><path d="M400.5 329.5 400.5 345.5" stroke="var(--c-000000)" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><path d="M464.5 329.5 464.5 345.5" stroke="var(--c-000000)" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><path d="M528.5 329.5 528.5 345.5" stroke="var(--c-000000)" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="19" transform="translate(206.833 367)">0</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="19" transform="translate(260.5 367)">120</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="19" transform="translate(324.5 367)">240</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="19" transform="translate(388.5 367)">360</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="19" transform="translate(452.5 367)">480</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="19" transform="translate(516.5 367)">600</text><path d="M208.5 176.5 240.5 176.5 240.5 200.5 272.5 200.5 272.5 176.5 304.5 176.5 304.5 200.5 336.5 200.5 336.5 176.5 368.5 176.5 368.5 200.5 400.5 200.5 400.5 176.5 432.5 176.5 432.5 200.5 464.5 200.5 464.5 176.5 496.5 176.5 496.5 200.5 528.5 200.5C528.5 192.5 528.5 184.5 528.5 176.5 540.5 176.5 538.833 176.5 541.5 176.5" stroke="var(--c-000000)" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><rect x="112" y="176" width="88" height="32" fill="var(--c-ffffff)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(137.1 200)" x="26.258" y="0.000" text-anchor="middle">Clock</text></g></svg>

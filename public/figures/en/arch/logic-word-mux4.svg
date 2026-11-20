@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="258" height="202" overflow="hidden" viewBox="0 0 258 202" class="csapp-figure" role="img" aria-labelledby="csapp-arch-logic-word-mux4-title" fill="var(--c-000000)"><title id="csapp-arch-logic-word-mux4-title">Figure 4.14</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  --c-808080: #808080;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-808080: #a2a2a2;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+  --c-808080: #808080;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-808080: #a2a2a2;
+}</style><g transform="translate(-572 -314)"><path d="M616.5 416.5 656.5 416.5" stroke="var(--c-000000)" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><path d="M616.5 488.5 656.5 488.5" stroke="var(--c-000000)" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(593.6 422)">D</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(593.6 498)">A</text><path d="M720.5 448.5 760.5 448.5" stroke="var(--c-000000)" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(769.6 456)">Out4</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(585.6 370)">s0</text><path d="M688 392 688 368 616 368" stroke="var(--c-000000)" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2 2" fill="none" fill-rule="evenodd"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(585.6 342)">s1</text><path d="M704 392 704 336 616 336" stroke="var(--c-000000)" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" stroke-dasharray="2 2" fill="none" fill-rule="evenodd"/><path d="M656.5 400.334C656.5 393.798 661.798 388.5 668.334 388.5L715.667 388.5C722.202 388.5 727.5 393.798 727.5 400.334L727.5 500.667C727.5 507.202 722.202 512.5 715.667 512.5L668.334 512.5C661.798 512.5 656.5 507.202 656.5 500.667Z" stroke="var(--c-000000)" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-808080)" fill-rule="evenodd"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="16" transform="translate(669.083 456)">MUX4</text><path d="M616.5 464.5 656.5 464.5" stroke="var(--c-000000)" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(593.6 474)">B</text><path d="M616.5 440.5 656.5 440.5" stroke="var(--c-000000)" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(593.6 450)">C</text></g></svg>

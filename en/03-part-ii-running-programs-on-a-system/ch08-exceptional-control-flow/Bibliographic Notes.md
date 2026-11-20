@@ -1,0 +1,5 @@
+# Bibliographic Notes
+
+[Back to Chapter Contents](./Chapter%208%20Exceptional%20Control%20Flow.md)
+
+Kerrisk is the essential reference for all aspects of programming in the Linux environment [\[62\]](../../05-appendix-and-references/References.md#ref-62). The Intel ISA specification contains a detailed discussion of exceptions and interrupts on Intel processors [\[50\]](../../05-appendix-and-references/References.md#ref-50). Operating systems texts [\[102](../../05-appendix-and-references/References.md#ref-102), [106](../../05-appendix-and-references/References.md#ref-106), [113\]](../../05-appendix-and-references/References.md#ref-113) contain additional information on exceptions, processes, and signals. The classic work by W. Richard Stevens [\[111\]](../../05-appendix-and-references/References.md#ref-111) is a valuable and highly readable description of how to work with processes and signals from application programs. Bovet and Cesati [\[11\]](../../05-appendix-and-references/References.md#ref-11) give a wonderfully clear description of the Linux kernel, including details of the process and signal implementations.

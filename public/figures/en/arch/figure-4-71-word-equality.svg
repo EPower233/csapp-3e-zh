@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="546" height="340" viewBox="0 0 546 340" role="img" aria-labelledby="title desc">
+<title id="title">Figure 4.71</title>
+<style>
+svg { --ink:#202737; --muted:#45546b; --line:#536680; --accent:#245a9b;
+      --soft:#e3effb; --strong:#b6d4f5; --panel:#f3f6fa;
+      --grid:#bec8d7; }
+@media (prefers-color-scheme:dark) {
+  svg { --ink:#e6edf7; --muted:#becbdd; --line:#94a9c6; --accent:#8abdfb;
+        --soft:#243753; --strong:#3b5b86; --panel:#202933;
+        --grid:#53647b; }
+}
+text { fill:var(--ink); font-family:system-ui,"Microsoft YaHei","PingFang SC",
+       "Noto Sans CJK SC",sans-serif; dominant-baseline:middle; }
+.mono { font-family:"Cascadia Mono",Consolas,"Microsoft YaHei",monospace; }
+.muted { fill:var(--muted); }
+</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="var(--line)"/></marker></defs>
+<rect x="106" y="12" width="100" height="60" rx="0" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="156" y="42" font-size="17" text-anchor="middle" class="mono" font-weight="400">Xor</text>
+<text x="16" y="26" font-size="15" text-anchor="start" class="mono" font-weight="400">b₆₃</text>
+<path d="M59,26 L106,26" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="16" y="58" font-size="15" text-anchor="start" class="mono" font-weight="400">a₆₃</text>
+<path d="M59,58 L106,58" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M206,42 H320 V151 H360" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="222" y="31" font-size="14" text-anchor="start" class="mono" font-weight="400">!eq₆₃</text>
+<rect x="106" y="72" width="100" height="60" rx="0" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="156" y="102" font-size="17" text-anchor="middle" class="mono" font-weight="400">Xor</text>
+<text x="16" y="86" font-size="15" text-anchor="start" class="mono" font-weight="400">b₆₂</text>
+<path d="M59,86 L106,86" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="16" y="118" font-size="15" text-anchor="start" class="mono" font-weight="400">a₆₂</text>
+<path d="M59,118 L106,118" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M206,102 H307 V164 H360" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="222" y="91" font-size="14" text-anchor="start" class="mono" font-weight="400">!eq₆₂</text>
+<rect x="106" y="209" width="100" height="60" rx="0" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="156" y="239" font-size="17" text-anchor="middle" class="mono" font-weight="400">Xor</text>
+<text x="16" y="223" font-size="15" text-anchor="start" class="mono" font-weight="400">b₁</text>
+<path d="M59,223 L106,223" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="16" y="255" font-size="15" text-anchor="start" class="mono" font-weight="400">a₁</text>
+<path d="M59,255 L106,255" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M206,239 H307 V181 H360" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="222" y="228" font-size="14" text-anchor="start" class="mono" font-weight="400">!eq₁</text>
+<rect x="106" y="269" width="100" height="60" rx="0" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="156" y="299" font-size="17" text-anchor="middle" class="mono" font-weight="400">Xor</text>
+<text x="16" y="283" font-size="15" text-anchor="start" class="mono" font-weight="400">b₀</text>
+<path d="M59,283 L106,283" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="16" y="315" font-size="15" text-anchor="start" class="mono" font-weight="400">a₀</text>
+<path d="M59,315 L106,315" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M206,299 H320 V194 H360" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="222" y="288" font-size="14" text-anchor="start" class="mono" font-weight="400">!eq₀</text>
+<text x="156" y="172" font-size="26" text-anchor="middle" class="" font-weight="400">⋮</text>
+<text x="257" y="172" font-size="26" text-anchor="middle" class="" font-weight="400">⋮</text>
+<path d="M354,140 h30.0 Q412.5,140 429,173 Q412.5,206 384.0,206 H354 Q366,173 354,140 Z" fill="var(--soft)" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M429,173 L454,173" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M454,161 L477,173 L454,185 Z" fill="var(--soft)" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="481" cy="173" r="4" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<path d="M485,173 L502,173" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="509" y="173" font-size="17" text-anchor="start" class="mono" font-weight="400">Eq</text>
+</svg>

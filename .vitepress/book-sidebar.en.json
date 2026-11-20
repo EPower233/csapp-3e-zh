@@ -1,0 +1,771 @@
+[
+  {
+    "text": "Front Matter",
+    "items": [
+      {
+        "text": "Table of Contents",
+        "link": "/en/TOC"
+      },
+      {
+        "text": "Preface",
+        "link": "/en/00-front-matter/Preface"
+      },
+      {
+        "text": "Guide for Instructors",
+        "link": "/en/00-front-matter/Guide for Instructors"
+      }
+    ]
+  },
+  {
+    "text": "Introduction",
+    "items": [
+      {
+        "text": "Chapter 1 A Tour of Computer Systems",
+        "link": "/en/01-introduction/ch01-a-tour-of-computer-systems/Chapter 1 A Tour of Computer Systems",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "1.1 Information Is Bits + Context",
+            "link": "/en/01-introduction/ch01-a-tour-of-computer-systems/1.1 Information Is Bits + Context"
+          },
+          {
+            "text": "1.2 Programs Are Translated by Other Programs into Different Forms",
+            "link": "/en/01-introduction/ch01-a-tour-of-computer-systems/1.2 Programs Are Translated by Other Programs into Different Forms"
+          },
+          {
+            "text": "1.3 It Pays to Understand How Compilation Systems Work",
+            "link": "/en/01-introduction/ch01-a-tour-of-computer-systems/1.3 It Pays to Understand How Compilation Systems Work"
+          },
+          {
+            "text": "1.4 Processors Read and Interpret Instructions Stored in Memory",
+            "link": "/en/01-introduction/ch01-a-tour-of-computer-systems/1.4 Processors Read and Interpret Instructions Stored in Memory"
+          },
+          {
+            "text": "1.5 Caches Matter",
+            "link": "/en/01-introduction/ch01-a-tour-of-computer-systems/1.5 Caches Matter"
+          },
+          {
+            "text": "1.6 Storage Devices Form a Hierarchy",
+            "link": "/en/01-introduction/ch01-a-tour-of-computer-systems/1.6 Storage Devices Form a Hierarchy"
+          },
+          {
+            "text": "1.7 The Operating System Manages the Hardware",
+            "link": "/en/01-introduction/ch01-a-tour-of-computer-systems/1.7 The Operating System Manages the Hardware"
+          },
+          {
+            "text": "1.8 Systems Communicate with Other Systems Using Networks",
+            "link": "/en/01-introduction/ch01-a-tour-of-computer-systems/1.8 Systems Communicate with Other Systems Using Networks"
+          },
+          {
+            "text": "1.9 Important Themes",
+            "link": "/en/01-introduction/ch01-a-tour-of-computer-systems/1.9 Important Themes"
+          },
+          {
+            "text": "1.10 Summary",
+            "link": "/en/01-introduction/ch01-a-tour-of-computer-systems/1.10 Summary"
+          },
+          {
+            "text": "Bibliographic Notes",
+            "link": "/en/01-introduction/ch01-a-tour-of-computer-systems/Bibliographic Notes"
+          },
+          {
+            "text": "Solutions to Practice Problems",
+            "link": "/en/01-introduction/ch01-a-tour-of-computer-systems/Solutions to Practice Problems"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Part I Program Structure and Execution",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "Part Overview",
+        "link": "/en/02-part-i-program-structure-and-execution/Part I Program Structure and Execution"
+      },
+      {
+        "text": "Chapter 2 Representing and Manipulating Information",
+        "link": "/en/02-part-i-program-structure-and-execution/ch02-representing-and-manipulating-information/Chapter 2 Representing and Manipulating Information",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "2.1 Information Storage",
+            "link": "/en/02-part-i-program-structure-and-execution/ch02-representing-and-manipulating-information/2.1 Information Storage"
+          },
+          {
+            "text": "2.2 Integer Representations",
+            "link": "/en/02-part-i-program-structure-and-execution/ch02-representing-and-manipulating-information/2.2 Integer Representations"
+          },
+          {
+            "text": "2.3 Integer Arithmetic",
+            "link": "/en/02-part-i-program-structure-and-execution/ch02-representing-and-manipulating-information/2.3 Integer Arithmetic"
+          },
+          {
+            "text": "2.4 Floating Point",
+            "link": "/en/02-part-i-program-structure-and-execution/ch02-representing-and-manipulating-information/2.4 Floating Point"
+          },
+          {
+            "text": "2.5 Summary",
+            "link": "/en/02-part-i-program-structure-and-execution/ch02-representing-and-manipulating-information/2.5 Summary"
+          },
+          {
+            "text": "Bibliographic Notes",
+            "link": "/en/02-part-i-program-structure-and-execution/ch02-representing-and-manipulating-information/Bibliographic Notes"
+          },
+          {
+            "text": "Homework Problems",
+            "link": "/en/02-part-i-program-structure-and-execution/ch02-representing-and-manipulating-information/Homework Problems"
+          },
+          {
+            "text": "Solutions to Practice Problems",
+            "link": "/en/02-part-i-program-structure-and-execution/ch02-representing-and-manipulating-information/Solutions to Practice Problems"
+          }
+        ]
+      },
+      {
+        "text": "Chapter 3 Machine-Level Representation of Programs",
+        "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/Chapter 3 Machine-Level Representation of Programs",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "3.1 A Historical Perspective",
+            "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/3.1 A Historical Perspective"
+          },
+          {
+            "text": "3.2 Program Encodings",
+            "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/3.2 Program Encodings"
+          },
+          {
+            "text": "3.3 Data Formats",
+            "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/3.3 Data Formats"
+          },
+          {
+            "text": "3.4 Accessing Information",
+            "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/3.4 Accessing Information"
+          },
+          {
+            "text": "3.5 Arithmetic and Logical Operations",
+            "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/3.5 Arithmetic and Logical Operations"
+          },
+          {
+            "text": "3.6 Control",
+            "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/3.6 Control"
+          },
+          {
+            "text": "3.7 Procedures",
+            "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/3.7 Procedures"
+          },
+          {
+            "text": "3.8 Array Allocation and Access",
+            "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/3.8 Array Allocation and Access"
+          },
+          {
+            "text": "3.9 Heterogeneous Data Structures",
+            "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/3.9 Heterogeneous Data Structures"
+          },
+          {
+            "text": "3.10 Combining Control and Data in Machine-Level Programs",
+            "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/3.10 Combining Control and Data in Machine-Level Programs"
+          },
+          {
+            "text": "3.11 Floating-Point Code",
+            "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/3.11 Floating-Point Code"
+          },
+          {
+            "text": "3.12 Summary",
+            "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/3.12 Summary"
+          },
+          {
+            "text": "Bibliographic Notes",
+            "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/Bibliographic Notes"
+          },
+          {
+            "text": "Homework Problems",
+            "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/Homework Problems"
+          },
+          {
+            "text": "Solutions to Practice Problems",
+            "link": "/en/02-part-i-program-structure-and-execution/ch03-machine-level-representation-of-programs/Solutions to Practice Problems"
+          }
+        ]
+      },
+      {
+        "text": "Chapter 4 Processor Architecture",
+        "link": "/en/02-part-i-program-structure-and-execution/ch04-processor-architecture/Chapter 4 Processor Architecture",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "4.1 The Y86-64 Instruction Set Architecture",
+            "link": "/en/02-part-i-program-structure-and-execution/ch04-processor-architecture/4.1 The Y86-64 Instruction Set Architecture"
+          },
+          {
+            "text": "4.2 Logic Design and the Hardware Control Language HCL",
+            "link": "/en/02-part-i-program-structure-and-execution/ch04-processor-architecture/4.2 Logic Design and the Hardware Control Language HCL"
+          },
+          {
+            "text": "4.3 Sequential Y86-64 Implementations",
+            "link": "/en/02-part-i-program-structure-and-execution/ch04-processor-architecture/4.3 Sequential Y86-64 Implementations"
+          },
+          {
+            "text": "4.4 General Principles of Pipelining",
+            "link": "/en/02-part-i-program-structure-and-execution/ch04-processor-architecture/4.4 General Principles of Pipelining"
+          },
+          {
+            "text": "4.5 Pipelined Y86-64 Implementations",
+            "link": "/en/02-part-i-program-structure-and-execution/ch04-processor-architecture/4.5 Pipelined Y86-64 Implementations"
+          },
+          {
+            "text": "4.6 Summary",
+            "link": "/en/02-part-i-program-structure-and-execution/ch04-processor-architecture/4.6 Summary"
+          },
+          {
+            "text": "Bibliographic Notes",
+            "link": "/en/02-part-i-program-structure-and-execution/ch04-processor-architecture/Bibliographic Notes"
+          },
+          {
+            "text": "Homework Problems",
+            "link": "/en/02-part-i-program-structure-and-execution/ch04-processor-architecture/Homework Problems"
+          },
+          {
+            "text": "Solutions to Practice Problems",
+            "link": "/en/02-part-i-program-structure-and-execution/ch04-processor-architecture/Solutions to Practice Problems"
+          }
+        ]
+      },
+      {
+        "text": "Chapter 5 Optimizing Program Performance",
+        "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/Chapter 5 Optimizing Program Performance",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "5.1 Capabilities and Limitations of Optimizing Compilers",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/5.1 Capabilities and Limitations of Optimizing Compilers"
+          },
+          {
+            "text": "5.2 Expressing Program Performance",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/5.2 Expressing Program Performance"
+          },
+          {
+            "text": "5.3 Program Example",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/5.3 Program Example"
+          },
+          {
+            "text": "5.4 Eliminating Loop Inefficiencies",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/5.4 Eliminating Loop Inefficiencies"
+          },
+          {
+            "text": "5.5 Reducing Procedure Calls",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/5.5 Reducing Procedure Calls"
+          },
+          {
+            "text": "5.6 Eliminating Unneeded Memory References",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/5.6 Eliminating Unneeded Memory References"
+          },
+          {
+            "text": "5.7 Understanding Modern Processors",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/5.7 Understanding Modern Processors"
+          },
+          {
+            "text": "5.8 Loop Unrolling",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/5.8 Loop Unrolling"
+          },
+          {
+            "text": "5.9 Enhancing Parallelism",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/5.9 Enhancing Parallelism"
+          },
+          {
+            "text": "5.10 Summary of Results for Optimizing Combining Code",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/5.10 Summary of Results for Optimizing Combining Code"
+          },
+          {
+            "text": "5.11 Some Limiting Factors",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/5.11 Some Limiting Factors"
+          },
+          {
+            "text": "5.12 Understanding Memory Performance",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/5.12 Understanding Memory Performance"
+          },
+          {
+            "text": "5.13 Life in the Real World： Performance Improvement Techniques",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/5.13 Life in the Real World： Performance Improvement Techniques"
+          },
+          {
+            "text": "5.14 Identifying and Eliminating Performance Bottlenecks",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/5.14 Identifying and Eliminating Performance Bottlenecks"
+          },
+          {
+            "text": "5.15 Summary",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/5.15 Summary"
+          },
+          {
+            "text": "Bibliographic Notes",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/Bibliographic Notes"
+          },
+          {
+            "text": "Homework Problems",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/Homework Problems"
+          },
+          {
+            "text": "Solutions to Practice Problems",
+            "link": "/en/02-part-i-program-structure-and-execution/ch05-optimizing-program-performance/Solutions to Practice Problems"
+          }
+        ]
+      },
+      {
+        "text": "Chapter 6 The Memory Hierarchy",
+        "link": "/en/02-part-i-program-structure-and-execution/ch06-the-memory-hierarchy/Chapter 6 The Memory Hierarchy",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "6.1 Storage Technologies",
+            "link": "/en/02-part-i-program-structure-and-execution/ch06-the-memory-hierarchy/6.1 Storage Technologies"
+          },
+          {
+            "text": "6.2 Locality",
+            "link": "/en/02-part-i-program-structure-and-execution/ch06-the-memory-hierarchy/6.2 Locality"
+          },
+          {
+            "text": "6.3 The Memory Hierarchy",
+            "link": "/en/02-part-i-program-structure-and-execution/ch06-the-memory-hierarchy/6.3 The Memory Hierarchy"
+          },
+          {
+            "text": "6.4 Cache Memories",
+            "link": "/en/02-part-i-program-structure-and-execution/ch06-the-memory-hierarchy/6.4 Cache Memories"
+          },
+          {
+            "text": "6.5 Writing Cache-Friendly Code",
+            "link": "/en/02-part-i-program-structure-and-execution/ch06-the-memory-hierarchy/6.5 Writing Cache-Friendly Code"
+          },
+          {
+            "text": "6.6 Putting It Together： The Impact of Caches on Program Performance",
+            "link": "/en/02-part-i-program-structure-and-execution/ch06-the-memory-hierarchy/6.6 Putting It Together： The Impact of Caches on Program Performance"
+          },
+          {
+            "text": "6.7 Summary",
+            "link": "/en/02-part-i-program-structure-and-execution/ch06-the-memory-hierarchy/6.7 Summary"
+          },
+          {
+            "text": "Bibliographic Notes",
+            "link": "/en/02-part-i-program-structure-and-execution/ch06-the-memory-hierarchy/Bibliographic Notes"
+          },
+          {
+            "text": "Homework Problems",
+            "link": "/en/02-part-i-program-structure-and-execution/ch06-the-memory-hierarchy/Homework Problems"
+          },
+          {
+            "text": "Solutions to Practice Problems",
+            "link": "/en/02-part-i-program-structure-and-execution/ch06-the-memory-hierarchy/Solutions to Practice Problems"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Part II Running Programs on a System",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "Part Overview",
+        "link": "/en/03-part-ii-running-programs-on-a-system/Part II Running Programs on a System"
+      },
+      {
+        "text": "Chapter 7 Linking",
+        "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/Chapter 7 Linking",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "7.1 Compiler Drivers",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/7.1 Compiler Drivers"
+          },
+          {
+            "text": "7.2 Static Linking",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/7.2 Static Linking"
+          },
+          {
+            "text": "7.3 Object Files",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/7.3 Object Files"
+          },
+          {
+            "text": "7.4 Relocatable Object Files",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/7.4 Relocatable Object Files"
+          },
+          {
+            "text": "7.5 Symbols and Symbol Tables",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/7.5 Symbols and Symbol Tables"
+          },
+          {
+            "text": "7.6 Symbol Resolution",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/7.6 Symbol Resolution"
+          },
+          {
+            "text": "7.7 Relocation",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/7.7 Relocation"
+          },
+          {
+            "text": "7.8 Executable Object Files",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/7.8 Executable Object Files"
+          },
+          {
+            "text": "7.9 Loading Executable Object Files",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/7.9 Loading Executable Object Files"
+          },
+          {
+            "text": "7.10 Dynamic Linking with Shared Libraries",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/7.10 Dynamic Linking with Shared Libraries"
+          },
+          {
+            "text": "7.11 Loading and Linking Shared Libraries from Applications",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/7.11 Loading and Linking Shared Libraries from Applications"
+          },
+          {
+            "text": "7.12 Position-Independent Code (PIC)",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/7.12 Position-Independent Code (PIC)"
+          },
+          {
+            "text": "7.13 Library Interpositioning",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/7.13 Library Interpositioning"
+          },
+          {
+            "text": "7.14 Tools for Manipulating Object Files",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/7.14 Tools for Manipulating Object Files"
+          },
+          {
+            "text": "7.15 Summary",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/7.15 Summary"
+          },
+          {
+            "text": "Bibliographic Notes",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/Bibliographic Notes"
+          },
+          {
+            "text": "Homework Problems",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/Homework Problems"
+          },
+          {
+            "text": "Solutions to Practice Problems",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch07-linking/Solutions to Practice Problems"
+          }
+        ]
+      },
+      {
+        "text": "Chapter 8 Exceptional Control Flow",
+        "link": "/en/03-part-ii-running-programs-on-a-system/ch08-exceptional-control-flow/Chapter 8 Exceptional Control Flow",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "8.1 Exceptions",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch08-exceptional-control-flow/8.1 Exceptions"
+          },
+          {
+            "text": "8.2 Processes",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch08-exceptional-control-flow/8.2 Processes"
+          },
+          {
+            "text": "8.3 System Call Error Handling",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch08-exceptional-control-flow/8.3 System Call Error Handling"
+          },
+          {
+            "text": "8.4 Process Control",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch08-exceptional-control-flow/8.4 Process Control"
+          },
+          {
+            "text": "8.5 Signals",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch08-exceptional-control-flow/8.5 Signals"
+          },
+          {
+            "text": "8.6 Nonlocal Jumps",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch08-exceptional-control-flow/8.6 Nonlocal Jumps"
+          },
+          {
+            "text": "8.7 Tools for Manipulating Processes",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch08-exceptional-control-flow/8.7 Tools for Manipulating Processes"
+          },
+          {
+            "text": "8.8 Summary",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch08-exceptional-control-flow/8.8 Summary"
+          },
+          {
+            "text": "Bibliographic Notes",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch08-exceptional-control-flow/Bibliographic Notes"
+          },
+          {
+            "text": "Homework Problems",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch08-exceptional-control-flow/Homework Problems"
+          },
+          {
+            "text": "Solutions to Practice Problems",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch08-exceptional-control-flow/Solutions to Practice Problems"
+          }
+        ]
+      },
+      {
+        "text": "Chapter 9 Virtual Memory",
+        "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/Chapter 9 Virtual Memory",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "9.1 Physical and Virtual Addressing",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/9.1 Physical and Virtual Addressing"
+          },
+          {
+            "text": "9.2 Address Spaces",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/9.2 Address Spaces"
+          },
+          {
+            "text": "9.3 VM as a Tool for Caching",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/9.3 VM as a Tool for Caching"
+          },
+          {
+            "text": "9.4 VM as a Tool for Memory Management",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/9.4 VM as a Tool for Memory Management"
+          },
+          {
+            "text": "9.5 VM as a Tool for Memory Protection",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/9.5 VM as a Tool for Memory Protection"
+          },
+          {
+            "text": "9.6 Address Translation",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/9.6 Address Translation"
+          },
+          {
+            "text": "9.7 Case Study： The Intel Core i7／Linux Memory System",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/9.7 Case Study： The Intel Core i7／Linux Memory System"
+          },
+          {
+            "text": "9.8 Memory Mapping",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/9.8 Memory Mapping"
+          },
+          {
+            "text": "9.9 Dynamic Memory Allocation",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/9.9 Dynamic Memory Allocation"
+          },
+          {
+            "text": "9.10 Garbage Collection",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/9.10 Garbage Collection"
+          },
+          {
+            "text": "9.11 Common Memory-Related Bugs in C Programs",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/9.11 Common Memory-Related Bugs in C Programs"
+          },
+          {
+            "text": "9.12 Summary",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/9.12 Summary"
+          },
+          {
+            "text": "Bibliographic Notes",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/Bibliographic Notes"
+          },
+          {
+            "text": "Homework Problems",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/Homework Problems"
+          },
+          {
+            "text": "Solutions to Practice Problems",
+            "link": "/en/03-part-ii-running-programs-on-a-system/ch09-virtual-memory/Solutions to Practice Problems"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Part III Interaction and Communication between Programs",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "Part Overview",
+        "link": "/en/04-part-iii-interaction-and-communication-between-programs/Part III Interaction and Communication between Programs"
+      },
+      {
+        "text": "Chapter 10 System-Level I/O",
+        "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/Chapter 10 System-Level I／O",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "10.1 Unix I／O",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/10.1 Unix I／O"
+          },
+          {
+            "text": "10.2 Files",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/10.2 Files"
+          },
+          {
+            "text": "10.3 Opening and Closing Files",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/10.3 Opening and Closing Files"
+          },
+          {
+            "text": "10.4 Reading and Writing Files",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/10.4 Reading and Writing Files"
+          },
+          {
+            "text": "10.5 Robust Reading and Writing with the RIO Package",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/10.5 Robust Reading and Writing with the RIO Package"
+          },
+          {
+            "text": "10.6 Reading File Metadata",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/10.6 Reading File Metadata"
+          },
+          {
+            "text": "10.7 Reading Directory Contents",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/10.7 Reading Directory Contents"
+          },
+          {
+            "text": "10.8 Sharing Files",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/10.8 Sharing Files"
+          },
+          {
+            "text": "10.9 I／O Redirection",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/10.9 I／O Redirection"
+          },
+          {
+            "text": "10.10 Standard I／O",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/10.10 Standard I／O"
+          },
+          {
+            "text": "10.11 Putting It Together： Which I／O Functions Should I Use？",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/10.11 Putting It Together： Which I／O Functions Should I Use？"
+          },
+          {
+            "text": "10.12 Summary",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/10.12 Summary"
+          },
+          {
+            "text": "Bibliographic Notes",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/Bibliographic Notes"
+          },
+          {
+            "text": "Homework Problems",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/Homework Problems"
+          },
+          {
+            "text": "Solutions to Practice Problems",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch10-system-level-io/Solutions to Practice Problems"
+          }
+        ]
+      },
+      {
+        "text": "Chapter 11 Network Programming",
+        "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch11-network-programming/Chapter 11 Network Programming",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "11.1 The Client-Server Programming Model",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch11-network-programming/11.1 The Client-Server Programming Model"
+          },
+          {
+            "text": "11.2 Networks",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch11-network-programming/11.2 Networks"
+          },
+          {
+            "text": "11.3 The Global IP Internet",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch11-network-programming/11.3 The Global IP Internet"
+          },
+          {
+            "text": "11.4 The Sockets Interface",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch11-network-programming/11.4 The Sockets Interface"
+          },
+          {
+            "text": "11.5 Web Servers",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch11-network-programming/11.5 Web Servers"
+          },
+          {
+            "text": "11.6 Putting It Together： The TINY Web Server",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch11-network-programming/11.6 Putting It Together： The TINY Web Server"
+          },
+          {
+            "text": "11.7 Summary",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch11-network-programming/11.7 Summary"
+          },
+          {
+            "text": "Bibliographic Notes",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch11-network-programming/Bibliographic Notes"
+          },
+          {
+            "text": "Homework Problems",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch11-network-programming/Homework Problems"
+          },
+          {
+            "text": "Solutions to Practice Problems",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch11-network-programming/Solutions to Practice Problems"
+          }
+        ]
+      },
+      {
+        "text": "Chapter 12 Concurrent Programming",
+        "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch12-concurrent-programming/Chapter 12 Concurrent Programming",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "12.1 Concurrent Programming with Processes",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch12-concurrent-programming/12.1 Concurrent Programming with Processes"
+          },
+          {
+            "text": "12.2 Concurrent Programming with I／O Multiplexing",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch12-concurrent-programming/12.2 Concurrent Programming with I／O Multiplexing"
+          },
+          {
+            "text": "12.3 Concurrent Programming with Threads",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch12-concurrent-programming/12.3 Concurrent Programming with Threads"
+          },
+          {
+            "text": "12.4 Shared Variables in Threaded Programs",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch12-concurrent-programming/12.4 Shared Variables in Threaded Programs"
+          },
+          {
+            "text": "12.5 Synchronizing Threads with Semaphores",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch12-concurrent-programming/12.5 Synchronizing Threads with Semaphores"
+          },
+          {
+            "text": "12.6 Using Threads for Parallelism",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch12-concurrent-programming/12.6 Using Threads for Parallelism"
+          },
+          {
+            "text": "12.7 Other Concurrency Issues",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch12-concurrent-programming/12.7 Other Concurrency Issues"
+          },
+          {
+            "text": "12.8 Summary",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch12-concurrent-programming/12.8 Summary"
+          },
+          {
+            "text": "Bibliographic Notes",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch12-concurrent-programming/Bibliographic Notes"
+          },
+          {
+            "text": "Homework Problems",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch12-concurrent-programming/Homework Problems"
+          },
+          {
+            "text": "Solutions to Practice Problems",
+            "link": "/en/04-part-iii-interaction-and-communication-between-programs/ch12-concurrent-programming/Solutions to Practice Problems"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Appendix & References",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Appendix A Error Handling",
+        "link": "/en/05-appendix-and-references/appendix-a-error-handling/Appendix A Error Handling",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "A.1 Error Handling in Unix Systems",
+            "link": "/en/05-appendix-and-references/appendix-a-error-handling/A.1 Error Handling in Unix Systems"
+          },
+          {
+            "text": "A.2 Error-Handling Wrappers",
+            "link": "/en/05-appendix-and-references/appendix-a-error-handling/A.2 Error-Handling Wrappers"
+          }
+        ]
+      },
+      {
+        "text": "References",
+        "link": "/en/05-appendix-and-references/References"
+      }
+    ]
+  }
+]

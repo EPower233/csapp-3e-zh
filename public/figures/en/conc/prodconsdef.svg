@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="579" height="119" overflow="hidden" viewBox="0 0 579 119" class="csapp-figure" role="img" aria-labelledby="csapp-conc-prodconsdef-title" fill="var(--c-000000)"><title id="csapp-conc-prodconsdef-title">Figure 12.23</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  --c-ffffff: #ffffff;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-ffffff: #1e232c;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+  --c-ffffff: #ffffff;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-ffffff: #1e232c;
+}</style><g transform="translate(-7 -2)"><path d="M8.50005 62C8.50005 29.6914 37.1538 3.50005 72.5 3.50005 107.846 3.50005 136.5 29.6914 136.5 62 136.5 94.3087 107.846 120.5 72.5 120.5 37.1538 120.5 8.50005 94.3087 8.50005 62Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-ffffff)" fill-rule="evenodd"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(28.75 57)" x="42.609" y="12.500" text-anchor="middle"><tspan x="42.609" y="0.000">Producer</tspan><tspan x="42.609" y="25.000">threads</tspan></text><rect x="232.5" y="32.5001" width="128" height="56" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="none"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(253.417 55)" x="42.047" y="12.500" text-anchor="middle"><tspan x="42.047" y="0.000">Bounded</tspan><tspan x="42.047" y="25.000">buffer</tspan></text><path d="M7.29075e-07-0.666667 89.3334-0.666569 89.3334 0.666764-7.29075e-07 0.666667ZM88-3.9999 96 0.000104987 88 4.0001Z" transform="matrix(1 0 0 -1 136.5 56.5001)"/><path d="M7.29075e-07-0.666667 89.3334-0.666569 89.3334 0.666764-7.29075e-07 0.666667ZM88-3.9999 96 0.000104987 88 4.0001Z" transform="matrix(1 0 0 -1 360.5 56.5001)"/><path d="M456.5 62.5001C456.5 30.4675 485.154 4.50005 520.5 4.50005 555.846 4.50005 584.5 30.4675 584.5 62.5001 584.5 94.5326 555.846 120.5 520.5 120.5 485.154 120.5 456.5 94.5326 456.5 62.5001Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-ffffff)" fill-rule="evenodd"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(473.833 57)" x="48.438" y="12.500" text-anchor="middle">Consumer threads</text></g></svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="578" height="133" overflow="hidden" viewBox="0 0 578 133" class="csapp-figure" role="img" aria-labelledby="csapp-vm-balancedtree-title" fill="var(--c-000000)"><title id="csapp-vm-balancedtree-title">Figure 9.53</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  --c-dadada: #dadada;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-dadada: #3d3d3d;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+  --c-dadada: #dadada;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-dadada: #3d3d3d;
+}</style><g transform="translate(-23 10)"><rect x="24.5001" y="26.5001" width="88" height="40" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-dadada)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(47.3333 54)" x="20.430" y="0.000" text-anchor="middle">Size</text><rect x="288.5" y="26.5001" width="312" height="40" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="none"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(352.167 54)" x="90.461" y="0.000" text-anchor="middle">Rest of block</text><rect x="112.5" y="26.5001" width="88" height="40" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-dadada)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(138.167 54)" x="17.516" y="0.000" text-anchor="middle">Left</text><rect x="200.5" y="26.5001" width="88" height="40" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-dadada)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(219.167 54)" x="24.516" y="0.000" text-anchor="middle">Right</text><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(48 18)" x="106.242" y="0.000" text-anchor="middle">Header of allocated block</text><path d="M0.5547-0.3698 28.8567 42.0832 27.7473 42.8228-0.5547 0.3698ZM-3.3282 2.2188C-4.55361 0.380686-4.05692-2.10279-2.2188-3.3282-0.380686-4.55361 2.10279-4.05692 3.3282-2.2188 4.55361-0.380686 4.05692 2.10279 2.2188 3.3282 0.380686 4.55361-2.10279 4.05692-3.3282 2.2188ZM30.8906 39.1248 32 48 24.2342 43.5624Z" transform="matrix(-1 0 0 1 160.5 66.5001)"/><path d="M249.055 66.1303 277.357 108.583 276.247 109.323 247.945 66.8699ZM245.172 68.7189C243.946 66.8807 244.443 64.3973 246.281 63.1719 248.119 61.9464 250.603 62.4431 251.828 64.2812 253.054 66.1194 252.557 68.6028 250.719 69.8283 248.881 71.0537 246.397 70.557 245.172 68.7189ZM279.391 105.625 280.5 114.5 272.734 110.062Z"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(105.833 96)">&lt;</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(273.833 95)">&gt;</text></g></svg>

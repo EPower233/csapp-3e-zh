@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="486" height="504" overflow="hidden" viewBox="0 0 486 504" class="csapp-figure" role="img" aria-labelledby="csapp-vm-heapmap-title" fill="var(--c-000000)"><title id="csapp-vm-heapmap-title">Figure 9.33</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  --c-c0c0c0: #c0c0c0;
+  --c-ffffff: #ffffff;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-c0c0c0: #4b4b4b;
+  --c-ffffff: #1e232c;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+  --c-c0c0c0: #c0c0c0;
+  --c-ffffff: #ffffff;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-c0c0c0: #4b4b4b;
+  --c-ffffff: #1e232c;
+}</style><g transform="translate(8 -5)"><rect x="22.5001" y="130.5" width="228" height="67" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="19" transform="translate(35.0833 159)" x="100.328" y="11.500" text-anchor="middle">Memory-mapped region for shared libraries</text><rect x="22.5001" y="197.5" width="228" height="72" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-c0c0c0)"/><rect x="22.5001" y="270.5" width="228" height="66" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="19" transform="translate(113.083 310)" x="23.125" y="0.000" text-anchor="middle">Heap</text><rect x="22.5001" y="40.5001" width="228" height="91" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-c0c0c0)"/><rect x="22.5001" y="411.5" width="228" height="40" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="19" transform="translate(87.25 438)" x="49.034" y="0.000" text-anchor="middle">Code (.text)</text><rect x="22.5001" y="373.5" width="228" height="40" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="19" transform="translate(46.9166 400)" x="90.836" y="0.000" text-anchor="middle">Initialized data (.data)</text><rect x="22.5001" y="335.5" width="228" height="40" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="19" transform="translate(39.0833 362)" x="98.742" y="0.000" text-anchor="middle">Uninitialized data (.bss)</text><path d="M2-3.55888e-06 2.00009 49-1.99991 49-2 3.55888e-06ZM6.00008 47 0.000104987 59-5.99992 47Z" transform="matrix(1 0 0 -1 129 271)"/><rect x="22.5001" y="7.50005" width="228" height="33" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="19" transform="translate(91.8333 30)" x="44.875" y="0.000" text-anchor="middle">User stack</text><path d="M134 40 134 66 130 66 130 40ZM138 64 132 76 126 64Z"/><rect x="22.5001" y="449.5" width="228" height="40" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-c0c0c0)"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="19" transform="translate(3.93333 493)">0</text><text font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="21" transform="translate(301.293 258)" x="77.383" y="0.000" text-anchor="middle">Top of heap</text><text font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="21" transform="translate(339.247 282)" x="43.333" y="0.000" text-anchor="middle">(brk pointer)</text><path d="M1.45815e-06-0.666667 41.3333-0.666576 41.3333 0.666757-1.45815e-06 0.666667ZM40-3.99991 48 0.000104987 40 4.00009Z" transform="matrix(-1 0 0 1 300.5 269.5)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="19" transform="translate(139.917 236)" x="53.310" y="11.500" text-anchor="middle">Heap grows up</text></g></svg>

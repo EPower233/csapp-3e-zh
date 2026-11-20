@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="508" viewBox="0 0 620 508" role="img" aria-labelledby="title desc">
+<title id="title">Figure 3.45</title>
+<style>
+svg { --ink:#202737; --muted:#45546b; --line:#536680; --accent:#245a9b;
+      --soft:#e3effb; --strong:#b6d4f5; --panel:#f3f6fa;
+      --grid:#bec8d7; }
+@media (prefers-color-scheme:dark) {
+  svg { --ink:#e6edf7; --muted:#becbdd; --line:#94a9c6; --accent:#8abdfb;
+        --soft:#243753; --strong:#3b5b86; --panel:#202933;
+        --grid:#53647b; }
+}
+text { fill:var(--ink); font-family:system-ui,"Microsoft YaHei","PingFang SC",
+       "Noto Sans CJK SC",sans-serif; dominant-baseline:middle; }
+.mono { font-family:"Cascadia Mono",Consolas,"Microsoft YaHei",monospace; }
+.muted { fill:var(--muted); }
+</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="var(--line)"/></marker></defs>
+<text x="25" y="14" font-size="14" text-anchor="start" class="mono" font-weight="400">255</text>
+<text x="234" y="14" font-size="14" text-anchor="start" class="mono" font-weight="400">127</text>
+<text x="450" y="14" font-size="14" text-anchor="end" class="mono" font-weight="400">0</text>
+<rect x="25" y="27" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="27" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="39" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm0</text>
+<text x="251" y="39" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm0</text>
+<text x="469" y="39" font-size="14" text-anchor="start" class="" font-weight="400">1st FP arg / Return value</text>
+<rect x="25" y="56" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="56" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="68" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm1</text>
+<text x="251" y="68" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm1</text>
+<text x="469" y="68" font-size="14" text-anchor="start" class="" font-weight="400">2nd FP arg</text>
+<rect x="25" y="85" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="85" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="97" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm2</text>
+<text x="251" y="97" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm2</text>
+<text x="469" y="97" font-size="14" text-anchor="start" class="" font-weight="400">3rd FP arg</text>
+<rect x="25" y="114" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="114" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="126" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm3</text>
+<text x="251" y="126" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm3</text>
+<text x="469" y="126" font-size="14" text-anchor="start" class="" font-weight="400">4th FP arg</text>
+<rect x="25" y="143" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="143" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="155" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm4</text>
+<text x="251" y="155" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm4</text>
+<text x="469" y="155" font-size="14" text-anchor="start" class="" font-weight="400">5th FP arg</text>
+<rect x="25" y="172" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="172" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="184" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm5</text>
+<text x="251" y="184" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm5</text>
+<text x="469" y="184" font-size="14" text-anchor="start" class="" font-weight="400">6th FP arg</text>
+<rect x="25" y="201" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="201" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="213" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm6</text>
+<text x="251" y="213" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm6</text>
+<text x="469" y="213" font-size="14" text-anchor="start" class="" font-weight="400">7th FP arg</text>
+<rect x="25" y="230" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="230" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="242" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm7</text>
+<text x="251" y="242" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm7</text>
+<text x="469" y="242" font-size="14" text-anchor="start" class="" font-weight="400">8th FP arg</text>
+<rect x="25" y="259" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="259" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="271" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm8</text>
+<text x="251" y="271" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm8</text>
+<text x="469" y="271" font-size="14" text-anchor="start" class="" font-weight="400">Caller-saved</text>
+<rect x="25" y="288" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="288" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="300" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm9</text>
+<text x="251" y="300" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm9</text>
+<text x="469" y="300" font-size="14" text-anchor="start" class="" font-weight="400">Caller-saved</text>
+<rect x="25" y="317" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="317" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="329" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm10</text>
+<text x="251" y="329" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm10</text>
+<text x="469" y="329" font-size="14" text-anchor="start" class="" font-weight="400">Caller-saved</text>
+<rect x="25" y="346" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="346" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="358" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm11</text>
+<text x="251" y="358" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm11</text>
+<text x="469" y="358" font-size="14" text-anchor="start" class="" font-weight="400">Caller-saved</text>
+<rect x="25" y="375" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="375" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="387" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm12</text>
+<text x="251" y="387" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm12</text>
+<text x="469" y="387" font-size="14" text-anchor="start" class="" font-weight="400">Caller-saved</text>
+<rect x="25" y="404" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="404" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="416" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm13</text>
+<text x="251" y="416" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm13</text>
+<text x="469" y="416" font-size="14" text-anchor="start" class="" font-weight="400">Caller-saved</text>
+<rect x="25" y="433" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="433" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="445" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm14</text>
+<text x="251" y="445" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm14</text>
+<text x="469" y="445" font-size="14" text-anchor="start" class="" font-weight="400">Caller-saved</text>
+<rect x="25" y="462" width="428" height="24" rx="2" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="239" y="462" width="214" height="24" rx="2" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="37" y="474" font-size="15" text-anchor="start" class="mono" font-weight="400">%ymm15</text>
+<text x="251" y="474" font-size="15" text-anchor="start" class="mono" font-weight="400">%xmm15</text>
+<text x="469" y="474" font-size="14" text-anchor="start" class="" font-weight="400">Caller-saved</text>
+</svg>

@@ -41,7 +41,7 @@ void Pthread_detach(pthread_t tid) {
 
 图A-4 Posix风格的 `pthread_detach` 函数的包装函数
 
-- GAI风格的错误处理包装函数。图A-5展示了GAI风格的 `getaddrinfo` 函数的包装函数。
+- GAI 风格的错误处理包装函数。图 A-5 展示了 GAI 风格的 `getaddrinfo` 函数的包装函数。
 
 ```c
 void Getaddrinfo(const char*            node,

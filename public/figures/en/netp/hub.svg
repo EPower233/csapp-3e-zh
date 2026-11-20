@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="336" height="113" overflow="hidden" viewBox="0 0 336 113" class="csapp-figure" role="img" aria-labelledby="csapp-netp-hub-title" fill="var(--c-000000)"><title id="csapp-netp-hub-title">Figure 11.3</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  --c-ffffff: #ffffff;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-ffffff: #1e232c;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+  --c-ffffff: #ffffff;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-ffffff: #1e232c;
+}</style><g transform="translate(12 -6)"><path d="M51.5001 40.5001 139.5 80.5001" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><path d="M155.5 40.5001 155.5 72.5001" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><path d="M0 0 72 40" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd" transform="matrix(-1 0 0 1 251.5 40.5001)"/><rect x="19.5001" y="10.5001" width="65" height="37" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(29.6667 37)" x="21.594" y="0.000" text-anchor="middle">Host</text><rect x="122.5" y="8.50005" width="65" height="37" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(132.667 35)" x="21.594" y="0.000" text-anchor="middle">Host</text><rect x="225.5" y="8.50005" width="65" height="37" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(235.667 35)" x="21.594" y="0.000" text-anchor="middle">Host</text><path d="M126.5 79.1669C126.5 75.4849 129.485 72.5001 133.167 72.5001L182.833 72.5001C186.515 72.5001 189.5 75.4849 189.5 79.1669L189.5 105.833C189.5 109.515 186.515 112.5 182.833 112.5L133.167 112.5C129.485 112.5 126.5 109.515 126.5 105.833Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-ffffff)" fill-rule="evenodd"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(138.167 100)" x="19.266" y="0.000" text-anchor="middle">Hub</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(222.5 74)">100 Mb/s</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(1.66667 74)">100 Mb/s</text></g></svg>

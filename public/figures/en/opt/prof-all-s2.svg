@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="839" height="334" overflow="hidden" viewBox="0 0 839 334" class="csapp-figure" role="img" aria-labelledby="csapp-opt-prof-all-s2-title" fill="var(--c-000000)"><title id="csapp-opt-prof-all-s2-title">Figure 5.38</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  --c-660066: #660066;
+  --c-808080: #808080;
+  --c-993366: #993366;
+  --c-9999ff: #9999ff;
+  --c-c0c0c0: #c0c0c0;
+  --c-ccffff: #ccffff;
+  --c-db843d: #db843d;
+  --c-ffffcc: #ffffcc;
+  --c-ffffff: #ffffff;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-660066: #f87ff8;
+  --c-808080: #a2a2a2;
+  --c-993366: #8a2e5c;
+  --c-9999ff: #1f1f7a;
+  --c-c0c0c0: #4b4b4b;
+  --c-ccffff: #163d45;
+  --c-db843d: #b56421;
+  --c-ffffcc: #3d3a18;
+  --c-ffffff: #1e232c;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+  --c-660066: #660066;
+  --c-808080: #808080;
+  --c-993366: #993366;
+  --c-9999ff: #9999ff;
+  --c-c0c0c0: #c0c0c0;
+  --c-ccffff: #ccffff;
+  --c-db843d: #db843d;
+  --c-ffffcc: #ffffcc;
+  --c-ffffff: #ffffff;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-660066: #f87ff8;
+  --c-808080: #a2a2a2;
+  --c-993366: #8a2e5c;
+  --c-9999ff: #1f1f7a;
+  --c-c0c0c0: #4b4b4b;
+  --c-ccffff: #163d45;
+  --c-db843d: #b56421;
+  --c-ffffcc: #3d3a18;
+  --c-ffffff: #1e232c;
+}</style><defs><clipPath id="csapp-opt-prof-all-s2-clip0"><rect x="61" y="193" width="839" height="334"/></clipPath></defs><g clip-path="url(#csapp-opt-prof-all-s2-clip0)" transform="translate(-61 -193)"><rect x="61" y="194" width="838" height="332" fill="var(--c-ffffff)"/><g><rect x="136" y="225" width="675" height="249" fill="var(--c-c0c0c0)"/></g><g><path d="M136.5 423.5 811.5 423.5M136.5 374.5 811.5 374.5M136.5 324.5 811.5 324.5M136.5 274.5 811.5 274.5M136.5 224.5 811.5 224.5" stroke="var(--c-000000)" stroke-width="0.333333" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g><g><rect x="136.5" y="224.5" width="675" height="249" stroke="var(--c-808080)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g><g><path d="M165.5 473.5 203.5 473.5 203.5 473.5 165.5 473.5ZM261.5 473.5 300.5 473.5 300.5 473.5 261.5 473.5ZM358.5 473.5 396.5 473.5 396.5 473.5 358.5 473.5ZM454.5 473.5 493.5 473.5 493.5 473.5 454.5 473.5ZM551.5 473.5 589.5 473.5 589.5 473.5 551.5 473.5ZM647.5 473.5 686.5 473.5 686.5 473.5 647.5 473.5ZM743.5 473.5 782.5 473.5 782.5 473.5 743.5 473.5Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g><g><path d="M165.5 473.5 203.5 473.5 203.5 473.5 165.5 473.5ZM358.5 473.5 396.5 473.5 396.5 473.5 358.5 473.5ZM454.5 473.5 493.5 473.5 493.5 473.5 454.5 473.5ZM551.5 473.5 589.5 473.5 589.5 473.5 551.5 473.5ZM647.5 473.5 686.5 473.5 686.5 473.5 647.5 473.5Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g><g><path d="M165.5 473.5 203.5 473.5 203.5 473.5 165.5 473.5ZM261.5 473.5 300.5 473.5 300.5 473.5 261.5 473.5ZM358.5 473.5 396.5 473.5 396.5 473.5 358.5 473.5ZM454.5 473.5 493.5 473.5 493.5 473.5 454.5 473.5ZM551.5 473.5 589.5 473.5 589.5 473.5 551.5 473.5ZM647.5 473.5 686.5 473.5 686.5 473.5 647.5 473.5ZM743.5 473.5 782.5 473.5 782.5 473.5 743.5 473.5Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g><g><path d="M165.5 472.5 203.5 472.5 203.5 473.5 165.5 473.5ZM261.5 472.5 300.5 472.5 300.5 473.5 261.5 473.5ZM358.5 473.5 396.5 473.5 396.5 473.5 358.5 473.5ZM454.5 473.5 493.5 473.5 493.5 473.5 454.5 473.5ZM551.5 473.5 589.5 473.5 589.5 473.5 551.5 473.5ZM647.5 472.5 686.5 472.5 686.5 473.5 647.5 473.5ZM743.5 473.5 782.5 473.5 782.5 473.5 743.5 473.5Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-ccffff)"/></g><g><path d="M165.5 468.5 203.5 468.5 203.5 473.5 165.5 473.5ZM261.5 468.5 300.5 468.5 300.5 473.5 261.5 473.5ZM358.5 466.5 396.5 466.5 396.5 473.5 358.5 473.5ZM454.5 468.5 493.5 468.5 493.5 473.5 454.5 473.5ZM551.5 468.5 589.5 468.5 589.5 473.5 551.5 473.5ZM647.5 472.5 686.5 472.5 686.5 473.5 647.5 473.5ZM743.5 473.5 782.5 473.5 782.5 473.5 743.5 473.5Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-660066)"/></g><g><path d="M165 266 204 266 204 468 165 468ZM262 468 300 468 300 468 262 468ZM358 466 397 466 397 466 358 466ZM455 468 493 468 493 468 455 468ZM551 468 590 468 590 469 551 469ZM647 473 686 473 686 473 647 473ZM744 473 782 473 782 473 744 473Z" fill="var(--c-db843d)"/></g><g><path d="M0 0 0.000104987 249" stroke="var(--c-000000)" stroke-width="0.333333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd" transform="matrix(1 0 0 -1 136.5 473.5)"/></g><g><path d="M132.5 473.5 136.5 473.5M132.5 423.5 136.5 423.5M132.5 374.5 136.5 374.5M132.5 324.5 136.5 324.5M132.5 274.5 136.5 274.5M132.5 224.5 136.5 224.5" stroke="var(--c-000000)" stroke-width="0.333333" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g><g><path d="M136.5 473.5 811.5 473.5" stroke="var(--c-000000)" stroke-width="0.333333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/></g><g><path d="M136.5 473.5 136.5 477.5M232.5 473.5 232.5 477.5M329.5 473.5 329.5 477.5M425.5 473.5 425.5 477.5M522.5 473.5 522.5 477.5M618.5 473.5 618.5 477.5M714.5 473.5 714.5 477.5M811.5 473.5 811.5 477.5" stroke="var(--c-000000)" stroke-width="0.333333" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g><g><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="14" transform="translate(116.146 478)">0</text></g><g><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="14" transform="translate(108.173 428)">50</text></g><g><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="14" transform="translate(100.199 379)">100</text></g><g><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="14" transform="translate(100.199 329)">150</text></g><g><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="14" transform="translate(100.199 279)">200</text></g><g><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="14" transform="translate(100.199 229)">250</text></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="14" transform="translate(163.948 495)" x="16.344" y="0.000" text-anchor="middle">Initial</text></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="14" transform="translate(250.815 495)" x="29.562" y="0.000" text-anchor="middle">Quicksort</text></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="14" transform="translate(351.23 495)" x="25.672" y="0.000" text-anchor="middle">Iter first</text></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="14" transform="translate(448.034 495)" x="25.297" y="0.000" text-anchor="middle">Iter last</text></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="14" transform="translate(540.065 495)" x="28.672" y="0.000" text-anchor="middle">Big table</text></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="14" transform="translate(628.923 495)" x="36.969" y="0.000" text-anchor="middle">Better hash</text></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="14" transform="translate(721.748 495)" x="40.469" y="0.000" text-anchor="middle">Linear lower</text></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="14" transform="matrix(6.12323e-17 -1 1 6.12323e-17 94.0079 391)" x="45.125" y="0.000" text-anchor="middle">CPU seconds</text></g><g><rect x="828.5" y="281.5" width="56" height="164" stroke="var(--c-000000)" stroke-width="0.333333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-ffffff)"/></g><g><rect x="835" y="291" width="6" height="7" fill="var(--c-db843d)"/></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="13" transform="translate(844.21 299)" x="11.922" y="0.000" text-anchor="middle">Sort</text></g><g><rect x="834.5" y="318.5" width="7" height="7" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-660066)"/></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="13" transform="translate(844.21 326)" x="10.117" y="0.000" text-anchor="middle">List</text></g><g><rect x="834.5" y="346.5" width="7" height="6" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-ccffff)"/></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="13" transform="translate(844.21 354)" x="17.711" y="0.000" text-anchor="middle">Lower</text></g><g><rect x="834.5" y="373.5" width="7" height="7" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-ffffcc)"/></g><g><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="13" transform="translate(844.21 381)" x="16.984" y="0.000" text-anchor="middle" data-csapp-zh="" textLength="33.969" lengthAdjust="spacingAndGlyphs">strlen</text></g><g><rect x="834.5" y="400.5" width="7" height="7" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-993366)"/></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="13" transform="translate(844.21 409)" x="15.180" y="0.000" text-anchor="middle">Hash</text></g><g><rect x="834.5" y="428.5" width="7" height="6" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-9999ff)"/></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="13" transform="translate(844.21 436)" x="13.367" y="0.000" text-anchor="middle">Other</text></g><rect x="61.5001" y="194.5" width="838" height="332" stroke="var(--c-000000)" stroke-width="0.333333" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g></svg>
