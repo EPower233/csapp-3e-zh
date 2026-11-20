@@ -42,6 +42,28 @@ html[code-block] .vp-doc div[class*="language-"] span.lang {
   display: none !important;
 }
 
+/* Keep long book titles within the navbar's title column. */
+.VPNavBar > .wrapper > .container > .title {
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.VPNavBarTitle > .title > span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  min-width: 0;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.VPNavBarTitle .book-title-compact {
+  display: none;
+}
+
 .bilingual-switcher {
   display: inline-flex;
   align-items: center;
@@ -73,6 +95,20 @@ html[code-block] .vp-doc div[class*="language-"] span.lang {
   color: var(--vp-c-brand-1);
   background: var(--vp-c-bg);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 479px) {
+  .VPNavBarTitle .book-title-full {
+    display: none;
+  }
+
+  .VPNavBarTitle .book-title-compact {
+    display: inline;
+  }
+
+  .bilingual-switcher {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 1279px) {

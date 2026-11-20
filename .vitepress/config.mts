@@ -17,6 +17,7 @@ const oneDarkProMix = JSON.parse(
 )
 
 const base = process.env.PAGES_BASE_PATH || '/'
+const englishTitle = "Computer Systems: A Programmer's Perspective"
 
 export default defineConfig({
   base,
@@ -40,9 +41,10 @@ export default defineConfig({
       label: 'English',
       lang: 'en-US',
       link: '/en/',
-      title: "Computer Systems: A Programmer's Perspective",
+      title: englishTitle,
       description: '3rd Edition — Chapter-by-Chapter Web Edition',
       themeConfig: {
+        siteTitle: `<span class="book-title-full">${englishTitle}</span><span class="book-title-compact" title="${englishTitle}">CS:APP</span>`,
         sidebar: sidebarEn,
       },
     },
