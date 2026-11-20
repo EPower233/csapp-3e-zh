@@ -121,9 +121,10 @@ async function loadPeerAndBind() {
     const peerPane = peerPaneRef.value
     if (primaryPane && peerPane) {
       const primaryUrl = withBase(encodeRoute(currentArticle.value))
+      const fragment = window.location.hash
       cleanupSync = isEnglish.value
-        ? initBilingualSync(peerPane, primaryPane, peerArticleUrl, primaryUrl)
-        : initBilingualSync(primaryPane, peerPane, primaryUrl, peerArticleUrl)
+        ? initBilingualSync(peerPane, primaryPane, peerArticleUrl, primaryUrl, { side: 'right', fragment })
+        : initBilingualSync(primaryPane, peerPane, primaryUrl, peerArticleUrl, { side: 'left', fragment })
     }
   } catch (err) {
     if (!request.signal.aborted) peerError.value = err instanceof Error ? err.message : String(err)

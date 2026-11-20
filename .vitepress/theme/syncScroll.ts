@@ -132,11 +132,21 @@ function interpolate(y: number, pairs: AnchorPair[], fromLeft: boolean): number 
   return fromLeft ? last.yR : last.yL
 }
 
+function fragmentTarget(container: HTMLElement, fragment: string): HTMLElement | null {
+  if (!fragment) return null
+  try {
+    return container.querySelector<HTMLElement>('#' + CSS.escape(decodeURIComponent(fragment.slice(1))))
+  } catch {
+    return null
+  }
+}
+
 export function initBilingualSync(
   leftEl: HTMLElement,
   rightEl: HTMLElement,
   leftUrl: string,
   rightUrl: string,
+  initial?: { side: 'left' | 'right'; fragment: string },
 ): () => void {
   let pairs = buildAnchorPairs(leftEl, rightEl)
   let activePane: 'left' | 'right' | null = null
@@ -168,6 +178,12 @@ export function initBilingualSync(
   const onLeftScroll = () => syncFrom('left')
   const onRightScroll = () => syncFrom('right')
 
+  const revealTarget = (container: HTMLElement, target: HTMLElement, side: 'left' | 'right') => {
+    activePane = side
+    container.scrollTop += target.getBoundingClientRect().top - container.getBoundingClientRect().top - READING_INSET
+    syncFrom(side)
+  }
+
   const scrollToArticleFragment = (container: HTMLElement, article: string, side: 'left' | 'right') => {
     const articleUrl = new URL(article, location.origin)
     const pathKey = (pathname: string) => pathname.replace(/(?:^|\/)index\.html$/, '/').replace(/\.html$/, '')
@@ -176,15 +192,11 @@ export function initBilingualSync(
       if (link.classList.contains('vp-raw') || link.hasAttribute('target') || link.hasAttribute('download')) continue
       const url = new URL(link.href)
       if (url.origin !== articleUrl.origin || pathKey(url.pathname) !== pathKey(articleUrl.pathname) || !url.hash) continue
-      try {
-        const target = container.querySelector<HTMLElement>('#' + CSS.escape(decodeURIComponent(url.hash.slice(1))))
-        if (!target) continue
-        handled.set(link, target)
-        // VitePress's normal hash jump scrolls the window. In split view each article scrolls independently.
-        link.classList.add('vp-raw')
-      } catch {
-        // Malformed or unavailable targets retain the normal link behavior.
-      }
+      const target = fragmentTarget(container, url.hash)
+      if (!target) continue
+      handled.set(link, target)
+      // VitePress's normal hash jump scrolls the window. In split view each article scrolls independently.
+      link.classList.add('vp-raw')
     }
     const onClick = (event: MouseEvent) => {
       if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return
@@ -193,8 +205,7 @@ export function initBilingualSync(
       const target = link ? handled.get(link) : undefined
       if (!target) return
       event.preventDefault()
-      activePane = side
-      container.scrollTop += target.getBoundingClientRect().top - container.getBoundingClientRect().top - READING_INSET
+      revealTarget(container, target, side)
     }
     container.addEventListener('click', onClick)
     return () => {
@@ -230,6 +241,15 @@ export function initBilingualSync(
   ]
   for (const img of imgs) {
     if (!img.complete) img.addEventListener('load', refresh, { once: true })
+  }
+
+  if (initial?.fragment) {
+    const container = initial.side === 'left' ? leftEl : rightEl
+    const target = fragmentTarget(container, initial.fragment)
+    if (target) {
+      window.scrollTo(0, 0)
+      revealTarget(container, target, initial.side)
+    }
   }
 
   return () => {

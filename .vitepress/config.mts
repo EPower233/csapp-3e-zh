@@ -57,6 +57,8 @@ export default defineConfig({
     },
   },
   themeConfig: {
+    // Fragment URLs are explicit navigation targets in the split reader.
+    anchorScroll: false,
     // The built-in translations menu is hidden (BilingualLayout's switcher uses
     // bilingual-map.json); disable path-mirroring so it never emits /en/<中文路径> links.
     i18nRouting: false,
