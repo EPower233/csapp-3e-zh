@@ -30,7 +30,7 @@ Chances are you will never design your own processor. This is a task for experts
 
 - **You just might work on a processor design.** Although the number of companies producing microprocessors is small, the design teams working on those processors are already large and growing. There can be over 1,000 people involved in the different aspects of a major processor design.
 
-> [!NOTE] Aside The progress of computer technology
+> [!NOTE] The progress of computer technology
 >
 > To get a sense of how much computer technology has improved over the past four decades, consider the following two processors.
 >

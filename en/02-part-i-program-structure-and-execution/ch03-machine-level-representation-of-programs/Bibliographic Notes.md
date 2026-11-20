@@ -2,7 +2,13 @@
 
 [Back to Chapter Contents](./Chapter%203%20Machine-Level%20Representation%20of%20Programs.md)
 
-Both Intel and AMD provide extensive documentation on their processors. This includes general descriptions of an assembly-language programmer's view of the hardware \[[2](./../../05-appendix-and-references/References.md#ref-2), [50](./../../05-appendix-and-references/References.md#ref-50)\], as well as detailed references about the individual instructions \[[3](./../../05-appendix-and-references/References.md#ref-3), [51](./../../05-appendix-and-references/References.md#ref-51)\]. Reading the instruction descriptions is complicated by the facts that (1) all documentation is based on the Intel assembly-code format, (2) there are many variations for each instruction due to the different addressing and execution modes, and (3) there are no illustrative examples. Still, these remain the authoritative references about the behavior of each instruction.
+Both Intel and AMD provide extensive documentation on their processors. This includes general descriptions of an assembly-language programmer's view of the hardware \[[2](./../../05-appendix-and-references/References.md#ref-2), [50](./../../05-appendix-and-references/References.md#ref-50)\], as well as detailed references about the individual instructions \[[3](./../../05-appendix-and-references/References.md#ref-3), [51](./../../05-appendix-and-references/References.md#ref-51)\]. Reading the instruction descriptions is complicated for three reasons:
+
+1. All documentation is based on the Intel assembly-code format.
+2. There are many variations for each instruction due to the different addressing and execution modes.
+3. There are no illustrative examples.
+
+Still, these remain the authoritative references about the behavior of each instruction.
 
 The organization x86-64.org has been responsible for defining the application binary interface (ABI) for x86-64 code running on Linux systems [\[77\]](./../../05-appendix-and-references/References.md#ref-77). This interface describes details for procedure linkages, binary code files, and a number of other features that are required for machine-code programs to execute properly.
 

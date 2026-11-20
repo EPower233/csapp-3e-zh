@@ -125,7 +125,10 @@ Given an input file `hello.txt` that consists of the string `"Hello, world!\n"`,
 
 ## Homework 9.15 (*)
 
-Determine the block sizes and header values that would result from the following sequence of `malloc` requests. Assumptions: (1) The allocator maintains double-word alignment and uses an implicit free list with the block format from [Figure 9.35](./9.9%20Dynamic%20Memory%20Allocation.md#Figure%209.35). (2) Block sizes are rounded up to the nearest multiple of 8 bytes.
+Determine the block sizes and header values that would result from the following sequence of `malloc` requests. Assumptions:
+
+1. The allocator maintains double-word alignment and uses an implicit free list with the block format from [Figure 9.35](./9.9%20Dynamic%20Memory%20Allocation.md#Figure%209.35).
+2. Block sizes are rounded up to the nearest multiple of 8 bytes.
 
 | Request | Block size (decimal bytes) | Block header (hex) |
 | --- | --- | --- |

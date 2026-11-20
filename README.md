@@ -13,7 +13,7 @@
 - **按章拆分结构**：全书拆分为书前材料、导论、第 1～3 部分（共 12 章）、附录 A、参考文献与封底；各章首页保留导言与本章目录，小节、家庭作业与练习题答案均为独立页面，左侧导航由 `.vitepress/book-sidebar.json` 驱动。
 - **保留原生 Markdown 链接**：书稿中的跨页标题锚点与目录引用保留 Obsidian 可用的原生 Markdown 链接格式，由 `.vitepress/heading-links.mts` 在 VitePress 构建与渲染阶段自动解析并映射到目标页面的实际标题 ID。
 - **数学公式与脚注**：通过 `markdown-it-mathjax3` 与 `markdown-it-footnote` 渲染行内/块级公式与脚注。
-- **代码高亮与行号**：开启全局行号显示，浅色/深色模式分别使用 `One Light Pro Mix` 与 `One Dark Pro Mix` 配色（位于 `.vitepress/themes/`），并精简代码块顶栏（移除三圆点、左对齐语言标识）。
+- **代码高亮与行号**：使用 Teek + VitePress 的默认代码样式与等宽字体，保留全局行号显示。
 - **本地全文检索**：启用 VitePress 本地搜索，并在 `.vitepress/config.mts` 中清洗标题内嵌链接以便精确索引。
 - **矢量插图资源**：中英文两版的 SVG 插图存放在 `public/figures/`，并适配浅色/深色主题展示。
 
@@ -40,6 +40,6 @@ npm run build    # 构建静态站点至 .vitepress/dist
 ├── 06 书后材料/                            # 封底.md
 ├── en/                                     # 英文分章书稿与目录
 ├── public/figures/                         # 中英文 SVG 插图
-├── .vitepress/                             # VitePress 配置、侧栏、锚点插件、主题与代码配色
+├── .vitepress/                             # VitePress 配置、侧栏、锚点插件与主题
 └── .github/workflows/deploy.yml            # GitHub Pages 自动构建与部署工作流
 ```

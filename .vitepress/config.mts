@@ -1,20 +1,11 @@
-import fs from 'node:fs'
-import path from 'node:path'
 import { defineConfig } from 'vitepress'
 import { fileURLToPath } from 'node:url'
 import headingLinks from './heading-links.mts'
 import htmlTableInline from './html-table-inline.mts'
+import readableTables from './readable-tables.mts'
 import footnote from 'markdown-it-footnote'
 import sidebarZh from './book-sidebar.json'
 import sidebarEn from './book-sidebar.en.json'
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const oneLightProMix = JSON.parse(
-  fs.readFileSync(path.join(__dirname, 'themes', 'OneLight-Pro-mix.json'), 'utf-8'),
-)
-const oneDarkProMix = JSON.parse(
-  fs.readFileSync(path.join(__dirname, 'themes', 'OneDark-Pro-mix.json'), 'utf-8'),
-)
 
 const base = process.env.PAGES_BASE_PATH || '/'
 const englishTitle = "Computer Systems: A Programmer's Perspective"
@@ -23,10 +14,6 @@ export default defineConfig({
   base,
   buildConcurrency: 8,
   title: '深入理解计算机系统',
-  head: [
-    ['link', { rel: 'stylesheet', href: `${base}fonts/jetbrains-maple-mono/regular/result.css` }],
-    ['link', { rel: 'stylesheet', href: `${base}fonts/jetbrains-maple-mono/bold/result.css` }],
-  ],
   locales: {
     root: {
       label: '简体中文',
@@ -52,13 +39,10 @@ export default defineConfig({
   markdown: {
     math: true,
     lineNumbers: true,
-    theme: {
-      light: oneLightProMix,
-      dark: oneDarkProMix,
-    },
     config: (md) => {
       md.use(footnote)
       md.use(htmlTableInline)
+      md.use(readableTables)
       md.use(headingLinks, fileURLToPath(new URL('..', import.meta.url)))
     },
   },

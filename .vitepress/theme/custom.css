@@ -6,22 +6,6 @@ html.dark {
   color-scheme: dark;
 }
 
-:root {
-  --vp-font-family-mono: 'JetBrains Maple Mono', ui-monospace, 'Menlo', 'Monaco', 'Consolas',
-    'Liberation Mono', 'Courier New', monospace;
-  --vp-code-block-bg: #fafafa;
-}
-
-:root.dark {
-  --vp-code-block-bg: #282c34;
-}
-
-.vp-doc code,
-.vp-doc pre,
-.vp-doc div[class*="language-"] {
-  font-variant-ligatures: contextual;
-}
-
 .vp-doc img[src$='.svg'] {
   display: block;
   margin: 1rem auto;
@@ -29,12 +13,36 @@ html.dark {
   height: auto;
 }
 
-html[code-block] .vp-doc div[class*="language-"]::before {
-  display: none !important;
+.vp-doc .book-table {
+  max-width: 100%;
+  margin: 20px 0;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
 }
 
-html[code-block] .vp-doc div[class*="language-"] span.lang {
-  left: 16px !important;
+.vp-doc .book-table > table {
+  display: table;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  overflow: visible;
+}
+
+.vp-doc .book-table :is(th, td) {
+  min-width: 0;
+  padding: 6px 9px;
+  vertical-align: top;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.vp-doc .book-table--comparison > table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.vp-doc .book-table :is(th, td) code {
+  white-space: nowrap;
 }
 
 .VPNavBarTranslations,
@@ -175,13 +183,6 @@ html[code-block] .vp-doc div[class*="language-"] span.lang {
     border: 1px solid var(--vp-c-divider);
     border-radius: 10px;
     background: var(--vp-c-bg);
-  }
-
-  /* Half-width panes: keep table header / row-label cells readable instead of
-     wrapping CJK one character per line; the table scrolls horizontally. */
-  html.bilingual-split .VPDoc .content-container table th,
-  html.bilingual-split .VPDoc .content-container table td:first-child {
-    white-space: nowrap;
   }
 }
 
