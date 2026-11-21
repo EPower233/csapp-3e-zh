@@ -18,7 +18,7 @@
 ```c
 #include "csapp.h"
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
   struct in_addr inaddr; /* Address in network byte order */
   uint32_t addr;         /* Address in host byte order */
   char buf[MAXBUF];      /* Buffer for dotted-decimal string */
@@ -43,7 +43,7 @@ int main(int argc, char **argv) {
 ```c
 #include "csapp.h"
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
   struct in_addr inaddr; /* Address in network byte order */
   int rc;
 
@@ -70,9 +70,9 @@ Here's a solution. Notice how much more difficult it is to use `inet_ntop`, whic
 ```c
 #include "csapp.h"
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
   struct addrinfo *p, *listp, hints;
-  struct sockaddr_in *sockp;
+  struct sockaddr_in* sockp;
   char buf[MAXLINE];
   int rc;
 
@@ -92,7 +92,7 @@ int main(int argc, char **argv) {
 
   /* Walk the list and display each associated IP address */
   for (p = listp; p; p = p->ai_next) {
-    sockp = (struct sockaddr_in *)p->ai_addr;
+    sockp = (struct sockaddr_in*)p->ai_addr;
     Inet_ntop(AF_INET, &(sockp->sin_addr), buf, MAXLINE);
     printf("%s\n", buf);
   }

@@ -43,12 +43,12 @@ How many "hello" output lines does this program print?
 
 int main()
 {
-    int i;
+  int i;
 
-    for (i = 0; i < 2; i++)
-        Fork();
-    printf("hello\n");
-    exit(0);
+  for (i = 0; i < 2; i++)
+    Fork();
+  printf("hello\n");
+  exit(0);
 }
 ```
 
@@ -61,17 +61,17 @@ How many "hello" output lines does this program print?
 
 void doit()
 {
-    Fork();
-    Fork();
-    printf("hello\n");
-    return;
+  Fork();
+  Fork();
+  printf("hello\n");
+  return;
 }
 
 int main()
 {
-    doit();
-    printf("hello\n");
-    exit(0);
+  doit();
+  printf("hello\n");
+  exit(0);
 }
 ```
 
@@ -84,13 +84,13 @@ What is one possible output of the following program?
 
 int main()
 {
-    int x = 3;
+  int x = 3;
 
-    if (Fork() != 0)
-        printf("x=%d\n", ++x);
+  if (Fork() != 0)
+    printf("x=%d\n", ++x);
 
-    printf("x=%d\n", --x);
-    exit(0);
+  printf("x=%d\n", --x);
+  exit(0);
 }
 ```
 
@@ -103,19 +103,19 @@ How many "hello" output lines does this program print?
 
 void doit()
 {
-    if (Fork() == 0) {
-        Fork();
-        printf("hello\n");
-        exit(0);
-    }
-    return;
+  if (Fork() == 0) {
+    Fork();
+    printf("hello\n");
+    exit(0);
+  }
+  return;
 }
 
 int main()
 {
-    doit();
-    printf("hello\n");
-    exit(0);
+  doit();
+  printf("hello\n");
+  exit(0);
 }
 ```
 
@@ -128,19 +128,19 @@ How many "hello" lines does this program print?
 
 void doit()
 {
-    if (Fork() == 0) {
-        Fork();
-        printf("hello\n");
-        return;
-    }
+  if (Fork() == 0) {
+    Fork();
+    printf("hello\n");
     return;
+  }
+  return;
 }
 
 int main()
 {
-    doit();
-    printf("hello\n");
-    exit(0);
+  doit();
+  printf("hello\n");
+  exit(0);
 }
 ```
 
@@ -154,15 +154,15 @@ int counter = 1;
 
 int main()
 {
-    if (fork() == 0) {
-        counter--;
-        exit(0);
-    }
-    else {
-        Wait(NULL);
-        printf("counter = %d\n", ++counter);
-    }
+  if (fork() == 0) {
+    counter--;
     exit(0);
+  }
+    else {
+    Wait(NULL);
+    printf("counter = %d\n", ++counter);
+  }
+  exit(0);
 }
 ```
 
@@ -179,20 +179,20 @@ Consider the following program:
 
 void end(void)
 {
-    printf("2"); fflush(stdout);
+  printf("2"); fflush(stdout);
 }
 
 int main()
 {
-    if (Fork() == 0)
-        atexit(end);
-    if (Fork() == 0) {
-        printf("0"); fflush(stdout);
-    }
+  if (Fork() == 0)
+    atexit(end);
+  if (Fork() == 0) {
+    printf("0"); fflush(stdout);
+  }
     else {
-        printf("1"); fflush(stdout);
-    }
-    exit(0);
+    printf("1"); fflush(stdout);
+  }
+  exit(0);
 }
 ```
 
@@ -207,12 +207,12 @@ How many lines of output does the following function print? Give your answer as 
 ```c
 void foo(int n)
 {
-    int i;
+  int i;
 
-    for (i = 0; i < n; i++)
-        Fork();
-    printf("hello\n");
-    exit(0);
+  for (i = 0; i < n; i++)
+    Fork();
+  printf("hello\n");
+  exit(0);
 }
 ```
 
@@ -238,30 +238,30 @@ What are the possible output sequences from the following program?
 ```c
 int main()
 {
-    if (fork() == 0) {
-        printf("a"); fflush(stdout);
-        exit(0);
-    }
-    else {
-        printf("b"); fflush(stdout);
-        waitpid(-1, NULL, 0);
-    }
-    printf("c"); fflush(stdout);
+  if (fork() == 0) {
+    printf("a"); fflush(stdout);
     exit(0);
+  }
+    else {
+    printf("b"); fflush(stdout);
+    waitpid(-1, NULL, 0);
+  }
+  printf("c"); fflush(stdout);
+  exit(0);
 }
 ```
 
-## Homework 8.22 (***)
+## Homework 8.22 (\*\*\*)
 
 Write your own version of the Unix `system` function
 
 ```c
-int mysystem(char *command);
+int mysystem(char* command);
 ```
 
 The `mysystem` function executes `command` by invoking `/bin/sh -c command`, and then returns after `command` has completed. If `command` exits normally (by calling the `exit` function or executing a `return` statement), then `mysystem` returns the `command` exit status. For example, if `command` terminates by calling `exit(8)`, then `mysystem` returns the value 8. Otherwise, if `command` terminates abnormally, then `mysystem` returns the status returned by the shell.
 
-## Homework 8.23 (***)
+## Homework 8.23 (\*\*)
 
 One of your colleagues is thinking of using signals to allow a parent process to count events that occur in a child process. The idea is to notify the parent each time an event occurs by sending it a signal and letting the parent's signal handler increment a global `counter` variable, which the parent can then inspect after the child has terminated. However, when he runs the test program in [Figure 8.45](#Figure%208.45) on his system, he discovers that when the parent calls `printf`, `counter` always has a value of 2, even though the child has sent five signals to the parent. Perplexed, he comes to you for help. Can you explain the bug?
 
@@ -274,34 +274,34 @@ int counter = 0;
 
 void handler(int sig)
 {
-    counter++;
-    sleep(1); /* Do some work in the handler */
-    return;
+  counter++;
+  sleep(1); /* Do some work in the handler */
+  return;
 }
 
 int main()
 {
-    int i;
+  int i;
 
-    Signal(SIGUSR2, handler);
+  Signal(SIGUSR2, handler);
 
-    if (Fork() == 0) {  /* Child */
-        for (i = 0; i < 5; i++) {
-            Kill(getppid(), SIGUSR2);
-            printf("sent SIGUSR2 to parent\n");
-        }
-        exit(0);
+  if (Fork() == 0) { /* Child */
+    for (i = 0; i < 5; i++) {
+      Kill(getppid(), SIGUSR2);
+      printf("sent SIGUSR2 to parent\n");
     }
-
-    Wait(NULL);
-    printf("counter=%d\n", counter);
     exit(0);
+  }
+
+  Wait(NULL);
+  printf("counter=%d\n", counter);
+  exit(0);
 }
 ```
 
 Figure 8.45 Counter program referenced in Problem 8.23.
 
-## Homework 8.24 (***)
+## Homework 8.24 (\*\*\*)
 
 Modify the program in [Figure 8.18](./8.4%20Process%20Control.md#Figure%208.18) so that the following two conditions are met:
 
@@ -316,11 +316,11 @@ child 12254 terminated by signal 11: Segmentation fault
 
 Hint: Read the man page for `psignal(3)`.
 
-## Homework 8.25 (***)
+## Homework 8.25 (\*\*\*)
 
 Write a version of the `fgets` function, called `tfgets`, that times out after 5 seconds. The `tfgets` function accepts the same inputs as `fgets`. If the user doesn't type an input line within 5 seconds, `tfgets` returns `NULL`. Otherwise, it returns a pointer to the input line.
 
-## Homework 8.26 (***)
+## Homework 8.26 (\*\*\*\*)
 
 Using the example in [Figure 8.23](./8.4%20Process%20Control.md#Figure%208.23) as a starting point, write a shell program that supports job control. Your shell should have the following features:
 
@@ -373,6 +373,6 @@ Job 5036 terminated by signal: Terminated
 linux>                                       # Back to the Unix shell
 ```
 
-Figure 8.46 Example shell session for [Homework Problem 8.26](#Homework%208.26%20%28%2A%2A%2A%29).
+Figure 8.46 Example shell session for [Homework Problem 8.26](#homework-8-26).
 
 [^ch8-shell-note]: Note that this is a simplification of the way that real shells work. With real shells, the kernel responds to Ctrl+C (Ctrl+Z) by sending `SIGINT` (`SIGTSTP`) directly to each process in the terminal foreground process group. The shell manages the membership of this group using the `tcsetpgrp` function, and manages the attributes of the terminal using the `tcsetattr` function, both of which are outside the scope of this book. See [\[62\]](../../05-appendix-and-references/References.md#ref-62) for details.

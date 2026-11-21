@@ -9,25 +9,25 @@ This problem concerns the `m.o` module from [Figure 7.5](./7.5%20Symbols%20and%2
 ```c
 extern int buf[];
 
-int *bufp0 = &buf[0];
-static int *bufp1;
+int* bufp0 = &buf[0];
+static int* bufp1;
 
 static void incr()
 {
-    static int count = 0;
+  static int count = 0;
 
-    count++;
+  count++;
 }
 
 void swap()
 {
-    int temp;
+  int temp;
 
-    incr();
-    bufp1 = &buf[1];
-    temp = *bufp0;
-    *bufp0 = *bufp1;
-    *bufp1 = temp;
+  incr();
+  bufp1 = &buf[1];
+  temp = *bufp0;
+  *bufp0 = *bufp1;
+  *bufp1 = temp;
 }
 ```
 
@@ -105,8 +105,8 @@ void p2(void);
 
 int main()
 {
-    p2();
-    return 0;
+  p2();
+  return 0;
 }
 ```
 
@@ -116,7 +116,7 @@ int main()
 char main;
 void p2()
 {
-    printf("0x%x\n", main);
+  printf("0x%x\n", main);
 }
 ```
 

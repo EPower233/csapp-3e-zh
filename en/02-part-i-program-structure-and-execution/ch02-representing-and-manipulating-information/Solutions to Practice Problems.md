@@ -8,27 +8,27 @@ Understanding the relation between hexadecimal and binary formats will be import
 
 - A. `0x39A7F8` to binary:
 
-| Hexadecimal | 3 | 9 | A | 7 | F | 8 |
-| --- | --- | --- | --- | --- | --- | --- |
-| Binary | 0011 | 1001 | 1010 | 0111 | 1111 | 1000 |
+  | Hexadecimal | 3 | 9 | A | 7 | F | 8 |
+  | --- | --- | --- | --- | --- | --- | --- |
+  | Binary | 0011 | 1001 | 1010 | 0111 | 1111 | 1000 |
 
 - B. Binary `1100100101111011` to hexadecimal:
 
-| Binary | 1100 | 1001 | 0111 | 1011 |
-| --- | --- | --- | --- | --- |
-| Hexadecimal | C | 9 | 7 | B |
+  | Binary | 1100 | 1001 | 0111 | 1011 |
+  | --- | --- | --- | --- | --- |
+  | Hexadecimal | C | 9 | 7 | B |
 
 - C. `0xD5E4C` to binary:
 
-| Hexadecimal | D | 5 | E | 4 | C |
-| --- | --- | --- | --- | --- | --- |
-| Binary | 1101 | 0101 | 1110 | 0100 | 1100 |
+  | Hexadecimal | D | 5 | E | 4 | C |
+  | --- | --- | --- | --- | --- | --- |
+  | Binary | 1101 | 0101 | 1110 | 0100 | 1100 |
 
 - D. Binary `1001101110011110110101` to hexadecimal:
 
-| Binary | 10 | 0110 | 1110 | 0111 | 1011 | 0101 |
-| --- | --- | --- | --- | --- | --- | --- |
-| Hexadecimal | 2 | 6 | E | 7 | B | 5 |
+  | Binary | 10 | 0110 | 1110 | 0111 | 1011 | 0101 |
+  | --- | --- | --- | --- | --- | --- | --- |
+  | Hexadecimal | 2 | 6 | E | 7 | B | 5 |
 
 ## Solution 2.2
 
@@ -88,13 +88,13 @@ This problem is another chance to practice hexadecimal to binary conversion. It 
 
 - A. Using the notation of the example in the text, we write the two strings as follows:
 
-```text
-  0    0    3    5    9    1    4    1
-0000 0000 0011 0101 1001 0001 0100 0001
-            *********************
-  0100 1010 0101 0110 0100 0101 0000 0100
-   4    A    5    6    4    5    0    4
-```
+  ```text
+     0   0   3   5   9   1   4   1
+  00000000001101011001000101000001
+             *********************
+       4   A   5   6   4   5   0   4
+    01001010010101100100010100000100
+  ```
 
 - B. With the second word shifted two positions to the right relative to the first, we find a sequence with 21 matching bits.
 - C. We find all bits of the integer embedded in the floating-point number, except for the most significant bit having value 1. Such is the case for the example in the text as well. In addition, the floating-point number has some nonzero high-order bits that do not match those of the integer.
@@ -304,12 +304,12 @@ The expressions in these functions are common program "idioms" for extracting va
 
 - A.
 
-| `w` | `fun1(w)` | `fun2(w)` |
-| --- | --- | --- |
-| `0x00000076` | `0x00000076` | `0x00000076` |
-| `0x87654321` | `0x00000021` | `0x00000021` |
-| `0x000000C9` | `0x000000C9` | `0xFFFFFFC9` |
-| `0xEDCBA987` | `0x00000087` | `0xFFFFFF87` |
+  | `w` | `fun1(w)` | `fun2(w)` |
+  | --- | --- | --- |
+  | `0x00000076` | `0x00000076` | `0x00000076` |
+  | `0x87654321` | `0x00000021` | `0x00000021` |
+  | `0x000000C9` | `0x000000C9` | `0xFFFFFFC9` |
+  | `0xEDCBA987` | `0x00000087` | `0xFFFFFF87` |
 
 - B. Function `fun1` extracts a value from the low-order 8 bits of the argument, giving an integer ranging between `0` and `255`. Function `fun2` extracts a value from the low-order 8 bits of the argument, but it also performs sign extension. The result will be a number between `-128` and `127`.
 
@@ -343,9 +343,9 @@ This example demonstrates a subtle feature of unsigned arithmetic, and also the 
 - B. *Explain how this incorrect result comes about.* Since `strlen` is defined to yield an unsigned result, the difference and the comparison are both computed using unsigned arithmetic. When `s` is shorter than `t`, the difference `strlen(s) - strlen(t)` should be negative, but instead becomes a large, unsigned number, which is greater than `0`.
 - C. *Show how to fix the code so that it will work reliably.* Replace the test with the following:
 
-```c
-return strlen(s) > strlen(t);
-```
+  ```c
+  return strlen(s) > strlen(t);
+  ```
 
 ## Solution 2.27
 
@@ -390,10 +390,10 @@ This function is a direct implementation of the rules given to determine whether
 ```c
 /* Determine whether arguments can be added without overflow */
 int tadd_ok(int x, int y) {
-    int sum = x + y;
-    int neg_over = x < 0 && y < 0 && sum >= 0;
-    int pos_over = x >= 0 && y >= 0 && sum < 0;
-    return !neg_over && !pos_over;
+  int sum = x + y;
+  int neg_over = x < 0 && y < 0 && sum >= 0;
+  int pos_over = x >= 0 && y >= 0 && sum < 0;
+  return !neg_over && !pos_over;
 }
 ```
 
@@ -427,14 +427,15 @@ The bit patterns are the same as for unsigned negation.
 
 This problem is an exercise to make sure you understand two's-complement multiplication.
 
-| Mode | $x$ | $y$ | $x \cdot y$ | Truncated $x \cdot y$ |
-| --- | --- | --- | --- | --- |
-| Unsigned | $4$ `[100]` | $5$ `[101]` | $20$ `[010100]` | $4$ `[100]` |
-| Two's complement | $-4$ `[100]` | $-3$ `[101]` | $12$ `[001100]` | $-4$ `[100]` |
-| Unsigned | $2$ `[010]` | $7$ `[111]` | $14$ `[001110]` | $6$ `[110]` |
-| Two's complement | $2$ `[010]` | $-1$ `[111]` | $-2$ `[111110]` | $-2$ `[110]` |
-| Unsigned | $6$ `[110]` | $6$ `[110]` | $36$ `[100100]` | $4$ `[100]` |
-| Two's complement | $-2$ `[110]` | $-2$ `[110]` | $4$ `[000100]` | $-4$ `[100]` |
+<table>
+  <tr><th scope="col">Mode</th><th colspan="2" scope="colgroup">$x$</th><th colspan="2" scope="colgroup">$y$</th><th colspan="2" scope="colgroup">$x \cdot y$</th><th colspan="2" scope="colgroup">Truncated $x \cdot y$</th></tr>
+  <tr><td>Unsigned</td><td>$4$</td><td>`[100]`</td><td>$5$</td><td>`[101]`</td><td>$20$</td><td>`[010100]`</td><td>$4$</td><td>`[100]`</td></tr>
+  <tr><td>Two's complement</td><td>$-4$</td><td>`[100]`</td><td>$-3$</td><td>`[101]`</td><td>$12$</td><td>`[001100]`</td><td>$-4$</td><td>`[100]`</td></tr>
+  <tr><td>Unsigned</td><td>$2$</td><td>`[010]`</td><td>$7$</td><td>`[111]`</td><td>$14$</td><td>`[001110]`</td><td>$6$</td><td>`[110]`</td></tr>
+  <tr><td>Two's complement</td><td>$2$</td><td>`[010]`</td><td>$-1$</td><td>`[111]`</td><td>$-2$</td><td>`[111110]`</td><td>$-2$</td><td>`[110]`</td></tr>
+  <tr><td>Unsigned</td><td>$6$</td><td>`[110]`</td><td>$6$</td><td>`[110]`</td><td>$36$</td><td>`[100100]`</td><td>$4$</td><td>`[100]`</td></tr>
+  <tr><td>Two's complement</td><td>$-2$</td><td>`[110]`</td><td>$-2$</td><td>`[110]`</td><td>$4$</td><td>`[000100]`</td><td>$-4$</td><td>`[100]`</td></tr>
+</table>
 
 ## Solution 2.35
 
@@ -459,10 +460,10 @@ With 64 bits, we can perform the multiplication without overflowing. We then tes
 ```c
 /* Determine whether the arguments can be multiplied without overflow */
 int tmult_ok(int x, int y) {
-    /* Compute product without overflow */
-    int64_t pll = (int64_t) x * y;
-    /* See if casting to int preserves value */
-    return pll == (int) pll;
+  /* Compute product without overflow */
+  int64_t pll = (int64_t)x * y;
+  /* See if casting to int preserves value */
+  return pll == (int)pll;
 }
 ```
 
@@ -479,17 +480,17 @@ the product would be computed as a 32-bit value (possibly overflowing) and then 
 - A. This change does not help at all. Even though the computation of `asize` will be accurate, the call to `malloc` will cause this value to be converted to a 32-bit unsigned number, and so the same overflow conditions will occur.
 - B. With `malloc` having a 32-bit unsigned number as its argument, it cannot possibly allocate a block of more than $2^{32}$ bytes, and so there is no point attempting to allocate or copy this much memory. Instead, the function should abort and return `NULL`, as illustrated by the following replacement to the original call to `malloc` (line 9):
 
-```c
-uint64_t required_size = ele_cnt * (uint64_t) ele_size;
-size_t request_size = (size_t) required_size;
-if (required_size != request_size)
+  ```c
+  uint64_t required_size = ele_cnt * (uint64_t)ele_size;
+  size_t request_size = (size_t)required_size;
+  if (required_size != request_size)
     /* Overflow must have occurred. Abort operation */
     return NULL;
-void *result = malloc(request_size);
-if (result == NULL)
+  void* result = malloc(request_size);
+  if (result == NULL)
     /* malloc failed */
     return NULL;
-```
+  ```
 
 ## Solution 2.38
 
@@ -607,11 +608,11 @@ Hexadecimal `0x359141` is equivalent to binary `[1101011001000101000001]`. Shift
 We see that the matching bits in the two representations correspond to the low-order bits of the integer, up to the most significant bit equal to 1 matching the high-order 21 bits of the fraction:
 
 ```text
-  0    0    3    5    9    1    4    1
-0000 0000 0011 0101 1001 0001 0100 0001
-            *********************
-  0100 1010 0101 0110 0100 0101 0000 0100
-   4    A    5    6    4    5    0    4
+   0   0   3   5   9   1   4   1
+00000000001101011001000101000001
+           *********************
+     4   A   5   6   4   5   0   4
+  01001010010101100100010100000100
 ```
 
 ## Solution 2.49
@@ -660,7 +661,7 @@ We assume that the value `1e400` overflows to infinity.
 ```c
 #define POS_INFINITY 1e400
 #define NEG_INFINITY (-POS_INFINITY)
-#define NEG_ZERO (-1.0/POS_INFINITY)
+#define NEG_ZERO (-1.0 / POS_INFINITY)
 ```
 
 ## Solution 2.54

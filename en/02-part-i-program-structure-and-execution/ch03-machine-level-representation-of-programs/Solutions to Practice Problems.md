@@ -83,7 +83,7 @@ decode1:
 From this, we can generate the following C code:
 
 ```c
-void decode1(long *xp, long *yp, long *zp) {
+void decode1(long* xp, long* yp, long* zp) {
   long x = *xp;
   long y = *yp;
   long z = *zp;
@@ -169,11 +169,11 @@ long t4 = z - t3;
 
 ## Solution 3.11
 
-A. This instruction is used to set register `%rdx` to zero, exploiting the property that `x ^ x = 0` for any `x`. It corresponds to the C statement `x = 0`.
+- A. This instruction is used to set register `%rdx` to zero, exploiting the property that `x ^ x = 0` for any `x`. It corresponds to the C statement `x = 0`.
 
-B. A more direct way of setting register `%rdx` to zero is with the instruction `movq $0, %rdx`.
+- B. A more direct way of setting register `%rdx` to zero is with the instruction `movq $0, %rdx`.
 
-C. Assembling and disassembling this code, however, we find that the version with `xorq` requires only 3 bytes, while the version with `movq` requires 7. Other ways to set `%rdx` to zero rely on the property that any instruction that updates the lower 4 bytes will cause the high-order bytes to be set to zero. Thus, we could use either `xorl %edx, %edx` (2 bytes) or `movl $0, %edx` (5 bytes).
+- C. Assembling and disassembling this code, however, we find that the version with `xorq` requires only 3 bytes, while the version with `movq` requires 7. Other ways to set `%rdx` to zero rely on the property that any instruction that updates the lower 4 bytes will cause the high-order bytes to be set to zero. Thus, we could use either `xorl %edx, %edx` (2 bytes) or `movl $0, %edx` (5 bytes).
 
 ## Solution 3.12
 
@@ -197,13 +197,13 @@ uremdiv:
 
 It is important to understand that assembly code does not keep track of the type of a program value. Instead, the different instructions determine the operand sizes and whether they are signed or unsigned. When mapping from instruction sequences back to C code, we must do a bit of detective work to infer the data types of the program values.
 
-A. The suffix `l` and the register identifiers indicate 32-bit operands, while the comparison is for a two's-complement `<`. We can infer that `data_t` must be `int`.
+- A. The suffix `l` and the register identifiers indicate 32-bit operands, while the comparison is for a two's-complement `<`. We can infer that `data_t` must be `int`.
 
-B. The suffix `w` and the register identifiers indicate 16-bit operands, while the comparison is for a two's-complement `>=`. We can infer that `data_t` must be `short`.
+- B. The suffix `w` and the register identifiers indicate 16-bit operands, while the comparison is for a two's-complement `>=`. We can infer that `data_t` must be `short`.
 
-C. The suffix `b` and the register identifiers indicate 8-bit operands, while the comparison is for an unsigned `<=`. We can infer that `data_t` must be `unsigned char`.
+- C. The suffix `b` and the register identifiers indicate 8-bit operands, while the comparison is for an unsigned `<=`. We can infer that `data_t` must be `unsigned char`.
 
-D. The suffix `q` and the register identifiers indicate 64-bit operands, while the comparison is for `!=`, which is the same whether the arguments are signed, unsigned, or pointers. We can infer that `data_t` could be either `long`, `unsigned long`, or some form of pointer.
+- D. The suffix `q` and the register identifiers indicate 64-bit operands, while the comparison is for `!=`, which is the same whether the arguments are signed, unsigned, or pointers. We can infer that `data_t` could be either `long`, `unsigned long`, or some form of pointer.
 
 ## Solution 3.14
 
@@ -221,33 +221,33 @@ D. The suffix `l` and the register identifier indicate 32-bit operands, while th
 
 This exercise requires you to examine disassembled code in detail and reason about the encodings for jump targets. It also gives you practice in hexadecimal arithmetic.
 
-A. The `je` instruction has as its target `0x4003fc + 0x02`. As the original disassembled code shows, this is `0x4003fe`:
+- A. The `je` instruction has as its target `0x4003fc + 0x02`. As the original disassembled code shows, this is `0x4003fe`:
 
-```asm
-4003fa:  74 02  je      4003fe
-4003fc:  ff d0  callq   *%rax
-```
+  ```asm
+  4003fa:  74 02  je      4003fe
+  4003fc:  ff d0  callq   *%rax
+  ```
 
-B. The `je` instruction has as its target `0x400431 - 12` (since `0xf4` is the 1-byte two's-complement representation of `-12`). As the original disassembled code shows, this is `0x400425`:
+- B. The `je` instruction has as its target `0x400431 - 12` (since `0xf4` is the 1-byte two's-complement representation of `-12`). As the original disassembled code shows, this is `0x400425`:
 
-```asm
-40042f:  74 f4  je      400425
-400431:  5d     pop     %rbp
-```
+  ```asm
+  40042f:  74 f4  je      400425
+  400431:  5d     pop     %rbp
+  ```
 
-C. According to the annotation produced by the disassembler, the jump target is at absolute address `0x400547`. According to the byte encoding, this must be at an address `0x2` bytes beyond that of the `pop` instruction. Subtracting these gives address `0x400545`. Noting that the encoding of the `ja` instruction requires 2 bytes, it must be located at address `0x400543`. These are confirmed by examining the original disassembly:
+- C. According to the annotation produced by the disassembler, the jump target is at absolute address `0x400547`. According to the byte encoding, this must be at an address `0x2` bytes beyond that of the `pop` instruction. Subtracting these gives address `0x400545`. Noting that the encoding of the `ja` instruction requires 2 bytes, it must be located at address `0x400543`. These are confirmed by examining the original disassembly:
 
-```asm
-400543:  77 02  ja      400547
-400545:  5d     pop     %rbp
-```
+  ```asm
+  400543:  77 02  ja      400547
+  400545:  5d     pop     %rbp
+  ```
 
-D. Reading the bytes in reverse order, we can see that the target offset is `0xffffff73`, or decimal `-141`. Adding this to `0x4005ed` (the address of the `nop` instruction) gives address `0x400560`:
+- D. Reading the bytes in reverse order, we can see that the target offset is `0xffffff73`, or decimal `-141`. Adding this to `0x4005ed` (the address of the `nop` instruction) gives address `0x400560`:
 
-```asm
-4005e8:  e9 73 ff ff ff  jmpq    400560
-4005ed:  90              nop
-```
+  ```asm
+  4005e8:  e9 73 ff ff ff  jmpq    400560
+  4005ed:  90              nop
+  ```
 
 ## Solution 3.16
 
@@ -256,7 +256,7 @@ Annotating assembly code and writing C code that mimics its control flow are goo
 A. Here is the C code:
 
 ```c
-void goto_cond(long a, long *p) {
+void goto_cond(long a, long* p) {
   if (p == 0) { goto done; }
   if (*p >= a) { goto done; }
   *p = a;
@@ -318,9 +318,9 @@ long test(long x, long y, long z) {
 
 This problem reinforces our method of computing the misprediction penalty.
 
-A. We can apply our formula directly to get $T_{\mathrm{MP}} = 2(31 - 16) = 30$.
+- A. We can apply our formula directly to get $T_{\mathrm{MP}} = 2(31 - 16) = 30$.
 
-B. When misprediction occurs, the function will require around $16 + 30 = 46$ cycles.
+- B. When misprediction occurs, the function will require around $16 + 30 = 46$ cycles.
 
 ## Solution 3.20
 
@@ -445,22 +445,22 @@ We will often see cases, especially when compiling with higher levels of optimiz
 
 Being able to work backward from assembly code to C code is a prime example of reverse engineering.
 
-A. We can see that the code uses the jump-to-middle translation, using the `jmp` instruction on line 3.
+- A. We can see that the code uses the jump-to-middle translation, using the `jmp` instruction on line 3.
 
-B. Here is the original C code:
+- B. Here is the original C code:
 
-```c
-long fun_a(unsigned long x) {
-  long val = 0;
-  while (x) {
-    val ^= x;
-    x >>= 1;
+  ```c
+  long fun_a(unsigned long x) {
+    long val = 0;
+    while (x) {
+      val ^= x;
+      x >>= 1;
+    }
+    return val & 0x1;
   }
-  return val & 0x1;
-}
-```
+  ```
 
-C. This code computes the parity of argument `x`. That is, it returns 1 if there is an odd number of ones in `x` and 0 if there is an even number.
+- C. This code computes the parity of argument `x`. That is, it returns 1 if there is an odd number of ones in `x` and 0 if there is an even number.
 
 ## Solution 3.27
 
@@ -484,23 +484,23 @@ done:
 
 This problem is trickier than [Problem 3.26](./3.6%20Control.md#practice-problem-3-26), since the code within the loop is more complex and the overall operation is less familiar.
 
-A. Here is the original C code:
+- A. Here is the original C code:
 
-```c
-long fun_b(unsigned long x) {
-  long val = 0;
-  long i;
-  for (i = 64; i != 0; i--) {
-    val = (val << 1) | (x & 0x1);
-    x >>= 1;
+  ```c
+  long fun_b(unsigned long x) {
+    long val = 0;
+    long i;
+    for (i = 64; i != 0; i--) {
+      val = (val << 1) | (x & 0x1);
+      x >>= 1;
+    }
+    return val;
   }
-  return val;
-}
-```
+  ```
 
-B. The code was generated using the guarded-do transformation, but the compiler detected that, since `i` is initialized to 64, it will satisfy the test $i \ne 0$, and therefore the initial test is not required.
+- B. The code was generated using the guarded-do transformation, but the compiler detected that, since `i` is initialized to 64, it will satisfy the test $i \ne 0$, and therefore the initial test is not required.
 
-C. This code reverses the bits in `x`, creating a mirror image. It does this by shifting the bits of `x` from left to right, and then filling these bits in as it shifts `val` from right to left.
+- C. This code reverses the bits in `x`, creating a mirror image. It does this by shifting the bits of `x` from left to right, and then filling these bits in as it shifts `val` from right to left.
 
 ## Solution 3.29
 
@@ -512,7 +512,7 @@ A. Applying our translation rule would yield the following code:
 /* Naive translation of for loop into while loop */
 /* WARNING: This is buggy code */
 long sum = 0;
-long i   = 0;
+long i = 0;
 while (i < 10) {
   if (i & 1) {
     /* This will cause an infinite loop */
@@ -543,15 +543,15 @@ update:
 
 This problem gives you a chance to reason about the control flow of a `switch` statement. Answering the questions requires you to combine information from several places in the assembly code.
 
-Line 2 of the assembly code adds 1 to `x` to set the lower range of the cases to zero. That means that the minimum case label is `-1`.
+- Line 2 of the assembly code adds 1 to `x` to set the lower range of the cases to zero. That means that the minimum case label is `-1`.
 
-Lines 3 and 4 cause the program to jump to the default case when the adjusted case value is greater than 8. This implies that the maximum case label is `-1 + 8 = 7`.
+- Lines 3 and 4 cause the program to jump to the default case when the adjusted case value is greater than 8. This implies that the maximum case label is `-1 + 8 = 7`.
 
-In the jump table, we see that the entry on lines 6 (case value 3) and 9 (case value 6) have the same destination (`.L2`) as the jump instruction on line 4, indicating the default case behavior. Thus, case labels 3 and 6 are missing in the `switch` statement body.
+- In the jump table, we see that the entry on lines 6 (case value 3) and 9 (case value 6) have the same destination (`.L2`) as the jump instruction on line 4, indicating the default case behavior. Thus, case labels 3 and 6 are missing in the `switch` statement body.
 
-In the jump table, we see that the entries on lines 3 and 10 have the same destination. These correspond to cases 0 and 7.
+- In the jump table, we see that the entries on lines 3 and 10 have the same destination. These correspond to cases 0 and 7.
 
-In the jump table, we see that the entries on lines 5 and 7 have the same destination. These correspond to cases 2 and 4.
+- In the jump table, we see that the entries on lines 5 and 7 have the same destination. These correspond to cases 2 and 4.
 
 From this reasoning, we draw the following conclusions:
 
@@ -568,7 +568,7 @@ The key to reverse engineering compiled `switch` statements is to combine the in
 The original C code is as follows:
 
 ```c
-void switcher(long a, long b, long c, long *dest) {
+void switcher(long a, long b, long c, long* dest) {
   long val;
   switch (a) {
     case 5:
@@ -734,35 +734,35 @@ procprob:
 Alternatively, we can see that the same assembly code would be valid if the two sums were computed in the assembly code in the opposite ordering as they are in the C code. This would result in interchanging arguments `a` and `b` and arguments `u` and `v`, yielding the following prototype:
 
 ```c
-int procprob(int b, short a, long *v, char *u);
+int procprob(int b, short a, long* v, char* u);
 ```
 
 ## Solution 3.34
 
 This example demonstrates the use of callee-saved registers as well as the stack for holding local data.
 
-A. We can see that lines 9–14 save local values `a0`–`a5` into callee-saved registers `%rbx`, `%r15`, `%r14`, `%r13`, `%r12`, and `%rbp`, respectively.
+- A. We can see that lines 9–14 save local values `a0`–`a5` into callee-saved registers `%rbx`, `%r15`, `%r14`, `%r13`, `%r12`, and `%rbp`, respectively.
 
-B. Local values `a6` and `a7` are stored on the stack at offsets 0 and 8 relative to the stack pointer (lines 16 and 18).
+- B. Local values `a6` and `a7` are stored on the stack at offsets 0 and 8 relative to the stack pointer (lines 16 and 18).
 
-C. After storing six local variables, the program has used up the supply of callee-saved registers. It stores the remaining two local values on the stack.
+- C. After storing six local variables, the program has used up the supply of callee-saved registers. It stores the remaining two local values on the stack.
 
 ## Solution 3.35
 
 This problem provides a chance to examine the code for a recursive function. An important lesson to learn is that recursive code has the exact same structure as the other functions we have seen. The stack and register-saving disciplines suffice to make recursive functions operate correctly.
 
-A. Register `%rbx` holds the value of parameter `x`, so that it can be used to compute the result expression.
+- A. Register `%rbx` holds the value of parameter `x`, so that it can be used to compute the result expression.
 
-B. The assembly code was generated from the following C code:
+- B. The assembly code was generated from the following C code:
 
-```c
-long rfun(unsigned long x) {
-  if (x == 0) { return 0; }
-  unsigned long nx = x >> 2;
-  long          rv = rfun(nx);
-  return x + rv;
-}
-```
+  ```c
+  long rfun(unsigned long x) {
+    if (x == 0) { return 0; }
+    unsigned long nx = x >> 2;
+    long          rv = rfun(nx);
+    return x + rv;
+  }
+  ```
 
 ## Solution 3.36
 
@@ -825,9 +825,9 @@ Let us first study the following C code, and then see how it is derived from the
 ```c
 /* Set all diagonal elements to val */
 void fix_set_diag_opt(fix_matrix A, int val) {
-  int *Abase = &A[0][0];
-  long i     = 0;
-  long iend  = N * (N + 1);
+  int* Abase = &A[0][0];
+  long i = 0;
+  long iend = N * (N + 1);
   do {
     Abase[i] = val;
     i += (N + 1);
@@ -894,9 +894,9 @@ sp_init:
 From this, we can generate C code as follows:
 
 ```c
-void sp_init(struct prob *sp) {
-  sp->s.x  = sp->s.y;
-  sp->p    = &(sp->s.x);
+void sp_init(struct prob* sp) {
+  sp->s.x = sp->s.y;
+  sp->p = &(sp->s.x);
   sp->next = sp;
 }
 ```
@@ -923,7 +923,7 @@ fun:
 A. Based on the annotated code, we can generate a C version:
 
 ```c
-long fun(struct ELE *ptr) {
+long fun(struct ELE* ptr) {
   long val = 0;
   while (ptr) {
     val += ptr->v;
@@ -995,7 +995,22 @@ A. Here are the object sizes and byte offsets:
 
 B. The structure is a total of 56 bytes long. The end of the structure must be padded by 4 bytes to satisfy the 8-byte alignment requirement.
 
-C. One strategy that works, when all data elements have a length equal to a power of 2, is to order the structure elements in descending order of size. This leads to a declaration with the following offsets:
+C. One strategy that works, when all data elements have a length equal to a power of 2, is to order the structure elements in descending order of size. This leads to the following declaration:
+
+```c
+struct {
+  char* a;
+  double c;
+  long g;
+  float e;
+  int h;
+  short b;
+  char d;
+  char f;
+} rec;
+```
+
+The resulting offsets are as follows:
 
 | Field | `a` | `c` | `g` | `e` | `h` | `b` | `d` | `f` |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -1090,24 +1105,19 @@ These cases can be handled by selecting the appropriate entries from the tables 
 
 The basic rules for mapping arguments to registers are fairly simple (although they become much more complex with more and other types of arguments [\[77\]](./../../05-appendix-and-references/References.md#ref-77)).
 
-A. `double g1(double a, long b, float c, int d);`  
-Registers: `a` in `%xmm0`, `b` in `%rdi`, `c` in `%xmm1`, `d` in `%esi`.
-
-B. `double g2(int a, double *b, float *c, long d);`  
-Registers: `a` in `%edi`, `b` in `%rsi`, `c` in `%rdx`, `d` in `%rcx`.
-
-C. `double g3(double *a, double b, int c, float d);`  
-Registers: `a` in `%rdi`, `b` in `%xmm0`, `c` in `%esi`, `d` in `%xmm1`.
-
-D. `double g4(float a, int *b, float c, double d);`  
-Registers: `a` in `%xmm0`, `b` in `%rdi`, `c` in `%xmm1`, `d` in `%xmm2`.
+| Item | Function declaration | Register assignment |
+| --- | --- | --- |
+| A | `double g1(double a, long b, float c, int d);` | `a` in `%xmm0`, `b` in `%rdi`, `c` in `%xmm1`, `d` in `%esi` |
+| B | `double g2(int a, double *b, float *c, long d);` | `a` in `%edi`, `b` in `%rsi`, `c` in `%rdx`, `d` in `%rcx` |
+| C | `double g3(double *a, double b, int c, float d);` | `a` in `%rdi`, `b` in `%xmm0`, `c` in `%esi`, `d` in `%xmm1` |
+| D | `double g4(float a, int *b, float c, double d);` | `a` in `%xmm0`, `b` in `%rdi`, `c` in `%xmm1`, `d` in `%xmm2` |
 
 ## Solution 3.53
 
 We can see from the assembly code that there are two integer arguments, passed in registers `%rdi` and `%rsi`. Let us name these `i1` and `i2`. Similarly, there are two floating-point arguments, passed in registers `%xmm0` and `%xmm1`, which we name `f1` and `f2`. We can then annotate the assembly code:
 
 ```asm
-# Refer to arguments as i1 (%rdi), i2 (%rsi), f1 (%xmm0), and f2 (%xmm1)
+# Refer to arguments as i1 (%edi), i2 (%rsi), f1 (%xmm0), and f2 (%xmm1)
 # double funct1(arg1_t p, arg2_t q, arg3_t r, arg4_t s)
 funct1:
     vcvtsi2ssq  %rsi,   %xmm2,  %xmm2  # Get i2 and convert from long to float
@@ -1155,11 +1165,11 @@ We see that the two values are `0` and `1077936128` (`0x40400000`). From the hig
 
 ## Solution 3.56
 
-A. We see here that the 16 bytes starting at address `.LC1` form a mask, where the low-order 8 bytes contain all ones, except for the most significant bit, which is the sign bit of a double-precision value. When we compute the AND of this mask with `%xmm0`, it will clear the sign bit of `x`, yielding the absolute value. In fact, we generated this code by defining `EXPR(x)` to be `fabs(x)`, where `fabs` is defined in `<math.h>`.
+- A. We see here that the 16 bytes starting at address `.LC1` form a mask, where the low-order 8 bytes contain all ones, except for the most significant bit, which is the sign bit of a double-precision value. When we compute the AND of this mask with `%xmm0`, it will clear the sign bit of `x`, yielding the absolute value. In fact, we generated this code by defining `EXPR(x)` to be `fabs(x)`, where `fabs` is defined in `<math.h>`.
 
-B. We see that the `vxorpd` instruction sets the entire register to zero, and so this is a way to generate floating-point constant `0.0`.
+- B. We see that the `vxorpd` instruction sets the entire register to zero, and so this is a way to generate floating-point constant `0.0`.
 
-C. We see that the 16 bytes starting at address `.LC2` form a mask with a single 1 bit, at the position of the sign bit for the low-order value in the XMM register. When we compute the EXCLUSIVE-OR of this mask with `%xmm0`, we change the sign of `x`, computing the expression `-x`.
+- C. We see that the 16 bytes starting at address `.LC2` form a mask with a single 1 bit, at the position of the sign bit for the low-order value in the XMM register. When we compute the EXCLUSIVE-OR of this mask with `%xmm0`, we change the sign of `x`, computing the expression `-x`.
 
 ## Solution 3.57
 
@@ -1190,8 +1200,8 @@ funct3:
 From this, we can write the following code for `funct3`:
 
 ```c
-double funct3(int *ap, double b, long c, float *dp) {
-  int   a = *ap;
+double funct3(int* ap, double b, long c, float* dp) {
+  int a = *ap;
   float d = *dp;
   if (a < b) { return c * d; } else { return c + 2 * d; }
 }

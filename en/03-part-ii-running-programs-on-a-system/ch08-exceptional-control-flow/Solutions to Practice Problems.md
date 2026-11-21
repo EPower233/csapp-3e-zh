@@ -92,10 +92,10 @@ Figure 8.49 Process graph for [Practice Problem 8.4](./8.4%20Process%20Control.m
 ```c
 unsigned int snooze(unsigned int secs)
 {
-    unsigned int rc = sleep(secs);
+  unsigned int rc = sleep(secs);
 
-    printf("Slept for %d of %d secs.\n", secs - rc, secs);
-    return rc;
+  printf("Slept for %d of %d secs.\n", secs - rc, secs);
+  return rc;
 }
 ```
 
@@ -104,18 +104,18 @@ unsigned int snooze(unsigned int secs)
 ```c
 #include "csapp.h"
 
-int main(int argc, char *argv[], char *envp[])
+int main(int argc, char* argv[], char* envp[])
 {
-    int i;
+  int i;
 
-    printf("Command-line arguments:\n");
-    for (i = 0; argv[i] != NULL; i++)
-        printf("    argv[%2d]: %s\n", i, argv[i]);
-    printf("\n");
-    printf("Environment variables:\n");
-    for (i = 0; envp[i] != NULL; i++)
-        printf("    envp[%2d]: %s\n", i, envp[i]);
-    exit(0);
+  printf("Command-line arguments:\n");
+  for (i = 0; argv[i] != NULL; i++)
+    printf("    argv[%2d]: %s\n", i, argv[i]);
+  printf("\n");
+  printf("Environment variables:\n");
+  for (i = 0; envp[i] != NULL; i++)
+    printf("    envp[%2d]: %s\n", i, envp[i]);
+  exit(0);
 }
 ```
 
@@ -129,28 +129,28 @@ The `sleep` function returns prematurely whenever the sleeping process receives 
 /* SIGINT handler */
 void handler(int sig)
 {
-    return; /* Catch the signal and return */
+  return; /* Catch the signal and return */
 }
 
 unsigned int snooze(unsigned int secs)
 {
-    unsigned int rc = sleep(secs);
+  unsigned int rc = sleep(secs);
 
-    printf("Slept for %d of %d secs.\n", secs - rc, secs);
-    return rc;
+  printf("Slept for %d of %d secs.\n", secs - rc, secs);
+  return rc;
 }
 
-int main(int argc, char **argv)
+int main(int argc, char** argv)
 {
-    if (argc != 2) {
-        fprintf(stderr, "usage: %s <secs>\n", argv[0]);
-        exit(0);
-    }
-
-    if (signal(SIGINT, handler) == SIG_ERR) /* Install SIGINT */
-        unix_error("signal error\n");       /* handler        */
-    (void)snooze(atoi(argv[1]));
+  if (argc != 2) {
+    fprintf(stderr, "usage: %s <secs>\n", argv[0]);
     exit(0);
+  }
+
+  if (signal(SIGINT, handler) == SIG_ERR) /* Install SIGINT */
+    unix_error("signal error\n");         /* handler        */
+  (void)snooze(atoi(argv[1]));
+  exit(0);
 }
 ```
 

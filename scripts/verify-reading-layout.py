@@ -14,6 +14,8 @@ BLOCK = re.compile(r'<(p|li|th|td)\b[^>]*>(.*?)</\1>', re.S | re.I)
 TAG = re.compile(r'<[^>]*>')
 BROKEN_BOLD = re.compile(r'(?<!\*)\*\*(?=[^\s*])[^*]+[。？！；：）】]\*\*(?=\w|[（(])')
 EQUALITY = 'bool eq = (a && b) || (!a && !b);'
+ALERT_TITLE = re.compile(r'<p class="custom-block-title">(.*?)</p>', re.S)
+TYPEDEF_EXAMPLE = 'typedef int* int_pointer;\nint_pointer ip;'
 
 
 def article_text(markup):
@@ -34,6 +36,19 @@ def check_hcl(page):
     return bool(options and len(re.findall(r'<li(?=[\s>])', options[1])) == 3)
 
 
+def check_information_storage(page):
+    listings = [article_text(match).strip() for match in re.findall(r'<pre\b[^>]*>(.*?)</pre>', page, re.S)]
+    diagrams = [listing.splitlines() for listing in listings]
+    return (
+        TYPEDEF_EXAMPLE in listings
+        and any(len(lines) == 5
+                and lines[0].split() == '0 0 0 0 3 0 3 9'.split()
+                and lines[2] == ' ' * 19 + '*' * 13
+                and lines[3].split() == '4 6 4 0 E 4 0 0'.split() for lines in diagrams)
+        and bool(re.search(r'<p class="custom-block-title">[^<]*<code>printf</code>', page))
+    )
+
+
 def main(dist):
     problems = []
     counts = Counter()
@@ -49,6 +64,13 @@ def main(dist):
             problems.append((rel, 'Every table needs its own scroll region.'))
         if re.search(r'<link\b[^>]*href="[^"]*jetbrains-maple-mono', page):
             problems.append((rel, 'Use the default reader code font.'))
+        if any('`' in article_text(re.sub(r'<code\b[^>]*>.*?</code>', '', title, flags=re.S))
+               for title in ALERT_TITLE.findall(page)):
+            problems.append((rel, 'The page displays raw inline code delimiters in a callout title.'))
+        if path.name.startswith('2.1 '):
+            counts['information-storage'] += 1
+            if not check_information_storage(page):
+                problems.append((rel, 'Section 2.1 must preserve the pointer, binary diagram and formatted note title.'))
         if '**' in page:
             without_code = CODE.sub('', page)
             if any(BROKEN_BOLD.search(article_text(match[2])) for match in BLOCK.finditer(without_code)):
@@ -58,8 +80,8 @@ def main(dist):
             if not check_hcl(page):
                 problems.append((rel, 'Section 4.2.2 must show the logic-gate list, figure, and HCL in that order.'))
 
-    if not counts['pages'] or not counts['tables'] or counts['hcl'] != 2:
-        problems.append((str(dist), 'The built book, tables, or HCL page pair is incomplete.'))
+    if not counts['pages'] or not counts['tables'] or counts['hcl'] != 2 or counts['information-storage'] != 2:
+        problems.append((str(dist), 'The built book, tables, or regression page pairs are incomplete.'))
     for path, description in problems:
         print(f'{path}: {description}')
     print(f'Reading layout checked on {counts["pages"]} pages with {counts["tables"]} tables.')

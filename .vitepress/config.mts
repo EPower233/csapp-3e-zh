@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url'
 import headingLinks from './heading-links.mts'
 import htmlTableInline from './html-table-inline.mts'
 import readableTables from './readable-tables.mts'
+import alertTitleInline from './alert-title-inline.mts'
 import footnote from 'markdown-it-footnote'
 import sidebarZh from './book-sidebar.json'
 import sidebarEn from './book-sidebar.en.json'
@@ -43,6 +44,7 @@ export default defineConfig({
       md.use(footnote)
       md.use(htmlTableInline)
       md.use(readableTables)
+      md.use(alertTitleInline)
       md.use(headingLinks, fileURLToPath(new URL('..', import.meta.url)))
     },
   },
@@ -57,6 +59,7 @@ export default defineConfig({
     },
   },
   themeConfig: {
+    codeBlock: { enabled: true, collapseHeight: 700 },
     // Fragment URLs are explicit navigation targets in the split reader.
     anchorScroll: false,
     // The built-in translations menu is hidden (BilingualLayout's switcher uses

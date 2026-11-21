@@ -62,21 +62,21 @@ The following table gives the parameters for a number of different caches. Your 
 
 This problem concerns the cache in [Practice Problem 6.12](./6.4%20Cache%20Memories.md#practice-problem-6-12).
 
-A. List all of the hex memory addresses that will hit in set 1.
+- A. List all of the hex memory addresses that will hit in set 1.
 
-B. List all of the hex memory addresses that will hit in set 6.
+- B. List all of the hex memory addresses that will hit in set 6.
 
 ## Homework 6.28 (**)
 
 This problem concerns the cache in [Practice Problem 6.12](./6.4%20Cache%20Memories.md#practice-problem-6-12).
 
-A. List all of the hex memory addresses that will hit in set 2.
+- A. List all of the hex memory addresses that will hit in set 2.
 
-B. List all of the hex memory addresses that will hit in set 4.
+- B. List all of the hex memory addresses that will hit in set 4.
 
-C. List all of the hex memory addresses that will hit in set 5.
+- C. List all of the hex memory addresses that will hit in set 5.
 
-D. List all of the hex memory addresses that will hit in set 7.
+- D. List all of the hex memory addresses that will hit in set 7.
 
 ## Homework 6.29 (**)
 
@@ -133,11 +133,11 @@ Consider the following cache state. All addresses, tags, and values are given in
 
 <table>
   <tr>
-    <td>Index</td>
-    <td>Tag</td><td>V</td><td colspan="4">Bytes 0–3</td>
-    <td>Tag</td><td>V</td><td colspan="4">Bytes 0–3</td>
-    <td>Tag</td><td>V</td><td colspan="4">Bytes 0–3</td>
-    <td>Tag</td><td>V</td><td colspan="4">Bytes 0–3</td>
+    <th scope="col">Index</th>
+    <th scope="col">Tag</th><th scope="col">V</th><th colspan="4" scope="colgroup">Bytes 0–3</th>
+    <th scope="col">Tag</th><th scope="col">V</th><th colspan="4" scope="colgroup">Bytes 0–3</th>
+    <th scope="col">Tag</th><th scope="col">V</th><th colspan="4" scope="colgroup">Bytes 0–3</th>
+    <th scope="col">Tag</th><th scope="col">V</th><th colspan="4" scope="colgroup">Bytes 0–3</th>
   </tr>
   <tr><td>0</td><td>F0</td><td>1</td><td>ED</td><td>32</td><td>0A</td><td>A2</td><td>8A</td><td>1</td><td>BF</td><td>80</td><td>1D</td><td>FC</td><td>14</td><td>1</td><td>EF</td><td>09</td><td>86</td><td>2A</td><td>BC</td><td>0</td><td>25</td><td>44</td><td>6F</td><td>1A</td></tr>
   <tr><td>1</td><td>BC</td><td>0</td><td>03</td><td>3E</td><td>CD</td><td>38</td><td>A0</td><td>0</td><td>16</td><td>7B</td><td>ED</td><td>5A</td><td>BC</td><td>1</td><td>8E</td><td>4C</td><td>DF</td><td>18</td><td>E4</td><td>1</td><td>FB</td><td>B7</td><td>12</td><td>02</td></tr>
@@ -167,21 +167,21 @@ CT: The cache tag
 
 Suppose that a program using the cache in [Homework 6.30](#Homework%206.30%20%28%2A%29) references the 1-byte word at address `0x071A`. Indicate the cache entry accessed and the cache byte value returned in hex. Indicate whether a cache miss occurs. If there is a cache miss, enter "—" for "Cache byte returned." Hint: Pay attention to those valid bits!
 
-A. Address format (1 bit per box):
+- A. Address format (1 bit per box):
 
-| 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| | | | | | | | | | | | | |
+  | 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+  | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+  | | | | | | | | | | | | | |
 
-B. Memory reference:
+- B. Memory reference:
 
-| Parameter | Value |
-| --- | --- |
-| Block offset (CO) | `0x_` |
-| Index (CI) | `0x_` |
-| Cache tag (CT) | `0x_` |
-| Cache hit? (Y/N) | |
-| Cache byte returned | `0x_` |
+  | Parameter | Value |
+  | --- | --- |
+  | Block offset (CO) | `0x_` |
+  | Index (CI) | `0x_` |
+  | Cache tag (CT) | `0x_` |
+  | Cache hit? (Y/N) | |
+  | Cache byte returned | `0x_` |
 
 ## Homework 6.32 (**)
 
@@ -298,15 +298,15 @@ Assume we execute this under the following conditions:
 
 Given these assumptions, estimate the miss rates for the following cases:
 
-A. Case 1: Assume the cache is 512 bytes, direct-mapped, with 16-byte cache blocks. What is the miss rate?
+- A. Case 1: Assume the cache is 512 bytes, direct-mapped, with 16-byte cache blocks. What is the miss rate?
 
-B. Case 2: What is the miss rate if we double the cache size to 1,024 bytes?
+- B. Case 2: What is the miss rate if we double the cache size to 1,024 bytes?
 
-C. Case 3: Now assume the cache is 512 bytes, two-way set associative using an LRU replacement policy, with 16-byte cache blocks. What is the cache miss rate?
+- C. Case 3: Now assume the cache is 512 bytes, two-way set associative using an LRU replacement policy, with 16-byte cache blocks. What is the cache miss rate?
 
-D. For case 3, will a larger cache size help to reduce the miss rate? Why or why not?
+- D. For case 3, will a larger cache size help to reduce the miss rate? Why or why not?
 
-E. For case 3, will a larger block size help to reduce the miss rate? Why or why not?
+- E. For case 3, will a larger block size help to reduce the miss rate? Why or why not?
 
 ## Homework 6.37 (**)
 
@@ -467,9 +467,9 @@ struct pixel {
 };
 
 struct pixel buffer[480][640];
-int          i, j;
-char        *cptr;
-int         *iptr;
+int i, j;
+char* cptr;
+int* iptr;
 ```
 
 Assume the following:
@@ -495,8 +495,8 @@ for (j = 0; j < 640; j++) {
 Given the assumptions in [Homework 6.41](#Homework%206.41%20%28%2A%2A%29), what percentage of writes in the following code will miss in the cache?
 
 ```c
-char *cptr = (char *)buffer;
-for (; cptr < (((char *)buffer) + 640 * 480 * 4); cptr++) {
+char* cptr = (char*)buffer;
+for (; cptr < (((char*)buffer) + 640 * 480 * 4); cptr++) {
   *cptr = 0;
 }
 ```
@@ -506,8 +506,8 @@ for (; cptr < (((char *)buffer) + 640 * 480 * 4); cptr++) {
 Given the assumptions in [Homework 6.41](#Homework%206.41%20%28%2A%2A%29), what percentage of writes in the following code will miss in the cache?
 
 ```c
-int *iptr = (int *)buffer;
-for (; iptr < ((int *)buffer + 640 * 480); iptr++) {
+int* iptr = (int*)buffer;
+for (; iptr < ((int*)buffer + 640 * 480); iptr++) {
   *iptr = 0;
 }
 ```
@@ -521,7 +521,7 @@ Download the `mountain` program from the CS:APP Web site and run it on your favo
 In this assignment, you will apply the concepts you learned in [Chapters 5](../ch05-optimizing-program-performance/Chapter%205%20Optimizing%20Program%20Performance.md) and [6](Chapter%206%20The%20Memory%20Hierarchy.md) to the problem of optimizing code for a memory-intensive application. Consider a procedure to copy and transpose the elements of an $N \times N$ matrix of type `int`. That is, for source matrix $S$ and destination matrix $D$, we want to copy each element $s_{i,j}$ to $d_{j,i}$. This code can be written with a simple loop,
 
 ```c
-void transpose(int *dst, int *src, int dim) {
+void transpose(int* dst, int* src, int dim) {
   int i, j;
 
   for (i = 0; i < dim; i++) {
@@ -539,7 +539,7 @@ where the arguments to the procedure are pointers to the destination (`dst`) and
 This assignment is an intriguing variation of [Homework 6.45](#Homework%206.45%20%28%2A%2A%29). Consider the problem of converting a directed graph $g$ into its undirected counterpart $g'$. The graph $g'$ has an edge from vertex $u$ to vertex $v$ if and only if there is an edge from $u$ to $v$ or from $v$ to $u$ in the original graph $g$. The graph $g$ is represented by its adjacency matrix $G$ as follows. If $N$ is the number of vertices in $g$, then $G$ is an $N \times N$ matrix and its entries are all either 0 or 1. Suppose the vertices of $g$ are named $v_0, v_1, v_2, \dots, v_{N-1}$. Then `G[i][j]` is 1 if there is an edge from $v_i$ to $v_j$ and is 0 otherwise. Observe that the elements on the diagonal of an adjacency matrix are always 1 and that the adjacency matrix of an undirected graph is symmetric. This code can be written with a simple loop:
 
 ```c
-void col_convert(int *G, int dim) {
+void col_convert(int* G, int dim) {
   int i, j;
 
   for (i = 0; i < dim; i++) {

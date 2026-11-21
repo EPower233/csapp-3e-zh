@@ -8,12 +8,12 @@ Suppose we wish to write a procedure that computes the inner product of two vect
 
 ```c
 /* Inner product. Accumulate in temporary */
-void inner4(vec_ptr u, vec_ptr v, data_t *dest) {
-  long    i;
-  long    length = vec_length(u);
-  data_t *udata  = get_vec_start(u);
-  data_t *vdata  = get_vec_start(v);
-  data_t  sum    = (data_t)0;
+void inner4(vec_ptr u, vec_ptr v, data_t* dest) {
+  long i;
+  long length = vec_length(u);
+  data_t* udata = get_vec_start(u);
+  data_t* vdata = get_vec_start(v);
+  data_t sum = (data_t)0;
 
   for (i = 0; i < length; i++) {
     sum = sum + udata[i] * vdata[i];
@@ -70,7 +70,7 @@ Write a version of the inner product procedure described in [Problem 5.13](#Home
 The library function memset has the following prototype:
 
 ```c
-void *memset(void *s, int c, size_t n);
+void* memset(void* s, int c, size_t n);
 ```
 
 This function fills n bytes of the memory area starting at s with copies of the low-order byte of c. For example, it can be used to zero out a region of memory by giving argument 0 for c, but other values are possible.
@@ -79,15 +79,15 @@ The following is a straightforward implementation of `memset`:
 
 ```c
 /* Basic implementation of memset */
-void *basic_memset(void *s, int c, size_t n)
+void* basic_memset(void* s, int c, size_t n)
 {
-    size_t cnt = 0;
-    unsigned char *schar = s;
-    while (cnt < n) {
-        *schar++ = (unsigned char) c;
-        cnt++;
-    }
-    return s;
+  size_t cnt = 0;
+  unsigned char* schar = s;
+  while (cnt < n) {
+    *schar++ = (unsigned char)c;
+    cnt++;
+  }
+  return s;
 }
 ```
 
@@ -101,13 +101,13 @@ Here are some additional guidelines. To ensure portability, let $K$ denote the v
 - On some machines, unaligned writes can be much slower than aligned ones. (On some non-x86 machines, they can even cause segmentation faults.) Write your code so that it starts with byte-level writes until the destination address is a multiple of $K$, then do word-level writes, and then (if necessary) finish with byte-level writes.
 - Beware of the case where `cnt` is small enough that the upper bounds on some of the loops become negative. With expressions involving the `sizeof` operator, the testing may be performed with unsigned arithmetic. (See [Section 2.2.8](./../ch02-representing-and-manipulating-information/2.2%20Integer%20Representations.md#_2-2-8-advice-on-signed-versus-unsigned) and [Problem 2.72](../ch02-representing-and-manipulating-information/Homework%20Problems.md#Homework%202.72%20%28%2A%2A%29).)
 
-## Homework 5.18 (**)
+## Homework 5.18 (\*\*\*)
 
 We considered the task of polynomial evaluation in [Practice Problems 5.5](./5.7%20Understanding%20Modern%20Processors.md#practice-problem-5-5) and [5.6](./5.7%20Understanding%20Modern%20Processors.md#practice-problem-5-6), with both a direct evaluation and an evaluation by Horner's method. Try to write faster versions of the function using the optimization techniques we have explored, including loop unrolling, parallel accumulation, and reassociation. You will find many different ways of mixing together Horner's scheme and direct evaluation with these optimization techniques.
 
 Ideally, you should be able to reach a CPE close to the throughput limit of your machine. Our best version achieves a CPE of 1.07 on our reference machine.
 
-## Homework 5.19 (***)
+## Homework 5.19 (\*\*\*)
 
 In [Practice Problem 5.12](./5.12%20Understanding%20Memory%20Performance.md#practice-problem-5-12), we were able to reduce the CPE for the prefix-sum computation to 3.00, limited by the latency of floating-point addition on this machine. Simple loop unrolling does not improve things.
 

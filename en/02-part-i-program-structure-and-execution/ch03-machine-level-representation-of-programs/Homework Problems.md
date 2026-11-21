@@ -28,7 +28,7 @@ The following code computes the 128-bit product of two 64-bit signed values `x` 
 ```c
 typedef __int128 int128_t;
 
-void store_prod(int128_t *dest, int64_t x, int64_t y) {
+void store_prod(int128_t* dest, int64_t x, int64_t y) {
   *dest = x * (int128_t)y;
 }
 ```
@@ -91,24 +91,24 @@ long loop(long x, int n) {
 
 Your task is to fill in the missing parts of the C code to get a program equivalent to the generated assembly code. Recall that the result of the function is returned in register `%rax`. You will find it helpful to examine the assembly code before, during, and after the loop to form a consistent mapping between the registers and the program variables.
 
-A. Which registers hold program values `x`, `n`, `result`, and `mask`?
+- A. Which registers hold program values `x`, `n`, `result`, and `mask`?
 
-B. What are the initial values of `result` and `mask`?
+- B. What are the initial values of `result` and `mask`?
 
-C. What is the test condition for `mask`?
+- C. What is the test condition for `mask`?
 
-D. How does `mask` get updated?
+- D. How does `mask` get updated?
 
-E. How does `result` get updated?
+- E. How does `result` get updated?
 
-F. Fill in all the missing parts of the C code.
+- F. Fill in all the missing parts of the C code.
 
 ## Homework 3.61 (**)
 
 In [Section 3.6.6](./3.6%20Control.md#3.6.6%20Implementing%20Conditional%20Branches%20with%20Conditional%20Moves), we examined the following code as a candidate for the use of conditional data transfer:
 
 ```c
-long cread(long *xp) {
+long cread(long* xp) {
   return (xp ? *xp : 0);
 }
 ```
@@ -125,7 +125,7 @@ The code that follows shows an example of branching on an enumerated type value 
 /* Enumerated type creates set of constants numbered 0 and upward */
 typedef enum { MODE_A, MODE_B, MODE_C, MODE_D, MODE_E } mode_t;
 
-long switch3(long *p1, long *p2, mode_t action) {
+long switch3(long* p1, long* p2, mode_t action) {
   long result = 0;
   switch (action) {
     case MODE_A:
@@ -237,7 +237,7 @@ Consider the following source code, where $R$, $S$, and $T$ are constants declar
 ```c
 long A[R][S][T];
 
-long store_ele(long i, long j, long k, long *dest) {
+long store_ele(long i, long j, long k, long* dest) {
   *dest = A[i][j][k];
   return sizeof(A);
 }
@@ -262,9 +262,9 @@ store_ele:
     ret
 ```
 
-A. Extend [Equation 3.1](./3.8%20Array%20Allocation%20and%20Access.md#equation-3-1) from two dimensions to three to provide a formula for the location of array element `A[i][j][k]`.
+- A. Extend [Equation 3.1](./3.8%20Array%20Allocation%20and%20Access.md#equation-3-1) from two dimensions to three to provide a formula for the location of array element `A[i][j][k]`.
 
-B. Use your reverse engineering skills to determine the values of `R`, `S`, and `T` based on the assembly code.
+- B. Use your reverse engineering skills to determine the values of `R`, `S`, and `T` based on the assembly code.
 
 ## Homework 3.65 (*)
 
@@ -355,8 +355,8 @@ The following C code has a function `process` having structures as argument and 
 
 ```c
 typedef struct {
-  long  a[2];
-  long *p;
+  long a[2];
+  long* p;
 } strA;
 
 typedef struct {
@@ -368,7 +368,7 @@ strB process(strA s) {
   strB r;
   r.u[0] = s.a[1];
   r.u[1] = s.a[0];
-  r.q    = *s.p;
+  r.q = *s.p;
   return r;
 }
 
@@ -376,7 +376,7 @@ long eval(long x, long y, long z) {
   strA s;
   s.a[0] = x;
   s.a[1] = y;
-  s.p    = &z;
+  s.p = &z;
   strB r = process(s);
   return r.u[0] + r.u[1] + r.q;
 }
@@ -415,17 +415,17 @@ eval:
     ret
 ```
 
-A. We can see on line 2 of function `eval` that it allocates 104 bytes on the stack. Diagram the stack frame for `eval`, showing the values that it stores on the stack prior to calling `process`.
+- A. We can see on line 2 of function `eval` that it allocates 104 bytes on the stack. Diagram the stack frame for `eval`, showing the values that it stores on the stack prior to calling `process`.
 
-B. What value does `eval` pass in its call to `process`?
+- B. What value does `eval` pass in its call to `process`?
 
-C. How does the code for `process` access the elements of structure argument `s`?
+- C. How does the code for `process` access the elements of structure argument `s`?
 
-D. How does the code for `process` set the fields of result structure `r`?
+- D. How does the code for `process` set the fields of result structure `r`?
 
-E. Complete your diagram of the stack frame for `eval`, showing how `eval` accesses the elements of structure `r` following the return from `process`.
+- E. Complete your diagram of the stack frame for `eval`, showing how `eval` accesses the elements of structure `r` following the return from `process`.
 
-F. What general principles can you discern about how structure values are passed as function arguments and how they are returned as function results?
+- F. What general principles can you discern about how structure values are passed as function arguments and how they are returned as function results?
 
 ## Homework 3.68 (**)
 
@@ -433,21 +433,21 @@ In the following code, `A` and `B` are constants defined with `#define`:
 
 ```c
 typedef struct {
-  int  x[A][B]; /* Unknown constants A and B */
+  int x[A][B]; /* Unknown constants A and B */
   long y;
 } str1;
 
 typedef struct {
-  char  array[B];
-  int   t;
+  char array[B];
+  int t;
   short s[A];
-  long  u;
+  long u;
 } str2;
 
-void setVal(str1 *p, str2 *q) {
+void setVal(str1* p, str2* q) {
   long v1 = q->t;
   long v2 = q->u;
-  p->y    = v1 + v2;
+  p->y = v1 + v2;
 }
 ```
 
@@ -471,14 +471,14 @@ You are charged with maintaining a large C program, and you come across the foll
 
 ```c
 typedef struct {
-  int      first;
+  int first;
   a_struct a[CNT];
-  int      last;
+  int last;
 } b_struct;
 
-void test(long i, b_struct *bp) {
-  int       n    = bp->first + bp->last;
-  a_struct *ap   = &bp->a[i];
+void test(long i, b_struct* bp) {
+  int n = bp->first + bp->last;
+  a_struct* ap = &bp->a[i];
   ap->x[ap->idx] = n;
 }
 ```
@@ -512,12 +512,12 @@ Consider the following union declaration:
 ```c
 union ele {
   struct {
-    long *p;
-    long  y;
+    long* p;
+    long y;
   } e1;
   struct {
-    long       x;
-    union ele *next;
+    long x;
+    union ele* next;
   } e2;
 };
 ```
@@ -527,8 +527,8 @@ This declaration illustrates that structures can be embedded within unions.
 The following function (with some expressions omitted) operates on a linked list having these unions as list elements:
 
 ```c
-void proc(union ele *up) {
-  up->__________________ = *(__________) - ________;
+void proc(union ele* up) {
+  up->__________________ = *(__________)-________;
 }
 ```
 
@@ -584,10 +584,10 @@ D. What alignment properties does this code guarantee for the values of $s_2$ an
 ```c
 #include <alloca.h>
 
-long aframe(long n, long idx, long *q) {
-  long   i;
-  long **p = alloca(n * sizeof(long *));
-  p[0]     = &i;
+long aframe(long n, long idx, long* q) {
+  long i;
+  long** p = alloca(n * sizeof(long*));
+  p[0] = &i;
   for (i = 1; i < n; i++) { p[i] = q; }
   return *p[idx];
 }

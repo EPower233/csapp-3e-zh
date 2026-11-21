@@ -64,12 +64,12 @@ Even with these rules, you should try to make your code readable by choosing des
 ```c
 /* Get most significant byte from x */
 int get_msb(int x) {
-    /* Shift by w-8 */
-    int shift_val = (sizeof(int)-1)<<3;
-    /* Arithmetic shift */
-    int xright = x >> shift_val;
-    /* Zero all but LSB */
-    return xright & 0xFF;
+  /* Shift by w-8 */
+  int shift_val = (sizeof(int) - 1) << 3;
+  /* Arithmetic shift */
+  int xright = x >> shift_val;
+  /* Zero all but LSB */
+  return xright & 0xFF;
 }
 ```
 
@@ -94,15 +94,15 @@ Fill in code for the following C functions. Function `srl` performs a logical ri
 
 ```c
 unsigned srl(unsigned x, int k) {
-    /* Perform shift arithmetically */
-    unsigned xsra = (int) x >> k;
-    ...
+  /* Perform shift arithmetically */
+  unsigned xsra = (int)x >> k;
+  ...
 }
 
 int sra(int x, int k) {
-    /* Perform shift logically */
-    int xsrl = (unsigned) x >> k;
-    ...
+  /* Perform shift logically */
+  int xsrl = (unsigned)x >> k;
+  ...
 }
 ```
 
@@ -132,7 +132,7 @@ Your function should follow the bit-level integer coding rules, except that you 
 
 Your code should contain a total of at most 12 arithmetic, bitwise, and logical operations.
 
-## Homework 2.66 (\*\*\*)
+## Homework 2.66 (\*\*\*\*)
 
 Write code to implement the following function:
 
@@ -244,7 +244,7 @@ Your predecessor (who was fired for incompetence) wrote the following code:
 /* Failed attempt at xbyte */
 int xbyte(packed_t word, int bytenum)
 {
-    return (word >> (bytenum << 3)) & 0xFF;
+  return (word >> (bytenum << 3)) & 0xFF;
 }
 ```
 
@@ -260,9 +260,9 @@ Here is the code you write:
 ```c
 /* Copy integer into buffer if space is available */
 /* WARNING: The following code is buggy */
-void copy_int(int val, void *buf, int maxbytes) {
-    if (maxbytes-sizeof(val) >= 0)
-        memcpy(buf, (void *) &val, sizeof(val));
+void copy_int(int val, void* buf, int maxbytes) {
+  if (maxbytes - sizeof(val) >= 0)
+    memcpy(buf, (void*)&val, sizeof(val));
 }
 ```
 
@@ -320,7 +320,7 @@ Hint: Look at the relationship between the signed product $x \cdot y$ and the un
 The library function `calloc` has the following declaration:
 
 ```c
-void *calloc(size_t nmemb, size_t size);
+void* calloc(size_t nmemb, size_t size);
 ```
 
 According to the library documentation, "The `calloc` function allocates memory for an array of `nmemb` elements of `size` bytes each. The memory is set to zero. If `nmemb` or `size` is zero, then `calloc` returns `NULL`."
@@ -330,8 +330,8 @@ Write an implementation of `calloc` that performs the allocation by a call to `m
 As a reference, functions `malloc` and `memset` have the following declarations:
 
 ```c
-void *malloc(size_t size);
-void *memset(void *s, int c, size_t n);
+void* malloc(size_t size);
+void* memset(void* s, int c, size_t n);
 ```
 
 ## Homework 2.77 (\*\*)
@@ -378,8 +378,8 @@ We are running programs where values of type `int` are 32 bits. They are represe
 int x = random();
 int y = random();
 /* Convert to unsigned */
-unsigned ux = (unsigned) x;
-unsigned uy = (unsigned) y;
+unsigned ux = (unsigned)x;
+unsigned uy = (unsigned)y;
 ```
 
 For each of the following C expressions, you are to indicate whether or not the expression always yields `1`. If it always yields `1`, describe the underlying mathematical principles. Otherwise, give an example of arguments that make it yield `0`.
@@ -406,14 +406,15 @@ Fill in the return value for the following procedure, which tests whether its fi
 
 ```c
 int float_le(float x, float y) {
-    unsigned ux = f2u(x);
-    unsigned uy = f2u(y);
-    /* Get the sign bits */
-    unsigned sx = ux >> 31;
-    unsigned sy = uy >> 31;
+  unsigned ux = f2u(x);
+  unsigned uy = f2u(y);
 
-    /* Give an expression using only ux, uy, sx, and sy */
-    return ________;
+  /* Get the sign bits */
+  unsigned sx = ux >> 31;
+  unsigned sy = uy >> 31;
+
+  /* Give an expression using only ux, uy, sx, and sy */
+  return ________;
 }
 ```
 
@@ -431,9 +432,9 @@ Intel-compatible processors also support an "extended-precision" floating-point 
 
 | Description | Extended precision Value | Extended precision Decimal |
 | --- | --- | --- |
-| Smallest positive denormalized | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ |
-| Smallest positive normalized | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ |
-| Largest normalized | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ |
+| Smallest positive denormalized | | |
+| Smallest positive normalized | | |
+| Largest normalized | | |
 
 This format can be used in C programs compiled for Intel-compatible machines by declaring the data to be of type `long double`. However, it forces the compiler to generate code based on the legacy 8087 floating-point instructions. The resulting program will most likely run much slower than would be the case for data type `double`.
 
@@ -455,12 +456,12 @@ You need not fill in entries marked `—`.
 
 | Description | Hex | $M$ | $E$ | $V$ | $D$ |
 | --- | --- | --- | --- | --- | --- |
-| $-0$ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | $-0$ | `-0.0` |
-| Smallest value $> 2$ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ |
-| $512$ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | $512$ | `512.0` |
-| Largest denormalized | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ |
-| $-\infty$ | \_\_\_\_\_\_\_\_\_\_ | — | — | $-\infty$ | $-\infty$ |
-| Number with hex representation `3BB0` | `3BB0` | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ |
+| $-0$ | | | | $-0$ | `-0.0` |
+| Smallest value $> 2$ | | | | | |
+| $512$ | | | | $512$ | `512.0` |
+| Largest denormalized | | | | | |
+| $-\infty$ | | — | — | $-\infty$ | $-\infty$ |
+| Number with hex representation `3BB0` | `3BB0` | | | | |
 
 ## Homework 2.88 (\*\*)
 
@@ -483,11 +484,11 @@ In the following table, you are given some bit patterns in format A, and your ta
 | Format A Bits | Format A Value | Format B Bits | Format B Value |
 | --- | --- | --- | --- |
 | `1 01111 001` | $-\frac{9}{8}$ | `1 0111 0010` | $-\frac{9}{8}$ |
-| `0 10110 011` | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ |
-| `1 00111 010` | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ |
-| `0 00000 111` | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ |
-| `1 11100 000` | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ |
-| `0 10111 100` | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ | \_\_\_\_\_\_\_\_\_\_ |
+| `0 10110 011` | | | |
+| `1 00111 010` | | | |
+| `0 00000 111` | | | |
+| `1 11100 000` | | | |
+| `0 10111 100` | | | |
 
 ## Homework 2.89 (\*)
 
@@ -501,9 +502,9 @@ int x = random();
 int y = random();
 int z = random();
 /* Convert to double */
-double dx = (double) x;
-double dy = (double) y;
-double dz = (double) z;
+double dx = (double)x;
+double dy = (double)y;
+double dz = (double)z;
 ```
 
 For each of the following C expressions, you are to indicate whether or not the expression always yields `1`. If it always yields `1`, describe the underlying mathematical principles. Otherwise, give an example of arguments that make it yield `0`. Note that you cannot use an IA32 machine running GCC to test your answers, since it would use the 80-bit extended-precision representation for both `float` and `double`.
@@ -520,32 +521,32 @@ You have been assigned the task of writing a C function to compute a floating-po
 
 ```c
 float fpwr2(int x) {
-    /* Result exponent and fraction */
-    unsigned exp, frac;
-    unsigned u;
+  /* Result exponent and fraction */
+  unsigned exp, frac;
+  unsigned u;
 
-    if (x < ________) {
-        /* Too small. Return 0.0 */
-        exp  = ________;
-        frac = ________;
-    } else if (x < ________) {
-        /* Denormalized result */
-        exp  = ________;
-        frac = ________;
-    } else if (x < ________) {
-        /* Normalized result. */
-        exp  = ________;
-        frac = ________;
-    } else {
-        /* Too big. Return +∞ */
-        exp  = ________;
-        frac = ________;
-    }
+  if (x < ________) {
+    /* Too small. Return 0.0 */
+    exp = ________;
+    frac = ________;
+  } else if (x < ________) {
+    /* Denormalized result */
+    exp = ________;
+    frac = ________;
+  } else if (x < ________) {
+    /* Normalized result. */
+    exp = ________;
+    frac = ________;
+  } else {
+    /* Too big. Return +∞ */
+    exp = ________;
+    frac = ________;
+  }
 
-    /* Pack exp and frac into 32 bits */
-    u = exp << 23 | frac;
-    /* Return as float */
-    return u2f(u);
+  /* Pack exp and frac into 32 bits */
+  u = exp << 23 | frac;
+  /* Return as float */
+  return u2f(u);
 }
 ```
 
@@ -575,16 +576,16 @@ The following function illustrates the use of these coding rules. For argument `
 ```c
 /* If f is denorm, return 0. Otherwise, return f */
 float_bits float_denorm_zero(float_bits f) {
-    /* Decompose bit representation into parts */
-    unsigned sign = f >> 31;
-    unsigned exp  = f >> 23 & 0xFF;
-    unsigned frac = f & 0x7FFFFF;
-    if (exp == 0) {
-        /* Denormalized. Set fraction to 0 */
-        frac = 0;
-    }
-    /* Reassemble bits */
-    return (sign << 31) | (exp << 23) | frac;
+  /* Decompose bit representation into parts */
+  unsigned sign = f >> 31;
+  unsigned exp = f >> 23 & 0xFF;
+  unsigned frac = f & 0x7FFFFF;
+  if (exp == 0) {
+    /* Denormalized. Set fraction to 0 */
+    frac = 0;
+  }
+  /* Reassemble bits */
+  return (sign << 31) | (exp << 23) | frac;
 }
 ```
 

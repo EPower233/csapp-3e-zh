@@ -19,7 +19,7 @@ B. You can fix this bug by replacing the exit function in [line 10](#figure-12-4
 ```c
 /* WARNING: This code is buggy! */
 #include "csapp.h"
-void *thread(void *vargp);
+void* thread(void* vargp);
 
 int main() {
   pthread_t tid;
@@ -29,7 +29,7 @@ int main() {
 }
 
 /* Thread routine */
-void *thread(void *vargp) {
+void* thread(void* vargp) {
   Sleep(1);
   printf("Hello, world!\n");
   return NULL;
@@ -54,11 +54,11 @@ $$
 
 The solution to the first readers-writers problem in [Figure 12.26](./12.5%20Synchronizing%20Threads%20with%20Semaphores.md#figure-12-26) gives a somewhat weak priority to readers because a writer leaving its critical section might restart a waiting writer instead of a waiting reader. Derive a solution that gives stronger priority to readers, where a writer leaving its critical section will always restart a waiting reader if one exists.
 
-## Homework 12.20 (***)
+## Homework 12.20 (\*\*\*)
 
 Consider a simpler variant of the readers-writers problem where there are at most N readers. Derive a solution that gives equal priority to readers and writers, in the sense that pending readers and writers have an equal chance of being granted access to the resource. Hint: You can solve this problem using a single counting semaphore and a single mutex.
 
-## Homework 12.21 (****)
+## Homework 12.21 (\*\*\*\*)
 
 Derive a solution to the second readers-writers problem, which favors writers instead of readers.
 
@@ -78,7 +78,7 @@ The functions in the RIO I/O package ([Section 10.5](../ch10-system-level-io/10.
 
 In the prethreaded concurrent echo server in [Figure 12.28](./12.5%20Synchronizing%20Threads%20with%20Semaphores.md#Figure%2012.28), each thread calls the `echo_cnt` function ([Figure 12.29](./12.5%20Synchronizing%20Threads%20with%20Semaphores.md#Figure%2012.29)). Is `echo_cnt` thread-safe? Is it reentrant? Why or why not?
 
-## Homework 12.26 (***)
+## Homework 12.26 (\*\*\*)
 
 Use the lock-and-copy technique to implement a thread-safe non-reentrant version of `gethostbyname` called `gethostbyname_ts`. A correct solution will use a deep copy of the `hostent` structure protected by a mutex.
 
@@ -153,7 +153,7 @@ B. If a < b < c, which threads violate the mutex lock ordering rule?
 
 C. For these threads, show a new lock ordering that guarantees freedom from deadlock.
 
-## Homework 12.31 (***)
+## Homework 12.31 (\*\*\*)
 
 Implement a version of the standard I/O `fgets` function, called tfgets, that times out and returns NULL if it does not receive an input line on standard input within 5 seconds. Your function should be implemented in a package called tfgets-proc.c using processes, signals, and nonlocal jumps. It should not use the Linux `alarm` function. Test your solution using the driver program in [Figure 12.47](#figure-12-47).
 
@@ -162,52 +162,52 @@ Implement a version of the standard I/O `fgets` function, called tfgets, that ti
 ```c
 #include "csapp.h"
 
-char *tfgets(char *s, int size, FILE *stream);
+char* tfgets(char* s, int size, FILE* stream);
 
 int main()
 {
-    char buf[MAXLINE];
+  char buf[MAXLINE];
 
-    if (tfgets(buf, MAXLINE, stdin) == NULL)
-        printf("BOOM!\n");
-    else
-        printf("%s", buf);
+  if (tfgets(buf, MAXLINE, stdin) == NULL)
+    printf("BOOM!\n");
+  else
+    printf("%s", buf);
 
-    exit(0);
+  exit(0);
 }
 ```
 
-Figure 12.47 Driver program for [Problems 12.31](#Homework%2012.31%20%28%2A%2A%2A%29)–12.33.
+Figure 12.47 Driver program for [Problems 12.31](#homework-12-31)–12.33.
 
-## Homework 12.32 (***)
+## Homework 12.32 (\*\*\*)
 
-Implement a version of the `tfgets` function from [Problem 12.31](#Homework%2012.31%20%28%2A%2A%2A%29) that uses the `select` function. Your function should be implemented in a package called `tfgets-select.c`. Test your solution using the driver program from [Problem 12.31](#Homework%2012.31%20%28%2A%2A%2A%29). You may assume that standard input is assigned to descriptor 0.
+Implement a version of the `tfgets` function from [Problem 12.31](#homework-12-31) that uses the `select` function. Your function should be implemented in a package called `tfgets-select.c`. Test your solution using the driver program from [Problem 12.31](#homework-12-31). You may assume that standard input is assigned to descriptor 0.
 
-## Homework 12.33 (***)
+## Homework 12.33 (\*\*\*)
 
-Implement a threaded version of the tfgets function from [Problem 12.31](#Homework%2012.31%20%28%2A%2A%2A%29). Your function should be implemented in a package called tfgets-thread.c. Test your solution using the driver program from [Problem 12.31](#Homework%2012.31%20%28%2A%2A%2A%29).
+Implement a threaded version of the tfgets function from [Problem 12.31](#homework-12-31). Your function should be implemented in a package called tfgets-thread.c. Test your solution using the driver program from [Problem 12.31](#homework-12-31).
 
-## Homework 12.34 (***)
+## Homework 12.34 (\*\*\*)
 
 Write a parallel threaded version of an $N \times M$ matrix multiplication kernel. Compare the performance to the sequential case.
 
-## Homework 12.35 (***)
+## Homework 12.35 (\*\*\*)
 
 Implement a concurrent version of the TINY Web server based on processes. Your solution should create a new child process for each new connection request. Test your solution using a real Web browser.
 
-## Homework 12.36 (***)
+## Homework 12.36 (\*\*\*)
 
 Implement a concurrent version of the TINY Web server based on I/O multiplexing. Test your solution using a real Web browser.
 
-## Homework 12.37 (***)
+## Homework 12.37 (\*\*\*)
 
 Implement a concurrent version of the TINY Web server based on threads. Your solution should create a new thread for each new connection request. Test your solution using a real Web browser.
 
-## Homework 12.38 (****)
+## Homework 12.38 (\*\*\*\*)
 
 Implement a concurrent prethreaded version of the TINY Web server. Your solution should dynamically increase or decrease the number of threads in response to the current load. One strategy is to double the number of threads when the buffer becomes full, and halve the number of threads when the buffer becomes empty. Test your solution using a real Web browser.
 
-## Homework 12.39 (****)
+## Homework 12.39 (\*\*\*\*)
 
 A Web proxy is a program that acts as a middleman between a Web server and browser. Instead of contacting the server directly to get a Web page, the browser contacts the proxy, which forwards the request to the server. When the server replies to the proxy, the proxy sends the reply to the browser. For this lab, you will write a simple Web proxy that filters and logs requests:
 

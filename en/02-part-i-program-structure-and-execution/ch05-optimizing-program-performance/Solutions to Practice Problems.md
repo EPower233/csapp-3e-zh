@@ -40,17 +40,17 @@ We can see that this optimized version operates much like the following C code:
 
 ```c
 /* Make sure dest updated on each iteration */
-void combine3w(vec_ptr v, data_t *dest) {
-  long    i;
-  long    length = vec_length(v);
-  data_t *data   = get_vec_start(v);
-  data_t  acc    = IDENT;
+void combine3w(vec_ptr v, data_t* dest) {
+  long i;
+  long length = vec_length(v);
+  data_t* data = get_vec_start(v);
+  data_t acc = IDENT;
 
   /* Initialize in event length <= 0 */
   *dest = acc;
 
   for (i = 0; i < length; i++) {
-    acc   = acc OP data[i];
+    acc = acc OP data[i];
     *dest = acc;
   }
 }
@@ -83,12 +83,12 @@ C. Although each iteration in function `poly` requires two multiplications rathe
 The following code directly follows the rules we have stated for unrolling a loop by some factor $k$:
 
 ```c
-void unroll5(vec_ptr v, data_t *dest) {
-  long    i;
-  long    length = vec_length(v);
-  long    limit  = length - 4;
-  data_t *data   = get_vec_start(v);
-  data_t  acc    = IDENT;
+void unroll5(vec_ptr v, data_t* dest) {
+  long i;
+  long length = vec_length(v);
+  long limit = length - 4;
+  data_t* data = get_vec_start(v);
+  data_t acc = IDENT;
 
   /* Combine 5 elements at a time */
   for (i = 0; i < limit; i += 5) {

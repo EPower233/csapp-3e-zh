@@ -77,30 +77,30 @@ Solving this problem will give you a good feel for the idea of memory mapping. T
  */
 void mmapcopy(int fd, int size)
 {
-    char *bufp; /* ptr to memory-mapped VM area */
+  char* bufp; /* ptr to memory-mapped VM area */
 
-    bufp = Mmap(NULL, size, PROT_READ, MAP_PRIVATE, fd, 0);
-    Write(1, bufp, size);
-    return;
+  bufp = Mmap(NULL, size, PROT_READ, MAP_PRIVATE, fd, 0);
+  Write(1, bufp, size);
+  return;
 }
 
 /* mmapcopy driver */
-int main(int argc, char **argv)
+int main(int argc, char** argv)
 {
-    struct stat stat;
-    int fd;
+  struct stat stat;
+  int fd;
 
-    /* Check for required command-line argument */
-    if (argc != 2) {
-        printf("usage: %s <filename>\n", argv[0]);
-        exit(0);
-    }
-
-    /* Copy the input argument to stdout */
-    fd = Open(argv[1], O_RDONLY, 0);
-    fstat(fd, &stat);
-    mmapcopy(fd, stat.st_size);
+  /* Check for required command-line argument */
+  if (argc != 2) {
+    printf("usage: %s <filename>\n", argv[0]);
     exit(0);
+  }
+
+  /* Copy the input argument to stdout */
+  fd = Open(argv[1], O_RDONLY, 0);
+  fstat(fd, &stat);
+  mmapcopy(fd, stat.st_size);
+  exit(0);
 }
 ```
 
@@ -131,17 +131,17 @@ The minimum block size can have a significant effect on internal fragmentation. 
 There is nothing very tricky here. But the solution requires you to understand how the rest of our simple implicit-list allocator works and how to manipulate and traverse blocks.
 
 ```c
-static void *find_fit(size_t asize)
+static void* find_fit(size_t asize)
 {
-    /* First-fit search */
-    void *bp;
+  /* First-fit search */
+  void* bp;
 
-    for (bp = heap_listp; GET_SIZE(HDRP(bp)) > 0; bp = NEXT_BLKP(bp)) {
-        if (!GET_ALLOC(HDRP(bp)) && (asize <= GET_SIZE(HDRP(bp)))) {
-            return bp;
-        }
+  for (bp = heap_listp; GET_SIZE(HDRP(bp)) > 0; bp = NEXT_BLKP(bp)) {
+    if (!GET_ALLOC(HDRP(bp)) && (asize <= GET_SIZE(HDRP(bp)))) {
+      return bp;
     }
-    return NULL; /* No fit */
+  }
+  return NULL; /* No fit */
 }
 ```
 
@@ -150,21 +150,21 @@ static void *find_fit(size_t asize)
 This is another warm-up exercise to help you become familiar with allocators. Notice that for this allocator the minimum block size is 16 bytes. If the remainder of the block after splitting would be greater than or equal to the minimum block size, then we go ahead and split the block (lines 6–10). The only tricky part here is to realize that you need to place the new allocated block (lines 6 and 7) before moving to the next block (line 8).
 
 ```c
-static void place(void *bp, size_t asize)
+static void place(void* bp, size_t asize)
 {
-    size_t csize = GET_SIZE(HDRP(bp));
+  size_t csize = GET_SIZE(HDRP(bp));
 
-    if ((csize - asize) >= (2*DSIZE)) {
-        PUT(HDRP(bp), PACK(asize, 1));
-        PUT(FTRP(bp), PACK(asize, 1));
-        bp = NEXT_BLKP(bp);
-        PUT(HDRP(bp), PACK(csize-asize, 0));
-        PUT(FTRP(bp), PACK(csize-asize, 0));
-    }
+  if ((csize - asize) >= (2 * DSIZE)) {
+    PUT(HDRP(bp), PACK(asize, 1));
+    PUT(FTRP(bp), PACK(asize, 1));
+    bp = NEXT_BLKP(bp);
+    PUT(HDRP(bp), PACK(csize - asize, 0));
+    PUT(FTRP(bp), PACK(csize - asize, 0));
+  }
     else {
-        PUT(HDRP(bp), PACK(csize, 1));
-        PUT(FTRP(bp), PACK(csize, 1));
-    }
+    PUT(HDRP(bp), PACK(csize, 1));
+    PUT(FTRP(bp), PACK(csize, 1));
+  }
 }
 ```
 

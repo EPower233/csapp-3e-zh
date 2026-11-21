@@ -60,11 +60,11 @@ You can see now why it's often a good idea to defragment your disk drive!
 
 This is a simple problem that will give you some interesting insights into the feasibility of SSDs. Recall that for disks, $1\ \mathrm{PB} = 10^{9}\ \mathrm{MB}$. Then the following straightforward translation of units yields the following predicted times for each case:
 
-A. Worst-case sequential writes ($470\ \mathrm{MB/s}$): $(10^{9} \times 128) \times (1 / 470) \times (1 / (86,400 \times 365)) \approx 8$ years
+- A. Worst-case sequential writes ($470\ \mathrm{MB/s}$): $(10^{9} \times 128) \times (1 / 470) \times (1 / (86,400 \times 365)) \approx 8$ years
 
-B. Worst-case random writes ($303\ \mathrm{MB/s}$): $(10^{9} \times 128) \times (1 / 303) \times (1 / (86,400 \times 365)) \approx 13$ years
+- B. Worst-case random writes ($303\ \mathrm{MB/s}$): $(10^{9} \times 128) \times (1 / 303) \times (1 / (86,400 \times 365)) \approx 13$ years
 
-C. Average case ($20\ \mathrm{GB/day}$): $(10^{9} \times 128) \times (1 / 20,000) \times (1 / 365) \approx 17,534$ years
+- C. Average case ($20\ \mathrm{GB/day}$): $(10^{9} \times 128) \times (1 / 20,000) \times (1 / 365) \approx 17,534$ years
 
 So even if the SSD operates continuously, it should last for at least 8 years, which is longer than the expected lifetime of most computers.
 
@@ -206,31 +206,37 @@ A. The key to solving this problem is to visualize the picture in [Figure 6.48](
 
 Figure 6.48 Figure for solution to [Practice Problem 6.17](./6.5%20Writing%20Cache-Friendly%20Code.md#practice-problem-6-17).
 
-<table>
-  <tr><td colspan="3">`dst` array</td><td colspan="3">`src` array</td></tr>
-  <tr><td></td><td>Col. 0</td><td>Col. 1</td><td></td><td>Col. 0</td><td>Col. 1</td></tr>
-  <tr><td>Row 0</td><td>m</td><td>m</td><td>Row 0</td><td>m</td><td>m</td></tr>
-  <tr><td>Row 1</td><td>m</td><td>m</td><td>Row 1</td><td>m</td><td>h</td></tr>
-</table>
+| `dst` array | Col. 0 | Col. 1 |
+| --- | --- | --- |
+| Row 0 | m | m |
+| Row 1 | m | m |
+
+| `src` array | Col. 0 | Col. 1 |
+| --- | --- | --- |
+| Row 0 | m | m |
+| Row 1 | m | h |
 
 B. When the cache is 32 bytes, it is large enough to hold both arrays. Thus, the only misses are the initial cold misses.
 
-<table>
-  <tr><td colspan="3">`dst` array</td><td colspan="3">`src` array</td></tr>
-  <tr><td></td><td>Col. 0</td><td>Col. 1</td><td></td><td>Col. 0</td><td>Col. 1</td></tr>
-  <tr><td>Row 0</td><td>m</td><td>h</td><td>Row 0</td><td>m</td><td>h</td></tr>
-  <tr><td>Row 1</td><td>m</td><td>h</td><td>Row 1</td><td>m</td><td>h</td></tr>
-</table>
+| `dst` array | Col. 0 | Col. 1 |
+| --- | --- | --- |
+| Row 0 | m | h |
+| Row 1 | m | h |
+
+| `src` array | Col. 0 | Col. 1 |
+| --- | --- | --- |
+| Row 0 | m | h |
+| Row 1 | m | h |
 
 ## Solution 6.18
 
 Each 16-byte cache line holds two contiguous `algae_position` structures. Each loop visits these structures in memory order, reading one integer element each time. So the pattern for each loop is miss, hit, miss, hit, and so on. Notice that for this problem we could have predicted the miss rate without actually enumerating the total number of reads and misses.
 
-A. What is the total number of read accesses? 512 reads.
+- A. What is the total number of read accesses? 512 reads.
 
-B. What is the total number of read accesses that miss in the cache? 256 misses.
+- B. What is the total number of read accesses that miss in the cache? 256 misses.
 
-C. What is the miss rate? $256 / 512 = 50\%$.
+- C. What is the miss rate? $256 / 512 = 50\%$.
 
 ## Solution 6.19
 
@@ -248,13 +254,13 @@ D. What would the miss rate be if the cache were twice as big? If the cache were
 
 This loop has a nice stride-1 reference pattern, and thus the only misses are the initial cold misses.
 
-A. What is the total number of read accesses? 512 reads.
+- A. What is the total number of read accesses? 512 reads.
 
-B. What is the total number of read accesses that miss in the cache? 128 misses.
+- B. What is the total number of read accesses that miss in the cache? 128 misses.
 
-C. What is the miss rate? $128 / 512 = 25\%$.
+- C. What is the miss rate? $128 / 512 = 25\%$.
 
-D. What would the miss rate be if the cache were twice as big? Increasing the cache size by any amount would not change the miss rate, since cold misses are unavoidable.
+- D. What would the miss rate be if the cache were twice as big? Increasing the cache size by any amount would not change the miss rate, since cold misses are unavoidable.
 
 ## Solution 6.21
 

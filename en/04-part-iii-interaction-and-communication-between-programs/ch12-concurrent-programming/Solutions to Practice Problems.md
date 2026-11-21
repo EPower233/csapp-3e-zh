@@ -80,7 +80,11 @@ Variable `cnt` has a final incorrect value of 1.
 
 This problem is a simple test of your understanding of safe and unsafe trajectories in progress graphs. Trajectories such as A and C that skirt the critical region are safe and will produce correct results.
 
-A. $H_{1}, L_{1}, U_{1}, S_{1}, H_{2}, L_{2}, U_{2}, S_{2}, T_{2}, T_{1}$: safe B. $H_{2}, L_{2}, H_{1}, L_{1}, U_{1}, S_{1}, T_{1}, U_{2}, S_{2}, T_{2}$: unsafe C. $H_{1}, H_{2}, L_{2}, U_{2}, S_{2}, L_{1}, U_{1}, S_{1}, T_{1}, T_{2}$: safe
+- A. $H_{1}, L_{1}, U_{1}, S_{1}, H_{2}, L_{2}, U_{2}, S_{2}, T_{2}, T_{1}$: safe
+
+- B. $H_{2}, L_{2}, H_{1}, L_{1}, U_{1}, S_{1}, T_{1}, U_{2}, S_{2}, T_{2}$: unsafe
+
+- C. $H_{1}, H_{2}, L_{2}, U_{2}, S_{2}, L_{1}, U_{1}, S_{1}, T_{1}, T_{2}$: safe
 
 ## Solution 12.9
 
@@ -116,7 +120,7 @@ The `ctime_ts` function is not reentrant, because each invocation shares the sam
 
 ## Solution 12.13
 
-If we free the block immediately after the call to `pthread_create` in [line 14](12.7%20Other%20Concurrency%20Issues.md#Figure%2012.43), then we will introduce a new race, this time between the call to `free` in the main thread and the assignment statement in [line 24](12.7%20Other%20Concurrency%20Issues.md#Figure%2012.43) of the thread routine.
+If we free the block immediately after the call to `pthread_create` in [line 13](12.7%20Other%20Concurrency%20Issues.md#Figure%2012.43), then we will introduce a new race, this time between the call to `free` in the main thread and the assignment statement in [line 22](12.7%20Other%20Concurrency%20Issues.md#Figure%2012.43) of the thread routine.
 
 ## Solution 12.14
 
@@ -124,7 +128,7 @@ A. Another approach is to pass the integer `i` directly, rather than passing a p
 
 ```c
 for (i = 0; i < N; i++)
-    Pthread_create(&tid[i], NULL, thread, (void *)i);
+  Pthread_create(&tid[i], NULL, thread, (void*)i);
 ```
 
 In the thread routine, we cast the argument back to an `int` and assign it to `myid`:

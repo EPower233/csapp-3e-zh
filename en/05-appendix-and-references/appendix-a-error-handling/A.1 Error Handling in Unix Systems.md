@@ -50,10 +50,10 @@ Throughout this book, we use the following error-reporting functions to accommod
 ```c
 #include "csapp.h"
 
-void unix_error(char *msg);
-void posix_error(int code, char *msg);
-void gai_error(int code, char *msg);
-void app_error(char *msg);
+void unix_error(char* msg);
+void posix_error(int code, char* msg);
+void gai_error(int code, char* msg);
+void app_error(char* msg);
 ```
 
 Returns: nothing
@@ -63,28 +63,28 @@ As their names suggest, the `unix_error`, `posix_error`, and `gai_error` functio
 ### Figure A.1
 
 ```c
-void unix_error(char *msg) /* Unix-style error */
+void unix_error(char* msg) /* Unix-style error */
 {
-    fprintf(stderr, "%s: %s\n", msg, strerror(errno));
-    exit(0);
+  fprintf(stderr, "%s: %s\n", msg, strerror(errno));
+  exit(0);
 }
 
-void posix_error(int code, char *msg) /* Posix-style error */
+void posix_error(int code, char* msg) /* Posix-style error */
 {
-    fprintf(stderr, "%s: %s\n", msg, strerror(code));
-    exit(0);
+  fprintf(stderr, "%s: %s\n", msg, strerror(code));
+  exit(0);
 }
 
-void gai_error(int code, char *msg) /* Getaddrinfo-style error */
+void gai_error(int code, char* msg) /* Getaddrinfo-style error */
 {
-    fprintf(stderr, "%s: %s\n", msg, gai_strerror(code));
-    exit(0);
+  fprintf(stderr, "%s: %s\n", msg, gai_strerror(code));
+  exit(0);
 }
 
-void app_error(char *msg) /* Application error */
+void app_error(char* msg) /* Application error */
 {
-    fprintf(stderr, "%s\n", msg);
-    exit(0);
+  fprintf(stderr, "%s\n", msg);
+  exit(0);
 }
 ```
 
