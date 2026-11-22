@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="388" height="445" viewBox="0 0 388 445" role="img" aria-labelledby="title desc">
+<title id="title">Figure 4.13</title>
+<style>
+svg { --ink:#202737; --muted:#45546b; --line:#536680; --accent:#245a9b;
+      --soft:#e3effb; --strong:#b6d4f5; --panel:#f3f6fa;
+      --grid:#bec8d7; }
+@media (prefers-color-scheme:dark) {
+  svg { --ink:#e6edf7; --muted:#becbdd; --line:#94a9c6; --accent:#8abdfb;
+        --soft:#243753; --strong:#3b5b86; --panel:#202933;
+        --grid:#53647b; }
+}
+text { fill:var(--ink); font-family:system-ui,"Microsoft YaHei","PingFang SC",
+       "Noto Sans CJK SC",sans-serif; dominant-baseline:middle; }
+.mono { font-family:"Cascadia Mono",Consolas,"Microsoft YaHei",monospace; }
+.muted { fill:var(--muted); }
+</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="var(--line)"/></marker></defs>
+<rect x="59" y="57" width="265" height="96" rx="3" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="15" y="93" font-size="15" text-anchor="start" class="mono" font-weight="400">b₆₃</text>
+<path d="M54,93 L151,93" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="15" y="143" font-size="15" text-anchor="start" class="mono" font-weight="400">a₆₃</text>
+<path d="M54,143 L151,143" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M113,75 H151 M86,125 H151" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M151,68 h23 a16,16 0 0 1 0,32 h-23 Z" fill="var(--soft)" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M151,118 h23 a16,16 0 0 1 0,32 h-23 Z" fill="var(--soft)" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M190,84 H215 V97 H240 M190,134 H215 V119 H240" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M233,89 h20.400000000000002 Q272.78,89 284,108 Q272.78,127 253.4,127 H233 Q245,108 233,89 Z" fill="var(--soft)" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M284,108 L325,108" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="335" y="108" font-size="15" text-anchor="start" class="mono" font-weight="400">out₆₃</text>
+<rect x="59" y="159" width="265" height="96" rx="3" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="15" y="195" font-size="15" text-anchor="start" class="mono" font-weight="400">b₆₂</text>
+<path d="M54,195 L151,195" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="15" y="245" font-size="15" text-anchor="start" class="mono" font-weight="400">a₆₂</text>
+<path d="M54,245 L151,245" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M113,177 H151 M86,227 H151" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M151,170 h23 a16,16 0 0 1 0,32 h-23 Z" fill="var(--soft)" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M151,220 h23 a16,16 0 0 1 0,32 h-23 Z" fill="var(--soft)" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M190,186 H215 V199 H240 M190,236 H215 V221 H240" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M233,191 h20.400000000000002 Q272.78,191 284,210 Q272.78,229 253.4,229 H233 Q245,210 233,191 Z" fill="var(--soft)" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M284,210 L325,210" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="335" y="210" font-size="15" text-anchor="start" class="mono" font-weight="400">out₆₂</text>
+<rect x="59" y="315" width="265" height="96" rx="3" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="15" y="351" font-size="15" text-anchor="start" class="mono" font-weight="400">b₀</text>
+<path d="M54,351 L151,351" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="15" y="401" font-size="15" text-anchor="start" class="mono" font-weight="400">a₀</text>
+<path d="M54,401 L151,401" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M113,333 H151 M86,383 H151" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M151,326 h23 a16,16 0 0 1 0,32 h-23 Z" fill="var(--soft)" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M151,376 h23 a16,16 0 0 1 0,32 h-23 Z" fill="var(--soft)" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M190,342 H215 V355 H240 M190,392 H215 V377 H240" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M233,347 h20.400000000000002 Q272.78,347 284,366 Q272.78,385 253.4,385 H233 Q245,366 233,347 Z" fill="var(--soft)" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M284,366 L325,366" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="335" y="366" font-size="15" text-anchor="start" class="mono" font-weight="400">out₀</text>
+<text x="29" y="19" font-size="16" text-anchor="middle" class="mono" font-weight="400">s</text>
+<path d="M45,19 H113 V29 M86,19 V383 M113,57 V333" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<g transform="translate(113 29) rotate(90)">
+<path d="M0,-12 L23,0 L0,12 Z" fill="var(--soft)" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="27" cy="0" r="4" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+</g>
+<text x="131" y="46" font-size="15" text-anchor="start" class="mono" font-weight="400">!s</text>
+<circle cx="86" cy="19" r="2.6" fill="var(--line)" stroke="none" stroke-width="1.5"/>
+<circle cx="113" cy="75" r="2.6" fill="var(--line)" stroke="none" stroke-width="1.5"/>
+<circle cx="86" cy="125" r="2.6" fill="var(--line)" stroke="none" stroke-width="1.5"/>
+<circle cx="113" cy="177" r="2.6" fill="var(--line)" stroke="none" stroke-width="1.5"/>
+<circle cx="86" cy="227" r="2.6" fill="var(--line)" stroke="none" stroke-width="1.5"/>
+<circle cx="113" cy="333" r="2.6" fill="var(--line)" stroke="none" stroke-width="1.5"/>
+<circle cx="86" cy="383" r="2.6" fill="var(--line)" stroke="none" stroke-width="1.5"/>
+<text x="183" y="284" font-size="28" text-anchor="middle" class="" font-weight="400">⋮</text>
+</svg>

@@ -1,0 +1,93 @@
+import { defineConfig } from 'vitepress'
+import { fileURLToPath } from 'node:url'
+import headingLinks from './heading-links.mts'
+import htmlTableInline from './html-table-inline.mts'
+import readableTables from './readable-tables.mts'
+import footnote from 'markdown-it-footnote'
+import sidebarZh from './book-sidebar.json'
+import sidebarEn from './book-sidebar.en.json'
+
+const base = process.env.PAGES_BASE_PATH || '/'
+const englishTitle = "Computer Systems: A Programmer's Perspective"
+
+export default defineConfig({
+  base,
+  buildConcurrency: process.platform === 'win32' ? 1 : 8,
+  title: '深入理解计算机系统',
+  locales: {
+    root: {
+      label: '简体中文',
+      lang: 'zh-CN',
+      title: '深入理解计算机系统',
+      description: '《深入理解计算机系统（原书第3版）》分章阅读版',
+      themeConfig: {
+        sidebar: sidebarZh,
+      },
+    },
+    en: {
+      label: 'English',
+      lang: 'en-US',
+      link: '/en/',
+      title: englishTitle,
+      description: '3rd Edition — Chapter-by-Chapter Web Edition',
+      themeConfig: {
+        siteTitle: `<span class="book-title-full">${englishTitle}</span><span class="book-title-compact" title="${englishTitle}">CS:APP</span>`,
+        sidebar: sidebarEn,
+      },
+    },
+  },
+  markdown: {
+    math: true,
+    lineNumbers: true,
+    config: (md) => {
+      md.use(footnote)
+      md.use(htmlTableInline)
+      md.use(readableTables)
+      md.use(headingLinks, fileURLToPath(new URL('..', import.meta.url)))
+    },
+  },
+  postRender({ teleports }) {
+    if (teleports?.['#tk-popover-container']) {
+      teleports.body = (teleports.body ?? '') + '<div id="tk-popover-container" data-allow-mismatch="children"></div>'
+    }
+  },
+  vite: {
+    ssr: { noExternal: ['vitepress-theme-teek'] },
+    build: {
+      assetsInlineLimit: 0,
+      rollupOptions: {
+        // Large MathJax-heavy Markdown modules overflow Rollup's default Windows stack during treeshake.
+        treeshake: false,
+      },
+    },
+  },
+  themeConfig: {
+    teekHome: false,
+    themeEnhance: { enabled: true },
+    // Fragment URLs are explicit navigation targets in the split reader.
+    anchorScroll: false,
+    // The built-in translations menu is hidden (BilingualLayout's switcher uses
+    // bilingual-map.json); disable path-mirroring so it never emits /en/<中文路径> links.
+    i18nRouting: false,
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/EPower233/csapp-3e-zh' },
+    ],
+    search: {
+      provider: 'local',
+      options: {
+        _render(source, env, md) {
+          const html = md.render(source, env)
+          if (env.frontmatter?.search === false) return ''
+          // Strip MathJax SVG payloads from local search indexing (not searchable text, reduces memory/bundle size).
+          const cleaned = html.replace(/<mjx-container\b[\s\S]*?<\/mjx-container>/g, ' ')
+          // VitePress's search splitter uses the first fragment link in each heading.
+          return cleaned.replace(/<h[1-6]\b[^>]*>[\s\S]*?<\/h[1-6]>/g, heading =>
+            heading.replace(/<a\b([^>]*)>([\s\S]*?)<\/a>/g, (link, attrs, label) =>
+              /\bclass="header-anchor"/.test(attrs) ? link : label,
+            ),
+          )
+        },
+      },
+    },
+  },
+})

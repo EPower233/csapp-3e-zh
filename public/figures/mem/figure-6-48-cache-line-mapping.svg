@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="624" height="166" viewBox="0 0 624 166" role="img" aria-labelledby="title desc">
+<title id="title">图 6-48 主存到高速缓存的映射</title><desc id="desc">src 与 dst 各自的第 0 行映射到高速缓存行 0，第 1 行映射到高速缓存行 1。</desc>
+<style>
+svg { --ink:#202737; --muted:#45546b; --line:#536680; --accent:#245a9b;
+      --soft:#e3effb; --strong:#b6d4f5; --panel:#f3f6fa;
+      --grid:#bec8d7; }
+@media (prefers-color-scheme:dark) {
+  svg { --ink:#e6edf7; --muted:#becbdd; --line:#94a9c6; --accent:#8abdfb;
+        --soft:#243753; --strong:#3b5b86; --panel:#202933;
+        --grid:#53647b; }
+}
+text { fill:var(--ink); font-family:system-ui,"Microsoft YaHei","PingFang SC",
+       "Noto Sans CJK SC",sans-serif; dominant-baseline:middle; }
+.mono { font-family:"Cascadia Mono",Consolas,"Microsoft YaHei",monospace; }
+.muted { fill:var(--muted); }
+</style>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="var(--line)"/></marker></defs>
+<text x="202" y="20" font-size="17" text-anchor="middle" class="" font-weight="650">主存</text>
+<text x="474" y="42" font-size="17" text-anchor="middle" class="" font-weight="650">高速缓存</text>
+<rect x="109" y="42" width="88" height="26" rx="0" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="197" y="42" width="88" height="26" rx="0" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="109" y="68" width="88" height="26" rx="0" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="197" y="68" width="88" height="26" rx="0" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="109" y="94" width="88" height="26" rx="0" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="197" y="94" width="88" height="26" rx="0" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="109" y="120" width="88" height="26" rx="0" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="197" y="120" width="88" height="26" rx="0" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="386" y="67" width="87" height="26" rx="0" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="473" y="67" width="87" height="26" rx="0" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="386" y="93" width="87" height="26" rx="0" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<rect x="473" y="93" width="87" height="26" rx="0" fill="var(--soft)" stroke="var(--line)" stroke-width="1.5"/>
+<text x="89" y="48" font-size="15" text-anchor="middle" class="mono" font-weight="400">0</text>
+<text x="21" y="66" font-size="16" text-anchor="start" class="mono" font-weight="400">src</text>
+<path d="M72,43 Q62,43 62,53 V58 Q62,65 55,65 Q62,65 62,72 V77 Q62,88 72,88" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="89" y="100" font-size="15" text-anchor="middle" class="mono" font-weight="400">16</text>
+<text x="21" y="118" font-size="16" text-anchor="start" class="mono" font-weight="400">dst</text>
+<path d="M72,95 Q62,95 62,105 V110 Q62,117 55,117 Q62,117 62,124 V129 Q62,140 72,140" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="285" cy="55" r="2.6" fill="var(--line)" stroke="none" stroke-width="1.5"/>
+<path d="M285,55 L386,73" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<circle cx="285" cy="81" r="2.6" fill="var(--line)" stroke="none" stroke-width="1.5"/>
+<path d="M285,81 L386,100" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<circle cx="285" cy="107" r="2.6" fill="var(--line)" stroke="none" stroke-width="1.5"/>
+<path d="M285,107 L386,86" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<circle cx="285" cy="133" r="2.6" fill="var(--line)" stroke="none" stroke-width="1.5"/>
+<path d="M285,133 L386,113" fill="none" stroke="var(--line)" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<text x="574" y="80" font-size="15" text-anchor="start" class="" font-weight="400">行 0</text>
+<text x="574" y="106" font-size="15" text-anchor="start" class="" font-weight="400">行 1</text>
+</svg>

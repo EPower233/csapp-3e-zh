@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="770" height="451" overflow="hidden" viewBox="0 0 770 451" class="csapp-figure" role="img" aria-labelledby="csapp-arch-eg-pipe0-title" fill="var(--c-000000)"><title id="csapp-arch-eg-pipe0-title">图 4-32 非流水线化的计算硬件与流水线图（a/b）</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  --c-3333cc: #3333cc;
+  --c-66ccff: #66ccff;
+  --c-ccffff: #ccffff;
+  --c-ffffff: #ffffff;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-3333cc: #2929a3;
+  --c-66ccff: #1e5682;
+  --c-ccffff: #163d45;
+  --c-ffffff: #1e232c;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+  --c-3333cc: #3333cc;
+  --c-66ccff: #66ccff;
+  --c-ccffff: #ccffff;
+  --c-ffffff: #ffffff;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-3333cc: #2929a3;
+  --c-66ccff: #1e5682;
+  --c-ccffff: #163d45;
+  --c-ffffff: #1e232c;
+}</style><g transform="translate(-103 -126)"><rect x="225.5" y="163.5" width="262" height="135" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ccffff)"/><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(288 226)" x="67.125" y="12.500" text-anchor="middle" data-csapp-zh="">组合逻辑</text><rect x="537.5" y="163.5" width="22" height="135" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(540.333 213)">R</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(542.08 238)">e</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(542.08 264)">g</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(330 154)">300 ps</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(520 154)">20 ps</text><path d="M176.5 223.833 211.167 223.833 211.167 229.167 176.5 229.167ZM208.5 218.5 224.5 226.5 208.5 234.5Z" fill="var(--c-3333cc)"/><path d="M488.5 223.833 523.167 223.833 523.167 229.167 488.5 229.167ZM520.5 218.5 536.5 226.5 520.5 234.5Z" fill="var(--c-3333cc)"/><path d="M552.5 298.5 552.5 322.5" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(523.333 354)" x="26.258" y="0.000" text-anchor="middle" data-csapp-zh="">时钟</text><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(582.833 226)" x="70.344" y="0.000" text-anchor="middle" data-csapp-zh="">延迟 = 320 ps</text><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(582.833 251)" x="114.117" y="0.000" text-anchor="middle" data-csapp-zh="">吞吐量 = 3.12 GIPS</text><path d="M184.5 510.833 857.834 510.833 857.834 512.167 184.5 512.167ZM856.5 507.5 864.5 511.5 856.5 515.5Z"/><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(264 503)" x="22.945" y="0.000" text-anchor="middle" data-csapp-zh="">时间</text><rect x="192.5" y="399.5" width="184" height="32" stroke="var(--c-000000)" stroke-miterlimit="8" fill="var(--c-66ccff)"/><rect x="104" y="399" width="88" height="32" fill="var(--c-ffffff)"/><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(156.6 422)">I1</text><rect x="104" y="431" width="88" height="32" fill="var(--c-ffffff)"/><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(156.6 454)">I2</text><rect x="376.5" y="431.5" width="184" height="32" stroke="var(--c-000000)" stroke-miterlimit="8" fill="var(--c-66ccff)"/><rect x="560.5" y="463.5" width="184" height="32" stroke="var(--c-000000)" stroke-miterlimit="8" fill="var(--c-66ccff)"/><rect x="104" y="463" width="88" height="32" fill="var(--c-ffffff)"/><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(156.6 486)">I3</text><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="24" transform="translate(129.6 347)" x="140.070" y="0.000" text-anchor="middle" data-csapp-zh="">（a）硬件：未采用流水线</text><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="24" transform="translate(129.6 556)" x="107.391" y="0.000" text-anchor="middle" data-csapp-zh="">（b）流水线图</text></g></svg>

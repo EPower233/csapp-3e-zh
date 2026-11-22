@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="311" height="202" overflow="hidden" viewBox="0 0 311 202" class="csapp-figure" role="img" aria-labelledby="csapp-arch-seq-pc-title" fill="var(--c-000000)"><title id="csapp-arch-seq-pc-title">图 4-31 SEQ 更新 PC 阶段</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  --c-808080: #808080;
+  --c-ffffff: #ffffff;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-808080: #a2a2a2;
+  --c-ffffff: #1e232c;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+  --c-808080: #808080;
+  --c-ffffff: #ffffff;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-808080: #a2a2a2;
+  --c-ffffff: #1e232c;
+}</style><g transform="translate(-163 -447)"><path d="M168.5 529.834C168.5 524.679 172.679 520.5 177.834 520.5L455.167 520.5C460.321 520.5 464.5 524.679 464.5 529.834L464.5 567.167C464.5 572.321 460.321 576.5 455.167 576.5L177.834 576.5C172.679 576.5 168.5 572.321 168.5 567.167Z" stroke="var(--c-000000)" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-808080)" fill-rule="evenodd"/><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="16" transform="translate(300.083 545)" x="16.008" y="9.500" text-anchor="middle" data-csapp-zh=""><tspan x="16.008" y="0.000">新</tspan><tspan x="16.008" y="19.000">PC</tspan></text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="16" transform="translate(241.417 634)">Cnd</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="16" transform="translate(173 634)">icode</text><path d="M2-6.56168e-06 2.00009 26-1.99991 26-2 6.56168e-06ZM4.00008 24 0.000104987 32-3.99992 24Z" transform="matrix(1 0 0 -1 448 608)"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="16" transform="translate(304.083 634)">valC</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="16" transform="translate(432.5 634)">valP</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="16" transform="translate(367.167 634)">valM</text><path d="M255 608 255 607.998C255 607.446 255.448 606.998 256 606.998 256.552 606.998 257 607.446 257 607.998L257 608C257 608.552 256.552 609 256 609 255.448 609 255 608.552 255 608ZM255 603.998 255 603.996C255 603.444 255.448 602.996 256 602.996 256.552 602.996 257 603.444 257 603.996L257 603.998C257 604.55 256.552 604.998 256 604.998 255.448 604.998 255 604.55 255 603.998ZM255 599.996 255 599.994C255 599.442 255.448 598.994 256 598.994 256.552 598.994 257 599.442 257 599.994L257 599.996C257 600.548 256.552 600.996 256 600.996 255.448 600.996 255 600.548 255 599.996ZM255 595.994 255 595.992C255 595.44 255.448 594.992 256 594.992 256.552 594.992 257 595.44 257 595.992L257 595.994C257 596.546 256.552 596.994 256 596.994 255.448 596.994 255 596.546 255 595.994ZM255 591.992 255 591.99C255 591.438 255.448 590.99 256 590.99 256.552 590.99 257 591.438 257 591.99L257 591.992C257 592.544 256.552 592.992 256 592.992 255.448 592.992 255 592.544 255 591.992ZM255 587.99 255 587.988C255 587.436 255.448 586.988 256 586.988 256.552 586.988 257 587.436 257 587.988L257 587.99C257 588.542 256.552 588.99 256 588.99 255.448 588.99 255 588.542 255 587.99ZM255 583.988 255 583.986C255 583.434 255.448 582.986 256 582.986 256.552 582.986 257 583.434 257 583.986L257 583.988C257 584.54 256.552 584.988 256 584.988 255.448 584.988 255 584.54 255 583.988ZM253.333 581.333 256 576 258.667 581.333Z"/><path d="M2-6.56168e-06 2.00009 26-1.99991 26-2 6.56168e-06ZM4.00008 24 0.000104987 32-3.99992 24Z" transform="matrix(1 0 0 -1 328 520)"/><path d="M2-6.56168e-06 2.00009 26-1.99991 26-2 6.56168e-06ZM4.00008 24 0.000104987 32-3.99992 24Z" transform="matrix(1 0 0 -1 384 608)"/><path d="M2-6.56168e-06 2.00009 26-1.99991 26-2 6.56168e-06ZM4.00008 24 0.000104987 32-3.99992 24Z" transform="matrix(1 0 0 -1 320 608)"/><path d="M0.666667-2.18723e-06 0.666759 28-0.666575 28-0.666667 2.18723e-06ZM2.66675 26.6667 0.000104987 32-2.66658 26.6667Z" transform="matrix(1 0 0 -1 192.5 608.5)"/><rect x="304.5" y="448.5" width="48" height="40" stroke="var(--c-000000)" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="16" transform="translate(316.917 474)">PC</text></g></svg>

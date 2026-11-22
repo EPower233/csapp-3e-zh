@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="543" height="235" overflow="hidden" viewBox="0 0 543 235" class="csapp-figure" role="img" aria-labelledby="csapp-conc-concurrentsets-title" fill="var(--c-000000)"><title id="csapp-conc-concurrentsets-title">图 12-30 顺序、并发和并行程序集合之间的关系</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+}</style><g transform="translate(6 10)"><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(7.5 18)" x="58.938" y="0.000" text-anchor="middle" data-csapp-zh="">所有程序</text><rect x="8.50005" y="24.5001" width="264" height="200" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="none"/><rect x="272.5" y="24.5001" width="264" height="200" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="none"/><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(309.667 127)" x="96.891" y="0.000" text-anchor="middle" data-csapp-zh="">顺序程序</text><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(35.3333 63)" x="99.211" y="0.000" text-anchor="middle" data-csapp-zh="">并发程序</text><path d="M56.5001 148.5C56.5001 115.363 92.3173 88.5001 136.5 88.5001 180.683 88.5001 216.5 115.363 216.5 148.5 216.5 181.637 180.683 208.5 136.5 208.5 92.3173 208.5 56.5001 181.637 56.5001 148.5Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(100.583 143)" x="34.685" y="12.500" text-anchor="middle" data-csapp-zh="">并行程序</text></g></svg>

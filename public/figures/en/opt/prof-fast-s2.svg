@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="839" height="335" overflow="hidden" viewBox="0 0 839 335" class="csapp-figure" role="img" aria-labelledby="csapp-opt-prof-fast-s2-title" fill="var(--c-000000)"><title id="csapp-opt-prof-fast-s2-title">Figure 5.38</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  --c-660066: #660066;
+  --c-808080: #808080;
+  --c-993366: #993366;
+  --c-9999ff: #9999ff;
+  --c-c0c0c0: #c0c0c0;
+  --c-ccffff: #ccffff;
+  --c-db843d: #db843d;
+  --c-ffffcc: #ffffcc;
+  --c-ffffff: #ffffff;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-660066: #f87ff8;
+  --c-808080: #a2a2a2;
+  --c-993366: #8a2e5c;
+  --c-9999ff: #1f1f7a;
+  --c-c0c0c0: #4b4b4b;
+  --c-ccffff: #163d45;
+  --c-db843d: #b56421;
+  --c-ffffcc: #3d3a18;
+  --c-ffffff: #1e232c;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+  --c-660066: #660066;
+  --c-808080: #808080;
+  --c-993366: #993366;
+  --c-9999ff: #9999ff;
+  --c-c0c0c0: #c0c0c0;
+  --c-ccffff: #ccffff;
+  --c-db843d: #db843d;
+  --c-ffffcc: #ffffcc;
+  --c-ffffff: #ffffff;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-660066: #f87ff8;
+  --c-808080: #a2a2a2;
+  --c-993366: #8a2e5c;
+  --c-9999ff: #1f1f7a;
+  --c-c0c0c0: #4b4b4b;
+  --c-ccffff: #163d45;
+  --c-db843d: #b56421;
+  --c-ffffcc: #3d3a18;
+  --c-ffffff: #1e232c;
+}</style><defs><clipPath id="csapp-opt-prof-fast-s2-clip0"><rect x="61" y="193" width="839" height="335"/></clipPath><clipPath id="csapp-opt-prof-fast-s2-clip1"><rect x="136" y="224" width="676" height="251"/></clipPath><clipPath id="csapp-opt-prof-fast-s2-clip2"><rect x="136" y="224" width="676" height="251"/></clipPath></defs><g clip-path="url(#csapp-opt-prof-fast-s2-clip0)" transform="translate(-61 -193)"><rect x="61" y="193" width="838" height="334" fill="var(--c-ffffff)"/><g><rect x="136" y="224" width="675" height="250" fill="var(--c-c0c0c0)"/></g><g><path d="M136.5 432.5 811.5 432.5M136.5 390.5 811.5 390.5M136.5 349.5 811.5 349.5M136.5 307.5 811.5 307.5M136.5 265.5 811.5 265.5M136.5 224.5 811.5 224.5" stroke="var(--c-000000)" stroke-width="0.333333" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g><g><rect x="136.5" y="224.5" width="675" height="250" stroke="var(--c-808080)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g><g><path d="M170.5 468.5 215.5 468.5 215.5 474.5 170.5 474.5ZM282.5 471.5 327.5 471.5 327.5 474.5 282.5 474.5ZM395.5 472.5 440.5 472.5 440.5 474.5 395.5 474.5ZM507.5 471.5 552.5 471.5 552.5 474.5 507.5 474.5ZM620.5 471.5 665.5 471.5 665.5 474.5 620.5 474.5ZM732.5 470.5 777.5 470.5 777.5 474.5 732.5 474.5Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-9999ff)"/></g><g><path d="M282.5 471.5 327.5 471.5 327.5 471.5 282.5 471.5ZM395.5 471.5 440.5 471.5 440.5 472.5 395.5 472.5ZM507.5 471.5 552.5 471.5 552.5 471.5 507.5 471.5ZM620.5 469.5 665.5 469.5 665.5 471.5 620.5 471.5Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-993366)"/></g><g><path d="M170.5 452.5 215.5 452.5 215.5 468.5 170.5 468.5ZM282.5 458.5 327.5 458.5 327.5 471.5 282.5 471.5ZM395.5 457.5 440.5 457.5 440.5 471.5 395.5 471.5ZM507.5 457.5 552.5 457.5 552.5 471.5 507.5 471.5ZM620.5 454.5 665.5 454.5 665.5 469.5 620.5 469.5ZM732.5 467.5 777.5 467.5 777.5 470.5 732.5 470.5Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-ffffcc)"/></g><g><path d="M170.5 450.5 215.5 450.5 215.5 452.5 170.5 452.5ZM282.5 456.5 327.5 456.5 327.5 458.5 282.5 458.5ZM395.5 457.5 440.5 457.5 440.5 457.5 395.5 457.5ZM507.5 455.5 552.5 455.5 552.5 457.5 507.5 457.5ZM620.5 452.5 665.5 452.5 665.5 454.5 620.5 454.5ZM732.5 467.5 777.5 467.5 777.5 467.5 732.5 467.5Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-ccffff)"/></g><g clip-path="url(#csapp-opt-prof-fast-s2-clip1)"><path d="M170.5 249.5 215.5 249.5 215.5 450.5 170.5 450.5ZM282.5 161.5 327.5 161.5 327.5 456.5 282.5 456.5ZM395.5 253.5 440.5 253.5 440.5 457.5 395.5 457.5ZM507.5 262.5 552.5 262.5 552.5 455.5 507.5 455.5ZM620.5 449.5 665.5 449.5 665.5 452.5 620.5 452.5ZM732.5 465.5 777.5 465.5 777.5 467.5 732.5 467.5Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-660066)"/></g><g clip-path="url(#csapp-opt-prof-fast-s2-clip2)"><path d="M170 248 215 248 215 249 170 249ZM283 160 328 160 328 161 283 161ZM395 252 440 252 440 253 395 253ZM508 261 553 261 553 262 508 262ZM620 449 665 449 665 450 620 450ZM733 465 778 465 778 466 733 466Z" fill="var(--c-db843d)"/></g><g><path d="M0 0 0.000104987 250" stroke="var(--c-000000)" stroke-width="0.333333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd" transform="matrix(1 0 0 -1 136.5 474.5)"/></g><g><path d="M132.5 474.5 136.5 474.5M132.5 432.5 136.5 432.5M132.5 390.5 136.5 390.5M132.5 349.5 136.5 349.5M132.5 307.5 136.5 307.5M132.5 265.5 136.5 265.5M132.5 224.5 136.5 224.5" stroke="var(--c-000000)" stroke-width="0.333333" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g><g><path d="M136.5 474.5 811.5 474.5" stroke="var(--c-000000)" stroke-width="0.333333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/></g><g><path d="M136.5 474.5 136.5 478.5M248.5 474.5 248.5 478.5M361.5 474.5 361.5 478.5M473.5 474.5 473.5 478.5M586.5 474.5 586.5 478.5M698.5 474.5 698.5 478.5M811.5 474.5 811.5 478.5" stroke="var(--c-000000)" stroke-width="0.333333" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g><g><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="14" transform="translate(116.146 479)">0</text></g><g><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="14" transform="translate(116.146 437)">1</text></g><g><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="14" transform="translate(116.146 395)">2</text></g><g><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="14" transform="translate(116.146 354)">3</text></g><g><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="14" transform="translate(116.146 312)">4</text></g><g><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="14" transform="translate(116.146 270)">5</text></g><g><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="14" transform="translate(116.146 229)">6</text></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="14" transform="translate(162.429 496)" x="29.562" y="0.000" text-anchor="middle">Quicksort</text></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="14" transform="translate(278.914 496)" x="25.672" y="0.000" text-anchor="middle">Iter first</text></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="14" transform="translate(391.789 496)" x="25.297" y="0.000" text-anchor="middle">Iter last</text></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="14" transform="translate(499.89 496)" x="28.672" y="0.000" text-anchor="middle">Big table</text></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="14" transform="translate(604.818 496)" x="36.969" y="0.000" text-anchor="middle">Better hash</text></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="14" transform="translate(713.713 496)" x="40.469" y="0.000" text-anchor="middle">Linear lower</text></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="14" transform="matrix(6.12323e-17 -1 1 6.12323e-17 94.0079 390)" x="45.125" y="0.000" text-anchor="middle">CPU seconds</text></g><g><rect x="827.5" y="281.5" width="56" height="165" stroke="var(--c-000000)" stroke-width="0.333333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-ffffff)"/></g><g><rect x="833" y="292" width="7" height="7" fill="var(--c-db843d)"/></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="13" transform="translate(842.876 300)" x="11.922" y="0.000" text-anchor="middle">Sort</text></g><g><rect x="833.5" y="319.5" width="7" height="7" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-660066)"/></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="13" transform="translate(842.876 327)" x="10.117" y="0.000" text-anchor="middle">List</text></g><g><rect x="833.5" y="347.5" width="7" height="6" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-ccffff)"/></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="13" transform="translate(842.876 355)" x="17.711" y="0.000" text-anchor="middle">Lower</text></g><g><rect x="833.5" y="374.5" width="7" height="7" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-ffffcc)"/></g><g><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="13" transform="translate(842.876 382)" x="16.984" y="0.000" text-anchor="middle" data-csapp-zh="" textLength="33.969" lengthAdjust="spacingAndGlyphs">strlen</text></g><g><rect x="833.5" y="401.5" width="7" height="7" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-993366)"/></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="13" transform="translate(842.876 409)" x="15.180" y="0.000" text-anchor="middle">Hash</text></g><g><rect x="833.5" y="429.5" width="7" height="6" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="var(--c-9999ff)"/></g><g><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="13" transform="translate(842.876 437)" x="13.367" y="0.000" text-anchor="middle">Other</text></g><rect x="61.5001" y="193.5" width="838" height="334" stroke="var(--c-000000)" stroke-width="0.333333" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g></svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="79" overflow="hidden" viewBox="0 0 280 79" class="csapp-figure" role="img" aria-labelledby="csapp-netp-lan-title" fill="var(--c-000000)"><title id="csapp-netp-lan-title">图 11-5 局域网的概念视图</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  --c-ffffff: #ffffff;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-ffffff: #1e232c;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+  --c-ffffff: #ffffff;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-ffffff: #1e232c;
+}</style><g transform="translate(-5 2)"><path d="M8 68 280 68.0001 280 69.3334 8 69.3333ZM8 70.6667 280 70.6668 280 73.3334 8 73.3333ZM8 74.6667 280 74.6668 280 76.0001 8 76Z"/><path d="M40.5001 40.5001 40.5002 72.5001" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><path d="M136.5 40.5001 136.5 72.5001" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><path d="M248.5 40.5001 248.5 72.5001" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><rect x="8.50005" y="10.5001" width="65" height="37" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(18.6667 37)" x="21.594" y="0.000" text-anchor="middle" data-csapp-zh="">主机</text><rect x="102.5" y="8.50005" width="65" height="37" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(112.667 35)" x="21.594" y="0.000" text-anchor="middle" data-csapp-zh="">主机</text><rect x="214.5" y="8.50005" width="65" height="37" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(224.667 35)" x="21.594" y="0.000" text-anchor="middle" data-csapp-zh="">主机</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(177.667 26)">...</text></g></svg>

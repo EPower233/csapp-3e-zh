@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="684" height="204" overflow="hidden" viewBox="0 0 684 204" class="csapp-figure" role="img" aria-labelledby="csapp-ecf-trap-title" fill="var(--c-000000)"><title id="csapp-ecf-trap-title">Figure 8.6</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+}</style><g transform="translate(7 -2)"><path d="M261.167 5.50005 261.167 61.8334 259.833 61.8334 259.833 5.50005ZM264.5 60.5 260.5 68.5 256.5 60.5001Z"/><path d="M260.5 68.8334 505.833 68.8335 505.833 70.1668 260.5 70.1667ZM504.5 65.5002 512.5 69.5002 504.5 73.5002Z"/><path d="M0.666667-1.24984e-06 0.666759 49.3333-0.666574 49.3333-0.666667 1.24984e-06ZM4.00009 48 0.000104987 56-3.99991 48Z" transform="matrix(-1 0 0 1 512.5 69.5001)"/><path d="M507.391 124.158 266.968 84.2494 267.186 82.9341 507.609 122.842ZM267.737 87.7561 260.5 82.5001 269.047 79.8641Z"/><path d="M261.167 83.4928 262.094 168.826 260.761 168.841 259.833 83.5073ZM265.413 167.457 261.5 175.5 257.413 167.544Z"/><text font-family="Arial,Helvetica,sans-serif" font-style="italic" font-weight="400" font-size="21" transform="translate(297.667 30)" x="85.789" y="12.500" text-anchor="middle"><tspan x="85.789" y="0.000">(2) Control</tspan><tspan x="85.789" y="25.000">passes to handler</tspan></text><text font-family="Arial,Helvetica,sans-serif" font-style="italic" font-weight="400" font-size="21" transform="translate(560.463 88)" x="36.329" y="12.500" text-anchor="middle"><tspan x="36.329" y="0.000">(3) Trap</tspan><tspan x="36.329" y="25.000">handler runs</tspan></text><text font-family="Arial,Helvetica,sans-serif" font-style="italic" font-weight="400" font-size="21" transform="translate(297.333 137)" x="88.297" y="25.500" text-anchor="middle"><tspan x="88.297" y="0.000">(4) Handler</tspan><tspan x="88.297" y="25.000">returns to</tspan><tspan x="88.297" y="51.000">instruction after syscall</tspan></text><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(157.6 64)">syscall</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-style="italic" font-weight="400" font-size="21" transform="translate(216.267 85)">I</text><text font-family="Arial,Arial_MSFontService,sans-serif" font-style="italic" font-weight="400" font-size="14" transform="translate(222.267 89)">next</text><text font-family="Arial,Helvetica,sans-serif" font-style="italic" font-weight="400" font-size="21" transform="translate(6.22992 46)" x="66.734" y="25.500" text-anchor="middle"><tspan x="66.734" y="0.000">(1) Application</tspan><tspan x="66.734" y="25.000">executes a</tspan><tspan x="66.734" y="51.000">system call</tspan></text></g></svg>

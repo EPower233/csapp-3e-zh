@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="261" overflow="hidden" viewBox="0 0 740 261" class="csapp-figure" role="img" aria-labelledby="csapp-asm-buf-frame-title" fill="var(--c-000000)"><title id="csapp-asm-buf-frame-title">Figure 3.40</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  --c-000066: #000066;
+  --c-0066cc: #0066cc;
+  --c-ccffff: #ccffff;
+  --c-ffffff: #ffffff;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-000066: #7f7ff8;
+  --c-0066cc: #175ca1;
+  --c-ccffff: #163d45;
+  --c-ffffff: #1e232c;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+  --c-000066: #000066;
+  --c-0066cc: #0066cc;
+  --c-ccffff: #ccffff;
+  --c-ffffff: #ffffff;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-000066: #7f7ff8;
+  --c-0066cc: #175ca1;
+  --c-ccffff: #163d45;
+  --c-ffffff: #1e232c;
+}</style><g transform="translate(-31 -70)"><rect x="264.5" y="224.5" width="319" height="96" stroke="var(--c-0066cc)" stroke-width="3" stroke-miterlimit="8" fill="var(--c-ccffff)"/><rect x="265.5" y="72.5001" width="319" height="120" stroke="var(--c-0066cc)" stroke-width="3" stroke-miterlimit="8" fill="var(--c-ccffff)"/><rect x="264.5" y="192.5" width="320" height="32" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(351.083 216)" x="71.789" y="0.000" text-anchor="middle">Return address</text><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(628.941 304)">buf</text><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(680.275 304)">= %</text><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(718.775 304)">rsp</text><path d="M0 0C10.4934-6.11104e-15 19 6.5664 19 14.6665L19 33.3335C19 41.4336 27.5066 48 38 48 27.5066 48 19 54.5664 19 62.6665L19 81.3335C19 89.4336 10.4934 96-3.05552e-15 96" stroke="var(--c-000066)" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd" transform="matrix(-1 0 0 1 255.5 224.5)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(84.2667 266)" x="56.544" y="12.000" text-anchor="middle">Stack frame for echo</text><path d="M0 0C10.4934-4.83791e-15 19 5.67099 19 12.6665L19 63.3335C19 70.329 27.5066 76 38 76 27.5066 76 19 81.671 19 88.6665L19 139.333C19 146.329 10.4934 152-2.41895e-15 152" stroke="var(--c-000066)" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd" transform="matrix(-1 0 0 1 255.5 72.5001)"/><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(84.2667 146)" x="56.349" y="12.000" text-anchor="middle"><tspan x="56.349" y="0.000">Caller's</tspan><tspan x="56.349" y="24.000">frame</tspan></text><rect x="264.5" y="288.5" width="40" height="32" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(264.75 310)">[7]</text><rect x="304.5" y="288.5" width="40" height="32" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(304.75 310)">[6]</text><rect x="344.5" y="288.5" width="40" height="32" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(344.75 310)">[5]</text><rect x="384.5" y="288.5" width="40" height="32" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(384.75 310)">[4]</text><rect x="424.5" y="288.5" width="40" height="32" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(424.75 310)">[3]</text><rect x="464.5" y="288.5" width="40" height="32" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(464.75 310)">[2]</text><rect x="504.5" y="288.5" width="40" height="32" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(504.75 310)">[1]</text><rect x="544.5" y="288.5" width="40" height="32" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-ffffff)"/><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(544.75 310)">[0]</text><rect x="265.5" y="224.5" width="319" height="96" stroke="var(--c-0066cc)" stroke-width="3" stroke-miterlimit="8" fill="none"/><rect x="264.5" y="72.5001" width="320" height="152" stroke="var(--c-0066cc)" stroke-width="3" stroke-miterlimit="8" fill="none"/><path d="M3.93701e-06-1.5 32.5-1.49991 32.5 1.50009-3.93701e-06 1.5ZM31-4.49992 40 0.000104987 31 4.50008Z" transform="matrix(-1 0 0 1 624.5 208.5)"/><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(628.941 208)">%rsp</text><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(680.275 208)">+</text><text font-family="Courier New,Courier New_MSFontService,sans-serif" font-weight="400" font-size="21" transform="translate(693.108 208)">24</text><path d="M3.93701e-06-1.5 32.5-1.49991 32.5 1.50009-3.93701e-06 1.5ZM31-4.49992 40 0.000104987 31 4.50008Z" transform="matrix(-1 0 0 1 624.5 304.5)"/></g></svg>

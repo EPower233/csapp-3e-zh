@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="541" height="235" overflow="hidden" viewBox="0 0 541 235" class="csapp-figure" role="img" aria-labelledby="csapp-conc-threadsafe-title" fill="var(--c-000000)"><title id="csapp-conc-threadsafe-title">图 12-39 可重入函数、线程安全函数和线程不安全函数之间的集合关系</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+}</style><g transform="translate(4 10)"><path d="M56.5001 148.5C56.5001 115.363 92.3173 88.5001 136.5 88.5001 180.683 88.5001 216.5 115.363 216.5 148.5 216.5 181.637 180.683 208.5 136.5 208.5 92.3173 208.5 56.5001 181.637 56.5001 148.5Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(89.1667 143)" x="46.117" y="12.500" text-anchor="middle" data-csapp-zh=""><tspan x="46.117" y="0.000">可重入函</tspan><tspan x="46.117" y="25.000">数</tspan></text><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(9.66667 18)" x="56.617" y="0.000" text-anchor="middle" data-csapp-zh="">所有函数</text><rect x="8.50005" y="24.5001" width="264" height="200" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="none"/><rect x="272.5" y="24.5001" width="264" height="200" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="none"/><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(337.667 114)" x="68.864" y="12.500" text-anchor="middle" data-csapp-zh="">线程不安全函数</text><text font-family="&quot;Microsoft YaHei&quot;,&quot;PingFang SC&quot;,&quot;Noto Sans CJK SC&quot;,system-ui,sans-serif" font-weight="400" font-size="21" transform="translate(77.6667 50)" x="57.185" y="12.500" text-anchor="middle" data-csapp-zh=""><tspan x="57.185" y="0.000">线程安全函</tspan><tspan x="57.185" y="25.000">数</tspan></text></g></svg>

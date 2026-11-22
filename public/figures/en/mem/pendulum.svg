@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="787" height="256" overflow="hidden" viewBox="0 0 787 256" class="csapp-figure" role="img" aria-labelledby="csapp-mem-pendulum-title" fill="var(--c-000000)"><title id="csapp-mem-pendulum-title">Figure 6.1</title><style>svg.csapp-figure {
+  --c-000000: #202734;
+  --c-969696: #969696;
+  --c-c0c0c0: #c0c0c0;
+  color: var(--c-000000);
+}
+@media (prefers-color-scheme: dark) {
+  svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-969696: #9c9c9c;
+  --c-c0c0c0: #4b4b4b;
+  }
+}
+html:not(.dark) svg.csapp-figure,
+.theme-light svg.csapp-figure {
+  --c-000000: #202734;
+  --c-969696: #969696;
+  --c-c0c0c0: #c0c0c0;
+}
+.dark svg.csapp-figure,
+.theme-dark svg.csapp-figure {
+  --c-000000: #e6edf3;
+  --c-969696: #9c9c9c;
+  --c-c0c0c0: #4b4b4b;
+}</style><defs><clipPath id="csapp-mem-pendulum-clip0"><rect x="3" y="2" width="787" height="256"/></clipPath></defs><g clip-path="url(#csapp-mem-pendulum-clip0)" transform="translate(-3 -2)"><path d="M124.5 256.5 180.5 168.5 236.5 256.5Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-c0c0c0)" fill-rule="evenodd"/><path d="M42.2661 227.151 157.838 180.063C172.978 173.894 186.603 172.211 188.27 176.302 189.937 180.394 179.015 188.712 163.875 194.88L48.3032 241.968C33.1629 248.137 19.5379 249.82 17.8708 245.729 16.2037 241.637 27.1259 233.319 42.2661 227.151Z" fill="var(--c-969696)" fill-rule="evenodd"/><path d="M17.8708 245.729C14.5367 237.545 18.4677 228.208 26.6511 224.874 34.8345 221.54 44.1714 225.471 47.5055 233.654 50.8397 241.838 46.9087 251.175 38.7253 254.509 30.5419 257.843 21.205 253.912 17.8708 245.729Z" fill="var(--c-969696)" fill-rule="evenodd"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="37" transform="matrix(0.926084 -0.377317 0.377317 0.926084 175.317 182)">.</text><path d="M4.50005 256.5 68.5 256.5" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"/><path d="M0 88 56 0 112 88Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-c0c0c0)" fill-rule="evenodd" transform="matrix(-1 0 0 1 669.5 168.5)"/><path d="M29.6019 0 154.398 0C170.747-2.6948e-15 184 3.58172 184 8 184 12.4183 170.747 16 154.398 16L29.6019 16C13.2532 16 0 12.4183 0 8 0 3.58172 13.2532 1.3474e-15 29.6019 0Z" fill="var(--c-969696)" fill-rule="evenodd" transform="matrix(-0.926084 -0.377317 -0.377317 0.926084 778.481 238.32)"/><path d="M0 16C-2.03701e-15 7.16344 7.16344-2.03701e-15 16-4.07403e-15 24.8366-8.14805e-15 32 7.16344 32 16 32 24.8366 24.8366 32 16 32 7.16344 32-1.01851e-14 24.8366 0 16Z" fill="var(--c-969696)" fill-rule="evenodd" transform="matrix(-0.926084 -0.377317 -0.377317 0.926084 781.5 230.911)"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="37" transform="matrix(0.926084 0.377317 -0.377317 0.926084 608.447 179)">.</text><path d="M0 0 64 0.000104987" stroke="var(--c-000000)" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd" transform="matrix(-1 0 0 1 789.5 256.5)"/><path d="M341.5 256.5 397.5 168.5 453.5 256.5Z" stroke="var(--c-000000)" stroke-width="1.33333" stroke-miterlimit="8" fill="var(--c-c0c0c0)" fill-rule="evenodd"/><path d="M382.735 30.9455 401.504 154.322C403.963 170.485 402.415 184.126 398.047 184.791 393.679 185.455 388.145 172.891 385.686 156.729L366.917 33.3518C364.458 17.1891 366.006 3.54797 370.374 2.88348 374.742 2.21899 380.276 14.7828 382.735 30.9455Z" fill="var(--c-969696)" fill-rule="evenodd"/><path d="M370.374 2.88351C379.11 1.55453 387.269 7.55914 388.598 16.2952 389.927 25.0312 383.923 33.1906 375.187 34.5195 366.451 35.8485 358.291 29.8439 356.962 21.1079 355.633 12.3718 361.638 4.21249 370.374 2.88351Z" fill="var(--c-969696)" fill-rule="evenodd"/><text font-family="Arial,Arial_MSFontService,sans-serif" font-weight="400" font-size="37" transform="matrix(0.150396 0.988626 -0.988626 0.150396 395.051 171)">.</text><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(38.3333 159)" x="46.703" y="0.000" text-anchor="middle">Left stable</text><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(652 159)" x="53.117" y="0.000" text-anchor="middle">Right stable</text><text font-family="Arial,Helvetica,sans-serif" font-weight="400" font-size="21" transform="translate(409.5 48)" x="41.445" y="0.000" text-anchor="middle">Unstable</text></g></svg>
