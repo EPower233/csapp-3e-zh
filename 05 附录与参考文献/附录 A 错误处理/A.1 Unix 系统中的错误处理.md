@@ -56,9 +56,9 @@ void gai_error(int code, char* msg);
 void app_error(char* msg);
 ```
 
-正如它们的名字表明的那样，`unix_error`、`posix_error` 和 `gai_error` 函数报告 Unix 风格的错误、Posix 风格的错误和 GAI 风格的错误，然后终止。包括 `app_error` 函数是为了方便报告应用错误。它只是简单地打印它的输入，然后终止。[图 A-1](#%E5%9B%BE%20A-1) 展示了这些错误报告函数的代码。
+正如它们的名字表明的那样，`unix_error`、`posix_error` 和 `gai_error` 函数报告 Unix 风格的错误、Posix 风格的错误和 GAI 风格的错误，然后终止。包括 `app_error` 函数是为了方便报告应用错误。它只是简单地打印它的输入，然后终止。[图 A-1](#fig-a-1) 展示了这些错误报告函数的代码。
 
-### 图 A-1
+<div id="fig-a-1" class="anchor-block"></div>
 
 ```c
 void unix_error(char* msg) /* Unix-style error */
@@ -86,4 +86,8 @@ void app_error(char* msg) /* Application error */
 }
 ```
 
+<div class="figure-caption">
+
 图 A-1　错误报告函数
+
+</div>

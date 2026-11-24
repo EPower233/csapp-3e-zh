@@ -227,7 +227,7 @@ This problem is a drill to help you understand the different shift operations.
 
 In general, working through examples for very small word sizes is a very good way to understand computer arithmetic.
 
-The unsigned values correspond to those in [Figure 2.2](./2.1%20Information%20Storage.md#figure-2-2). For the two's-complement values, hex digits `0` through `7` have a most significant bit of 0, yielding nonnegative values, while hex digits `8` through `F` have a most significant bit of 1, yielding a negative value.
+The unsigned values correspond to those in [Figure 2.2](./2.1%20Information%20Storage.md#fig-2-2). For the two's-complement values, hex digits `0` through `7` have a most significant bit of 0, yielding nonnegative values, while hex digits `8` through `F` have a most significant bit of 1, yielding a negative value.
 
 | $\vec{x}$ (Hex) | $\vec{x}$ (Binary) | $B2U_4(\vec{x})$ | $B2T_4(\vec{x})$ |
 | --- | --- | --- | --- |

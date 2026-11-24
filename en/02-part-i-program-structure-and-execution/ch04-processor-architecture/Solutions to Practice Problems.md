@@ -203,9 +203,9 @@ In general, the signals `eq` and `xor` will be complements of each other. That i
 
 ## Solution 4.10
 
-The outputs of the EXCLUSIVE-OR circuits will be the complements of the bit equality values. Using DeMorgan's laws (Web Aside DATA:BOOL on page 52), we can implement AND using OR and NOT, yielding the circuit shown in [Figure 4.71](#figure-4-71).
+The outputs of the EXCLUSIVE-OR circuits will be the complements of the bit equality values. Using DeMorgan's laws (Web Aside DATA:BOOL on page 52), we can implement AND using OR and NOT, yielding the circuit shown in [Figure 4.71](#fig-4-71).
 
-### Figure 4.71
+<div id="fig-4-71" class="anchor-block"></div>
 
 ![](../../../public/figures/en/arch/figure-4-71-word-equality.svg)
 
@@ -269,11 +269,11 @@ The instruction sets `%rax` to 9, sets `%rsp` to 128, and increments the `PC` by
 
 ## Solution 4.15
 
-Tracing the steps listed in [Figure 4.20](./4.3%20Sequential%20Y86-64%20Implementations.md#figure-4-20) with `rA` equal to `%rsp`, we can see that in the memory stage the instruction will store `valA`, the original value of the stack pointer, to memory, just as we found for x86-64.
+Tracing the steps listed in [Figure 4.20](./4.3%20Sequential%20Y86-64%20Implementations.md#fig-4-20) with `rA` equal to `%rsp`, we can see that in the memory stage the instruction will store `valA`, the original value of the stack pointer, to memory, just as we found for x86-64.
 
 ## Solution 4.16
 
-Tracing the steps listed in [Figure 4.20](./4.3%20Sequential%20Y86-64%20Implementations.md#figure-4-20) with `rA` equal to `%rsp`, we can see that both of the write-back operations will update `%rsp`. Since the one writing `valM` would occur last, the net effect of the instruction will be to write the value read from memory to `%rsp`, just as we saw for x86-64.
+Tracing the steps listed in [Figure 4.20](./4.3%20Sequential%20Y86-64%20Implementations.md#fig-4-20) with `rA` equal to `%rsp`, we can see that both of the write-back operations will update `%rsp`. Since the one writing `valM` would occur last, the net effect of the instruction will be to write the value read from memory to `%rsp`, just as we saw for x86-64.
 
 ## Solution 4.17
 
@@ -306,7 +306,7 @@ The effect of this instruction is to set `%rsp` to 120, to store `0x040` (the re
 
 ## Solution 4.19
 
-All of the HCL code in this and other practice problems is straightforward, but trying to generate it yourself will help you think about the different instructions and how they are processed. For this problem, we can simply look at the set of Y86-64 instructions ([Figure 4.2](./4.1%20The%20Y86-64%20Instruction%20Set%20Architecture.md#figure-4-2)) and determine which have a constant field.
+All of the HCL code in this and other practice problems is straightforward, but trying to generate it yourself will help you think about the different instructions and how they are processed. For this problem, we can simply look at the set of Y86-64 instructions ([Figure 4.2](./4.1%20The%20Y86-64%20Instruction%20Set%20Architecture.md#fig-4-2)) and determine which have a constant field.
 
 ```hcl
 bool need_valC =
@@ -520,7 +520,7 @@ word m_stat = [
 
 ## Solution 4.37
 
-The following test program is designed to set up control combination A ([Figure 4.67](./4.5%20Pipelined%20Y86-64%20Implementations.md#figure-4-67)) and detect whether something goes wrong:
+The following test program is designed to set up control combination A ([Figure 4.67](./4.5%20Pipelined%20Y86-64%20Implementations.md#fig-4-67)) and detect whether something goes wrong:
 
 ```asm
 # Code to generate a combination of not-taken branch and ret
@@ -544,7 +544,7 @@ This program is designed so that if something goes wrong (for example, if the `r
 
 ## Solution 4.38
 
-The following test program is designed to set up control combination B ([Figure 4.67](./4.5%20Pipelined%20Y86-64%20Implementations.md#figure-4-67)). The simulator will detect a case where the bubble and stall control signals for a pipeline register are both set to zero, and so our test program need only set up the combination for it to be detected. The biggest challenge is to make the program do something sensible when handled correctly.
+The following test program is designed to set up control combination B ([Figure 4.67](./4.5%20Pipelined%20Y86-64%20Implementations.md#fig-4-67)). The simulator will detect a case where the bubble and stall control signals for a pipeline register are both set to zero, and so our test program need only set up the combination for it to be detected. The biggest challenge is to make the program do something sensible when handled correctly.
 
 ```asm
 # Test instruction that modifies %rsp followed by ret
@@ -564,7 +564,7 @@ This program uses two initialized words in memory. The first word (`mem`) holds 
 
 ## Solution 4.39
 
-From [Figure 4.66](./4.5%20Pipelined%20Y86-64%20Implementations.md#figure-4-66), we can see that pipeline register `D` must be stalled for a load/use hazard:
+From [Figure 4.66](./4.5%20Pipelined%20Y86-64%20Implementations.md#fig-4-66), we can see that pipeline register `D` must be stalled for a load/use hazard:
 
 ```hcl
 bool D_stall =
@@ -575,7 +575,7 @@ bool D_stall =
 
 ## Solution 4.40
 
-From [Figure 4.66](./4.5%20Pipelined%20Y86-64%20Implementations.md#figure-4-66), we can see that pipeline register `E` must be set to bubble for a load/use hazard or for a mispredicted branch:
+From [Figure 4.66](./4.5%20Pipelined%20Y86-64%20Implementations.md#fig-4-66), we can see that pipeline register `E` must be set to bubble for a load/use hazard or for a mispredicted branch:
 
 ```hcl
 bool E_bubble =

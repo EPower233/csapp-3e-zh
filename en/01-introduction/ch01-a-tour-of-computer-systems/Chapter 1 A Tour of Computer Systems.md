@@ -32,9 +32,9 @@ You are poised for an exciting journey. If you dedicate yourself to learning the
 
 You are going to learn practical skills such as how to avoid strange numerical errors caused by the way that computers represent numbers. You will learn how to optimize your C code by using clever tricks that exploit the designs of modern processors and memory systems. You will learn how the compiler implements procedure calls and how to use this knowledge to avoid the security holes from buffer overflow vulnerabilities that plague network and Internet software. You will learn how to recognize and avoid the nasty errors during linking that confound the average programmer. You will learn how to write your own Unix shell, your own dynamic storage allocation package, and even your own Web server. You will learn the promises and pitfalls of concurrency, a topic of increasing importance as multiple processor cores are integrated onto single chips.
 
-In their classic text on the C programming language [\[61\]](./../../05-appendix-and-references/References.md#ref-61), Kernighan and Ritchie introduce readers to C using the `hello` program shown in [Figure 1.1](#Figure%201.1). Although `hello` is a very simple program, every major part of the system must work in concert in order for it to run to completion. In a sense, the goal of this book is to help you understand what happens and why when you run `hello` on your system.
+In their classic text on the C programming language [\[61\]](./Bibliographic%20Notes.md#ref-61), Kernighan and Ritchie introduce readers to C using the `hello` program shown in [Figure 1.1](#fig-1-1). Although `hello` is a very simple program, every major part of the system must work in concert in order for it to run to completion. In a sense, the goal of this book is to help you understand what happens and why when you run `hello` on your system.
 
-### Figure 1.1
+<div id="fig-1-1" class="anchor-block"></div>
 
 ```c
 #include <stdio.h>
@@ -45,6 +45,10 @@ int main() {
 }
 ```
 
-Figure 1.1 The `hello` program. (Source: [\[60\]](./../../05-appendix-and-references/References.md#ref-60))
+<div class="figure-caption">
+
+Figure 1.1 The `hello` program. (Source: [\[60\]](./Bibliographic%20Notes.md#ref-60))
+
+</div>
 
 We begin our study of systems by tracing the lifetime of the `hello` program, from the time it is created by a programmer, until it runs on a system, prints its simple message, and terminates. As we follow the lifetime of the program, we will briefly introduce the key concepts, terminology, and components that come into play. Later chapters will expand on these ideas.

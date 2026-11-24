@@ -107,13 +107,17 @@ void unroll5(vec_ptr v, data_t *dest) {
 
 ## Solution 5.8
 
-This problem demonstrates how small changes in a program can yield dramatic performance differences, especially on a machine with out-of-order execution. [Figure 5.39](#figure-5-39) diagrams the three multiplication operations for a single iteration of the function. In this figure, the operations shown as blue boxes are along the critical path—they need to be computed in sequence to compute a new value for loop variable `r`. The operations shown as light boxes can be computed in parallel with the critical path operations. For a loop with $P$ operations along the critical path, each iteration will require a minimum of $5P$ clock cycles and will compute the product for three elements, giving a lower bound on the CPE of $5P/3$. This implies lower bounds of 5.00 for A1, 3.33 for A2 and A5, and 1.67 for A3 and A4. We ran these functions on an Intel Core i7 Haswell processor and found that it could achieve these CPE values.
+This problem demonstrates how small changes in a program can yield dramatic performance differences, especially on a machine with out-of-order execution. [Figure 5.39](#fig-5-39) diagrams the three multiplication operations for a single iteration of the function. In this figure, the operations shown as blue boxes are along the critical path—they need to be computed in sequence to compute a new value for loop variable `r`. The operations shown as light boxes can be computed in parallel with the critical path operations. For a loop with $P$ operations along the critical path, each iteration will require a minimum of $5P$ clock cycles and will compute the product for three elements, giving a lower bound on the CPE of $5P/3$. This implies lower bounds of 5.00 for A1, 3.33 for A2 and A5, and 1.67 for A3 and A4. We ran these functions on an Intel Core i7 Haswell processor and found that it could achieve these CPE values.
 
-### Figure 5.39
+<div id="fig-5-39" class="anchor-block"></div>
 
 ![](../../../public/figures/en/opt/figure-5-39-multiply-dependencies.svg)
 
+<div class="figure-caption">
+
 Figure 5.39 Data dependencies among multiplication operations for cases in [Practice Problem 5.8](./5.9%20Enhancing%20Parallelism.md#practice-problem-5-8). The operations shown as blue boxes form the critical paths for the iterations.
+
+</div>
 
 ## Solution 5.9
 

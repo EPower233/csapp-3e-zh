@@ -99,7 +99,7 @@ The key to solving this problem is to visualize how the array is laid out in mem
 
 ## Solution 6.9
 
-The solution is a straightforward application of the definitions of the various cache parameters in [Figure 6.26](./6.4%20Cache%20Memories.md#figure-6-26). Not very exciting, but you need to understand how the cache organization induces these partitions in the address bits before you can really understand how caches work.
+The solution is a straightforward application of the definitions of the various cache parameters in [Figure 6.26](./6.4%20Cache%20Memories.md#fig-6-26). Not very exciting, but you need to understand how the cache organization induces these partitions in the address bits before you can really understand how caches work.
 
 | Cache | $m$ | $C$ | $B$ | $E$ | $S$ | $t$ | $s$ | $b$ |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -198,13 +198,17 @@ This problem is a sort of inverse version of [Practice Problems 6.12](./6.4%20Ca
 
 ## Solution 6.17
 
-A. The key to solving this problem is to visualize the picture in [Figure 6.48](#figure-6-48). Notice that each cache line holds exactly one row of the array, that the cache is exactly large enough to hold one array, and that for all $i$, row $i$ of `src` and `dst` maps to the same cache line. Because the cache is too small to hold both arrays, references to one array keep evicting useful lines from the other array. For example, the write to `dst[0][0]` evicts the line that was loaded when we read `src[0][0]`. So when we next read `src[0][1]`, we have a miss.
+A. The key to solving this problem is to visualize the picture in [Figure 6.48](#fig-6-48). Notice that each cache line holds exactly one row of the array, that the cache is exactly large enough to hold one array, and that for all $i$, row $i$ of `src` and `dst` maps to the same cache line. Because the cache is too small to hold both arrays, references to one array keep evicting useful lines from the other array. For example, the write to `dst[0][0]` evicts the line that was loaded when we read `src[0][0]`. So when we next read `src[0][1]`, we have a miss.
 
-### Figure 6.48
+<div id="fig-6-48" class="anchor-block"></div>
 
 ![](../../../public/figures/en/mem/figure-6-48-cache-line-mapping.svg)
 
+<div class="figure-caption">
+
 Figure 6.48 Figure for solution to [Practice Problem 6.17](./6.5%20Writing%20Cache-Friendly%20Code.md#practice-problem-6-17).
+
+</div>
 
 <table>
   <tr><td colspan="3">`dst` array</td><td colspan="3">`src` array</td></tr>

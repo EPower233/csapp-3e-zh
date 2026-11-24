@@ -13,6 +13,38 @@ html.dark {
   height: auto;
 }
 
+.vp-doc .anchor-block {
+  scroll-margin-top: calc(var(--vp-nav-height, 64px) + 16px);
+}
+
+.vp-doc .figure-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--vp-c-text-2);
+  margin-top: -0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.vp-doc .figure-caption p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.vp-doc .figure-caption code {
+  font-style: normal;
+}
+
+.vp-doc span[id^='ref-'] {
+  scroll-margin-top: calc(var(--vp-nav-height, 64px) + 16px);
+}
+
+.vp-doc .anchor-block.tk-article-heading-highlight,
+.vp-doc span[id^='ref-'].tk-article-heading-highlight {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
 .vp-doc .book-table {
   max-width: 100%;
   margin: 20px 0;

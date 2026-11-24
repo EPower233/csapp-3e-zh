@@ -463,9 +463,8 @@
 - [Homework Problems](./04-part-iii-interaction-and-communication-between-programs/ch12-concurrent-programming/Homework%20Problems.md)
 - [Solutions to Practice Problems](./04-part-iii-interaction-and-communication-between-programs/ch12-concurrent-programming/Solutions%20to%20Practice%20Problems.md)
 
-## Appendix & References
+## Appendix
 
 ### [Appendix A Error Handling](./05-appendix-and-references/appendix-a-error-handling/Appendix%20A%20Error%20Handling.md)
 - [A.1 Error Handling in Unix Systems](./05-appendix-and-references/appendix-a-error-handling/A.1%20Error%20Handling%20in%20Unix%20Systems.md)
 - [A.2 Error-Handling Wrappers](./05-appendix-and-references/appendix-a-error-handling/A.2%20Error-Handling%20Wrappers.md)
-- [References](./05-appendix-and-references/References.md)

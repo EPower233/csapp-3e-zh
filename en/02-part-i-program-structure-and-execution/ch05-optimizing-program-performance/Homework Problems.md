@@ -37,9 +37,9 @@ Our measurements show that this function has CPEs of 1.50 for integer data and 3
     jne     .L15                            # If !=, goto loop
 ```
 
-Assume that the functional units have the characteristics listed in [Figure 5.12](./5.7%20Understanding%20Modern%20Processors.md#figure-5-12).
+Assume that the functional units have the characteristics listed in [Figure 5.12](./5.7%20Understanding%20Modern%20Processors.md#fig-5-12).
 
-A. Diagram how this instruction sequence would be decoded into operations and show how the data dependencies between them would create a critical path of operations, in the style of [Figures 5.13](5.7%20Understanding%20Modern%20Processors.md#Figure%205.13) and [5.14](5.7%20Understanding%20Modern%20Processors.md#Figure%205.14)
+A. Diagram how this instruction sequence would be decoded into operations and show how the data dependencies between them would create a critical path of operations, in the style of [Figures 5.13](5.7%20Understanding%20Modern%20Processors.md#fig-5-13) and [5.14](5.7%20Understanding%20Modern%20Processors.md#fig-5-14)
 
 B. For data type `double`, what lower bound on the CPE is determined by the critical path?
 

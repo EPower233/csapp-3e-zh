@@ -139,9 +139,9 @@ long switch3(long *p1, long *p2, mode_t action) {
 }
 ```
 
-The part of the generated assembly code implementing the different actions is shown in [Figure 3.52](#figure-3-52). The annotations indicate the argument locations, the register values, and the case labels for the different jump destinations.
+The part of the generated assembly code implementing the different actions is shown in [Figure 3.52](#fig-3-52). The annotations indicate the argument locations, the register values, and the case labels for the different jump destinations.
 
-### Figure 3.52
+<div id="fig-3-52" class="anchor-block"></div>
 
 ```asm
 # p1 in %rdi, p2 in %rsi, action in %edx
@@ -172,7 +172,11 @@ The part of the generated assembly code implementing the different actions is sh
     ret
 ```
 
+<div class="figure-caption">
+
 Figure 3.52 Assembly code for Problem 3.62. This code implements the different branches of a `switch` statement.
+
+</div>
 
 Fill in the missing parts of the C code. It contained one case that fell through to another—try to reconstruct this.
 
@@ -190,7 +194,7 @@ long switch_prob(long x, long n) {
 }
 ```
 
-[Figure 3.53](#figure-3-53) shows the disassembled machine code for the procedure.
+[Figure 3.53](#fig-3-53) shows the disassembled machine code for the procedure.
 
 The jump table resides in a different area of memory. We can see from the indirect jump on line 5 that the jump table begins at address `0x4006f8`. Using the GDB debugger, we can examine the six 8-byte words of memory comprising the jump table with the command `x/6gx 0x4006f8`. GDB prints the following:
 
@@ -203,7 +207,7 @@ The jump table resides in a different area of memory. We can see from the indire
 
 Fill in the body of the `switch` statement with C code that will have the same behavior as the machine code.
 
-### Figure 3.53
+<div id="fig-3-53" class="anchor-block"></div>
 
 ```asm
 # long switch_prob(long x, long n)
@@ -228,7 +232,11 @@ Fill in the body of the `switch` statement with C code that will have the same b
 4005c7:  c3                    retq
 ```
 
+<div class="figure-caption">
+
 Figure 3.53 Disassembled code for Problem 3.63.
+
+</div>
 
 ## Homework 3.64 (**)
 
@@ -561,13 +569,13 @@ On the basis of this information, fill in the missing expressions in the code fo
 
 ## Homework 3.71 (*)
 
-Write a function `good_echo` that reads a line from standard input and writes it to standard output. Your implementation should work for an input line of arbitrary length. You may use the library function `fgets`, but you must make sure your function works correctly even when the input line requires more space than you have allocated for your buffer. Your code should also check for error conditions and return when one is encountered. Refer to the definitions of the standard I/O functions for documentation \[[45](./../../05-appendix-and-references/References.md#ref-45), [61](./../../05-appendix-and-references/References.md#ref-61)\].
+Write a function `good_echo` that reads a line from standard input and writes it to standard output. Your implementation should work for an input line of arbitrary length. You may use the library function `fgets`, but you must make sure your function works correctly even when the input line requires more space than you have allocated for your buffer. Your code should also check for error conditions and return when one is encountered. Refer to the definitions of the standard I/O functions for documentation \[[45](./Bibliographic%20Notes.md#ref-45), [61](./Bibliographic%20Notes.md#ref-61)\].
 
 ## Homework 3.72 (**)
 
-[Figure 3.54(a)](#figure-3-54) shows the code for a function that is similar to function `vframe` ([Figure 3.43(a)](./3.10%20Combining%20Control%20and%20Data%20in%20Machine-Level%20Programs.md#figure-3-43)). We used `vframe` to illustrate the use of a frame pointer in managing variable-size stack frames. The new function `aframe` allocates space for local array `p` by calling library function `alloca`. This function is similar to the more commonly used function `malloc`, except that it allocates space on the run-time stack. The space is automatically deallocated when the executing procedure returns.
+[Figure 3.54(a)](#fig-3-54) shows the code for a function that is similar to function `vframe` ([Figure 3.43(a)](./3.10%20Combining%20Control%20and%20Data%20in%20Machine-Level%20Programs.md#fig-3-43)). We used `vframe` to illustrate the use of a frame pointer in managing variable-size stack frames. The new function `aframe` allocates space for local array `p` by calling library function `alloca`. This function is similar to the more commonly used function `malloc`, except that it allocates space on the run-time stack. The space is automatically deallocated when the executing procedure returns.
 
-[Figure 3.54(b)](#figure-3-54b) shows the part of the assembly code that sets up the frame pointer and allocates space for local variables `i` and `p`. It is very similar to the corresponding code for `vframe`. Let us use the same notation as in [Practice Problem 3.49](./3.10%20Combining%20Control%20and%20Data%20in%20Machine-Level%20Programs.md#practice-problem-3-49): The stack pointer is set to values $s_1$ at line 4 and $s_2$ at line 7. The start address of array `p` is set to value $p$ at line 9. Extra space $e_2$ may arise between $s_2$ and $p$, and extra space $e_1$ may arise between the end of array `p` and $s_1$.
+[Figure 3.54(b)](#fig-3-54b) shows the part of the assembly code that sets up the frame pointer and allocates space for local variables `i` and `p`. It is very similar to the corresponding code for `vframe`. Let us use the same notation as in [Practice Problem 3.49](./3.10%20Combining%20Control%20and%20Data%20in%20Machine-Level%20Programs.md#practice-problem-3-49): The stack pointer is set to values $s_1$ at line 4 and $s_2$ at line 7. The start address of array `p` is set to value $p$ at line 9. Extra space $e_2$ may arise between $s_2$ and $p$, and extra space $e_1$ may arise between the end of array `p` and $s_1$.
 
 A. Explain, in mathematical terms, the logic in the computation of $s_2$.
 
@@ -577,7 +585,7 @@ C. Find values of $n$ and $s_1$ that lead to minimum and maximum values of $e_1$
 
 D. What alignment properties does this code guarantee for the values of $s_2$ and $p$?
 
-### Figure 3.54
+<div id="fig-3-54" class="anchor-block"></div>
 
 #### (a) C code
 
@@ -593,7 +601,7 @@ long aframe(long n, long idx, long *q) {
 }
 ```
 
-### Figure 3.54b
+<div id="fig-3-54b" class="anchor-block"></div>
 
 #### (b) Portions of generated assembly code
 
@@ -612,15 +620,19 @@ aframe:
     # ...
 ```
 
-Figure 3.54 Code for Problem 3.72. This function is similar to that of [Figure 3.43](./3.10%20Combining%20Control%20and%20Data%20in%20Machine-Level%20Programs.md#figure-3-43).
+<div class="figure-caption">
+
+Figure 3.54 Code for Problem 3.72. This function is similar to that of [Figure 3.43](./3.10%20Combining%20Control%20and%20Data%20in%20Machine-Level%20Programs.md#fig-3-43).
+
+</div>
 
 ## Homework 3.73 (*)
 
-Write a function in assembly code that matches the behavior of the function `find_range` in [Figure 3.51](./3.11%20Floating-Point%20Code.md#figure-3-51). Your code should contain only one floating-point comparison instruction, and then it should use conditional branches to generate the correct result. Test your code on all $2^{32}$ possible argument values. Web Aside ASM:EASM on page 178 describes how to incorporate functions written in assembly code into C programs.
+Write a function in assembly code that matches the behavior of the function `find_range` in [Figure 3.51](./3.11%20Floating-Point%20Code.md#fig-3-51). Your code should contain only one floating-point comparison instruction, and then it should use conditional branches to generate the correct result. Test your code on all $2^{32}$ possible argument values. Web Aside ASM:EASM on page 178 describes how to incorporate functions written in assembly code into C programs.
 
 ## Homework 3.74
 
-Write a function in assembly code that matches the behavior of the function `find_range` in [Figure 3.51](./3.11%20Floating-Point%20Code.md#figure-3-51). Your code should contain only one floating-point comparison instruction, and then it should use conditional moves to generate the correct result. You might want to make use of the instruction `cmovp` (move if even parity). Test your code on all $2^{32}$ possible argument values. Web Aside ASM:EASM on page 178 describes how to incorporate functions written in assembly code into C programs.
+Write a function in assembly code that matches the behavior of the function `find_range` in [Figure 3.51](./3.11%20Floating-Point%20Code.md#fig-3-51). Your code should contain only one floating-point comparison instruction, and then it should use conditional moves to generate the correct result. You might want to make use of the instruction `cmovp` (move if even parity). Test your code on all $2^{32}$ possible argument values. Web Aside ASM:EASM on page 178 describes how to incorporate functions written in assembly code into C programs.
 
 ## Homework 3.75 (•)
 

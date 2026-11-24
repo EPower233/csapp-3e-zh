@@ -4,17 +4,17 @@
 
 ## Homework 12.16 (*)
 
-Write a version of hello.c ([Figure 12.13](./12.3%20Concurrent%20Programming%20with%20Threads.md#figure-12-13) ) that creates and reaps n joinable peer threads, where n is a command-line argument.
+Write a version of hello.c ([Figure 12.13](./12.3%20Concurrent%20Programming%20with%20Threads.md#fig-12-13) ) that creates and reaps n joinable peer threads, where n is a command-line argument.
 
 ## Homework 12.17 (*)
 
-A. The program in [Figure 12.46](#figure-12-46) has a bug. The thread is supposed to sleep for 1 second and then print a string. However, when we run it on our system, nothing prints. Why?
+A. The program in [Figure 12.46](#fig-12-46) has a bug. The thread is supposed to sleep for 1 second and then print a string. However, when we run it on our system, nothing prints. Why?
 
-B. You can fix this bug by replacing the exit function in [line 10](#figure-12-46) with one of two different Pthreads function calls. Which ones?
+B. You can fix this bug by replacing the exit function in [line 10](#fig-12-46) with one of two different Pthreads function calls. Which ones?
 
 -code/conc/hellobug.c
 
-### Figure 12.46
+<div id="fig-12-46" class="anchor-block"></div>
 
 ```c
 /* WARNING: This code is buggy! */
@@ -36,11 +36,15 @@ void *thread(void *vargp) {
 }
 ```
 
+<div class="figure-caption">
+
 Figure 12.46 Buggy program for Problem 12.17.
+
+</div>
 
 ## Homework 12.18 (*)
 
-Using the progress graph in [Figure 12.21](./12.5%20Synchronizing%20Threads%20with%20Semaphores.md#Figure%2012.21), classify the following trajectories as either safe or unsafe.
+Using the progress graph in [Figure 12.21](./12.5%20Synchronizing%20Threads%20with%20Semaphores.md#fig-12-21), classify the following trajectories as either safe or unsafe.
 
 $$
 \begin{array}{l}
@@ -52,7 +56,7 @@ $$
 
 ## Homework 12.19 (**)
 
-The solution to the first readers-writers problem in [Figure 12.26](./12.5%20Synchronizing%20Threads%20with%20Semaphores.md#figure-12-26) gives a somewhat weak priority to readers because a writer leaving its critical section might restart a waiting writer instead of a waiting reader. Derive a solution that gives stronger priority to readers, where a writer leaving its critical section will always restart a waiting reader if one exists.
+The solution to the first readers-writers problem in [Figure 12.26](./12.5%20Synchronizing%20Threads%20with%20Semaphores.md#fig-12-26) gives a somewhat weak priority to readers because a writer leaving its critical section might restart a waiting writer instead of a waiting reader. Derive a solution that gives stronger priority to readers, where a writer leaving its critical section will always restart a waiting reader if one exists.
 
 ## Homework 12.20 (***)
 
@@ -64,11 +68,11 @@ Derive a solution to the second readers-writers problem, which favors writers in
 
 ## Homework 12.22 (**)
 
-Test your understanding of the `select` function by modifying the server in [Figure 12.6](./12.2%20Concurrent%20Programming%20with%20I%EF%BC%8FO%20Multiplexing.md#figure-12-6) so that it echoes at most one text line per iteration of the main server loop.
+Test your understanding of the `select` function by modifying the server in [Figure 12.6](./12.2%20Concurrent%20Programming%20with%20I%EF%BC%8FO%20Multiplexing.md#fig-12-6) so that it echoes at most one text line per iteration of the main server loop.
 
 ## Homework 12.23 (**)
 
-The event-driven concurrent echo server in [Figure 12.8](./12.2%20Concurrent%20Programming%20with%20I%EF%BC%8FO%20Multiplexing.md#figure-12-8) is flawed because a malicious client can deny service to other clients by sending a partial text line. Write an improved version of the server that can handle these partial text lines without blocking.
+The event-driven concurrent echo server in [Figure 12.8](./12.2%20Concurrent%20Programming%20with%20I%EF%BC%8FO%20Multiplexing.md#fig-12-8) is flawed because a malicious client can deny service to other clients by sending a partial text line. Write an improved version of the server that can handle these partial text lines without blocking.
 
 ## Homework 12.24 (*)
 
@@ -76,7 +80,7 @@ The functions in the RIO I/O package ([Section 10.5](../ch10-system-level-io/10.
 
 ## Homework 12.25 (*)
 
-In the prethreaded concurrent echo server in [Figure 12.28](./12.5%20Synchronizing%20Threads%20with%20Semaphores.md#Figure%2012.28), each thread calls the `echo_cnt` function ([Figure 12.29](./12.5%20Synchronizing%20Threads%20with%20Semaphores.md#Figure%2012.29)). Is `echo_cnt` thread-safe? Is it reentrant? Why or why not?
+In the prethreaded concurrent echo server in [Figure 12.28](./12.5%20Synchronizing%20Threads%20with%20Semaphores.md#fig-12-28), each thread calls the `echo_cnt` function ([Figure 12.29](./12.5%20Synchronizing%20Threads%20with%20Semaphores.md#fig-12-29)). Is `echo_cnt` thread-safe? Is it reentrant? Why or why not?
 
 ## Homework 12.26 (***)
 
@@ -104,7 +108,7 @@ However, if you try this approach in a concurrent server based on threads, you w
 
 ## Homework 12.28 (*)
 
-In [Figure 12.45](./12.7%20Other%20Concurrency%20Issues.md#figure-12-45), does swapping the order of the two V operations have any effect on whether or not the program deadlocks? Justify your answer by drawing the progress graphs for the four possible cases:
+In [Figure 12.45](./12.7%20Other%20Concurrency%20Issues.md#fig-12-45), does swapping the order of the two V operations have any effect on whether or not the program deadlocks? Justify your answer by drawing the progress graphs for the four possible cases:
 
 <table>
 <tr><td colspan="2">Case 1</td><td colspan="2">Case 2</td><td colspan="2">Case 3</td><td colspan="2">Case 4</td></tr>
@@ -155,9 +159,9 @@ C. For these threads, show a new lock ordering that guarantees freedom from dead
 
 ## Homework 12.31 (***)
 
-Implement a version of the standard I/O `fgets` function, called tfgets, that times out and returns NULL if it does not receive an input line on standard input within 5 seconds. Your function should be implemented in a package called tfgets-proc.c using processes, signals, and nonlocal jumps. It should not use the Linux `alarm` function. Test your solution using the driver program in [Figure 12.47](#figure-12-47).
+Implement a version of the standard I/O `fgets` function, called tfgets, that times out and returns NULL if it does not receive an input line on standard input within 5 seconds. Your function should be implemented in a package called tfgets-proc.c using processes, signals, and nonlocal jumps. It should not use the Linux `alarm` function. Test your solution using the driver program in [Figure 12.47](#fig-12-47).
 
-### Figure 12.47
+<div id="fig-12-47" class="anchor-block"></div>
 
 ```c
 #include "csapp.h"
@@ -177,7 +181,11 @@ int main()
 }
 ```
 
+<div class="figure-caption">
+
 Figure 12.47 Driver program for [Problems 12.31](#Homework%2012.31%20%28%2A%2A%2A%29)–12.33.
+
+</div>
 
 ## Homework 12.32 (***)
 

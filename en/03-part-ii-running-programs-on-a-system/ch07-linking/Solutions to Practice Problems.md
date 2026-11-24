@@ -42,11 +42,11 @@ C. `gcc p.o libx.a liby.a libx.a`
 
 ## Solution 7.4
 
-This problem concerns the disassembly listing in [Figure 7.12(a)](7.7%20Relocation.md#Figure%207.12). Our purpose here is to give you some practice reading disassembly listings and to check your understanding of PC-relative addressing.
+This problem concerns the disassembly listing in [Figure 7.12(a)](7.7%20Relocation.md#fig-7-12). Our purpose here is to give you some practice reading disassembly listings and to check your understanding of PC-relative addressing.
 
-A. The hex address of the relocated reference in [line 5](7.7%20Relocation.md#Figure%207.12) is `0x4004df`.
+A. The hex address of the relocated reference in [line 5](7.7%20Relocation.md#fig-7-12) is `0x4004df`.
 
-B. The hex value of the relocated reference in [line 5](7.7%20Relocation.md#Figure%207.12) is `0x5`. Remember that the disassembly listing shows the value of the reference in little-endian byte order.
+B. The hex value of the relocated reference in [line 5](7.7%20Relocation.md#fig-7-12) is `0x5`. Remember that the disassembly listing shows the value of the reference in little-endian byte order.
 
 ## Solution 7.5
 
@@ -62,7 +62,7 @@ and
 ADDR(r.symbol) = ADDR(swap) = 0x4004e8
 ```
 
-Using the algorithm in [Figure 7.10](./7.7%20Relocation.md#figure-7-10), the linker first computes the runtime address of the reference:
+Using the algorithm in [Figure 7.10](./7.7%20Relocation.md#fig-7-10), the linker first computes the runtime address of the reference:
 
 ```text
 refaddr = ADDR(s) + r.offset

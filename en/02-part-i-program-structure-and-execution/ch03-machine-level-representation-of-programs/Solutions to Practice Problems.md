@@ -96,7 +96,7 @@ void decode1(long *xp, long *yp, long *zp) {
 
 ## Solution 3.6
 
-This exercise demonstrates the versatility of the `leaq` instruction and gives you more practice in deciphering the different operand forms. Although the operand forms are classified as type "Memory" in [Figure 3.3](./3.4%20Accessing%20Information.md#figure-3-3), no memory access occurs.
+This exercise demonstrates the versatility of the `leaq` instruction and gives you more practice in deciphering the different operand forms. Although the operand forms are classified as type "Memory" in [Figure 3.3](./3.4%20Accessing%20Information.md#fig-3-3), no memory access occurs.
 
 | Instruction | Result |
 | --- | --- |
@@ -1076,7 +1076,7 @@ This exercise requires that you step through the code, paying careful attention 
 
 ## Solution 3.51
 
-These cases can be handled by selecting the appropriate entries from the tables in [Figures 3.47](./3.11%20Floating-Point%20Code.md#figure-3-47) and [3.48](./3.11%20Floating-Point%20Code.md#figure-3-48), or using one of the code sequences for converting between floating-point formats.
+These cases can be handled by selecting the appropriate entries from the tables in [Figures 3.47](./3.11%20Floating-Point%20Code.md#fig-3-47) and [3.48](./3.11%20Floating-Point%20Code.md#fig-3-48), or using one of the code sequences for converting between floating-point formats.
 
 | $T_x$ | $T_y$ | Instruction(s) |
 | --- | --- | --- |
@@ -1088,7 +1088,7 @@ These cases can be handled by selecting the appropriate entries from the tables 
 
 ## Solution 3.52
 
-The basic rules for mapping arguments to registers are fairly simple (although they become much more complex with more and other types of arguments [\[77\]](./../../05-appendix-and-references/References.md#ref-77)).
+The basic rules for mapping arguments to registers are fairly simple (although they become much more complex with more and other types of arguments [\[77\]](./Bibliographic%20Notes.md#ref-77)).
 
 A. `double g1(double a, long b, float c, int d);`  
 Registers: `a` in `%xmm0`, `b` in `%rdi`, `c` in `%xmm1`, `d` in `%esi`.

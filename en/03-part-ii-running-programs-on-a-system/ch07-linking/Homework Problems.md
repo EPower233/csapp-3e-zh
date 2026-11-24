@@ -4,7 +4,7 @@
 
 ## Homework 7.6 (*)
 
-This problem concerns the `m.o` module from [Figure 7.5](./7.5%20Symbols%20and%20Symbol%20Tables.md#figure-7-5) and the following version of the `swap.c` function that counts the number of times it has been called:
+This problem concerns the `m.o` module from [Figure 7.5](./7.5%20Symbols%20and%20Symbol%20Tables.md#fig-7-5) and the following version of the `swap.c` function that counts the number of times it has been called:
 
 ```c
 extern int buf[];
@@ -134,7 +134,7 @@ C. `p.o` → `libx.a` → `liby.a` → `libz.a` and `liby.a` → `libx.a` → `l
 
 ## Homework 7.11 (**)
 
-The program header in [Figure 7.14](./7.8%20Executable%20Object%20Files.md#figure-7-14) indicates that the data segment occupies `0x230` bytes in memory. However, only the first `0x228` bytes of these come from the sections of the executable file. What causes this discrepancy?
+The program header in [Figure 7.14](./7.8%20Executable%20Object%20Files.md#fig-7-14) indicates that the data segment occupies `0x230` bytes in memory. However, only the first `0x228` bytes of these come from the sections of the executable file. What causes this discrepancy?
 
 ## Homework 7.12 (**)
 

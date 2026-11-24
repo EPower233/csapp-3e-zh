@@ -23,11 +23,11 @@ int main() {
 
 ## Homework 10.7 (*)
 
-Modify the `cpfile` program in [Figure 10.5](./10.5%20Robust%20Reading%20and%20Writing%20with%20the%20RIO%20Package.md#Figure%2010.5) so that it uses the RIO functions to copy standard input to standard output, `MAXBUF` bytes at a time.
+Modify the `cpfile` program in [Figure 10.5](./10.5%20Robust%20Reading%20and%20Writing%20with%20the%20RIO%20Package.md#fig-10-5) so that it uses the RIO functions to copy standard input to standard output, `MAXBUF` bytes at a time.
 
 ## Homework 10.8 (**)
 
-Write a version of the `statcheck` program in [Figure 10.10](./10.6%20Reading%20File%20Metadata.md#Figure%2010.10), called `fstatcheck`, that takes a descriptor number on the command line rather than a filename.
+Write a version of the `statcheck` program in [Figure 10.10](./10.6%20Reading%20File%20Metadata.md#fig-10-10), called `fstatcheck`, that takes a descriptor number on the command line rather than a filename.
 
 ## Homework 10.9 (**)
 
@@ -48,4 +48,4 @@ if (Fork() == 0) { /* child */
 
 ## Homework 10.10 (**)
 
-Modify the `cpfile` program in [Figure 10.5](./10.5%20Robust%20Reading%20and%20Writing%20with%20the%20RIO%20Package.md#Figure%2010.5) so that it takes an optional command-line argument `infile`. If `infile` is given, then copy `infile` to standard output; otherwise, copy standard input to standard output as before. The twist is that your solution must use the original copy loop ([lines 9–11](10.5%20Robust%20Reading%20and%20Writing%20with%20the%20RIO%20Package.md#Figure%2010.5)) for both cases. You are only allowed to insert code, and you are not allowed to change any of the existing code.
+Modify the `cpfile` program in [Figure 10.5](./10.5%20Robust%20Reading%20and%20Writing%20with%20the%20RIO%20Package.md#fig-10-5) so that it takes an optional command-line argument `infile`. If `infile` is given, then copy `infile` to standard output; otherwise, copy standard input to standard output as before. The twist is that your solution must use the original copy loop ([lines 9–11](10.5%20Robust%20Reading%20and%20Writing%20with%20the%20RIO%20Package.md#fig-10-5)) for both cases. You are only allowed to insert code, and you are not allowed to change any of the existing code.

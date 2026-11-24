@@ -58,9 +58,9 @@ void app_error(char *msg);
 
 Returns: nothing
 
-As their names suggest, the `unix_error`, `posix_error`, and `gai_error` functions report Unix-style, Posix-style, and GAI-style errors and then terminate. The `app_error` function is included as a convenience for application errors. It simply prints its input and then terminates. [Figure A.1](#Figure%20A.1) shows the code for the error-reporting functions.
+As their names suggest, the `unix_error`, `posix_error`, and `gai_error` functions report Unix-style, Posix-style, and GAI-style errors and then terminate. The `app_error` function is included as a convenience for application errors. It simply prints its input and then terminates. [Figure A.1](#fig-a-1) shows the code for the error-reporting functions.
 
-### Figure A.1
+<div id="fig-a-1" class="anchor-block"></div>
 
 ```c
 void unix_error(char *msg) /* Unix-style error */
@@ -88,4 +88,8 @@ void app_error(char *msg) /* Application error */
 }
 ```
 
+<div class="figure-caption">
+
 Figure A.1 Error-reporting functions.
+
+</div>

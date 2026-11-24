@@ -8,7 +8,7 @@ Processes A and B are concurrent with respect to each other, as are B and C, bec
 
 ## Solution 8.2
 
-In our example program in [Figure 8.15](./8.4%20Process%20Control.md#Figure%208.15), the parent and child execute disjoint sets of instructions. However, in this program, the parent and child execute nondisjoint sets of instructions, which is possible because the parent and child have identical code segments. This can be a difficult conceptual hurdle, so be sure you understand the solution to this problem. [Figure 8.47](#Figure%208.47) shows the process graph.
+In our example program in [Figure 8.15](./8.4%20Process%20Control.md#fig-8-15), the parent and child execute disjoint sets of instructions. However, in this program, the parent and child execute nondisjoint sets of instructions, which is possible because the parent and child have identical code segments. This can be a difficult conceptual hurdle, so be sure you understand the solution to this problem. [Figure 8.47](#fig-8-47) shows the process graph.
 
 A. The key idea here is that the child executes both `printf` statements. After the `fork` returns, it executes the `printf` in [line 6](8.4%20Process%20Control.md#Practice%20Problem%208.2). Then it falls out of the `if` statement and executes the `printf` in [line 7](8.4%20Process%20Control.md#Practice%20Problem%208.2). Here is the output produced by the child:
 
@@ -23,7 +23,7 @@ B. The parent executes only the `printf` in [line 7](8.4%20Process%20Control.md#
 p2: x=0
 ```
 
-### Figure 8.47
+<div id="fig-8-47" class="anchor-block"></div>
 
 ```mermaid
 flowchart LR
@@ -39,13 +39,17 @@ flowchart LR
     F --> CP1
 ```
 
+<div class="figure-caption">
+
 Figure 8.47 Process graph for [Practice Problem 8.2](./8.4%20Process%20Control.md#Practice%20Problem%208.2).
+
+</div>
 
 ## Solution 8.3
 
-We know that the sequences `acbc`, `abcc`, and `bacc` are possible because they correspond to topological sorts of the process graph ([Figure 8.48](#Figure%208.48)). However, sequences such as `bcac` and `cbca` do not correspond to any topological sort and thus are not feasible.
+We know that the sequences `acbc`, `abcc`, and `bacc` are possible because they correspond to topological sorts of the process graph ([Figure 8.48](#fig-8-48)). However, sequences such as `bcac` and `cbca` do not correspond to any topological sort and thus are not feasible.
 
-### Figure 8.48
+<div id="fig-8-48" class="anchor-block"></div>
 
 ```mermaid
 flowchart LR
@@ -60,15 +64,19 @@ flowchart LR
     PP2 --> PE(["exit"])
 ```
 
+<div class="figure-caption">
+
 Figure 8.48 Process graph for [Practice Problem 8.3](./8.4%20Process%20Control.md#Practice%20Problem%208.3).
+
+</div>
 
 ## Solution 8.4
 
-A. We can determine the number of lines of output by simply counting the number of `printf` vertices in the process graph ([Figure 8.49](#Figure%208.49)). In this case, there are six such vertices, and thus the program will print six lines of output.
+A. We can determine the number of lines of output by simply counting the number of `printf` vertices in the process graph ([Figure 8.49](#fig-8-49)). In this case, there are six such vertices, and thus the program will print six lines of output.
 
 B. Any output sequence corresponding to a topological sort of the graph is possible. For example: `Hello`, `1`, `0`, `Bye`, `2`, `Bye` is possible.
 
-### Figure 8.49
+<div id="fig-8-49" class="anchor-block"></div>
 
 ```mermaid
 flowchart LR
@@ -85,7 +93,11 @@ flowchart LR
     PP3 --> PE(["exit"])
 ```
 
+<div class="figure-caption">
+
 Figure 8.49 Process graph for [Practice Problem 8.4](./8.4%20Process%20Control.md#Practice%20Problem%208.4).
+
+</div>
 
 ## Solution 8.5
 
@@ -121,7 +133,7 @@ int main(int argc, char *argv[], char *envp[])
 
 ## Solution 8.7
 
-The `sleep` function returns prematurely whenever the sleeping process receives a signal that is not ignored. But since the default action upon receipt of a `SIGINT` is to terminate the process ([Figure 8.26](./8.5%20Signals.md#Figure%208.26)), we must install a `SIGINT` handler to allow the `sleep` function to return. The handler simply catches the signal and returns control to the `sleep` function, which returns immediately.
+The `sleep` function returns prematurely whenever the sleeping process receives a signal that is not ignored. But since the default action upon receipt of a `SIGINT` is to terminate the process ([Figure 8.26](./8.5%20Signals.md#fig-8-26)), we must install a `SIGINT` handler to allow the `sleep` function to return. The handler simply catches the signal and returns control to the `sleep` function, which returns immediately.
 
 ```c
 #include "csapp.h"

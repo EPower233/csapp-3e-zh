@@ -63,11 +63,11 @@ Modify the code you wrote for [Homework 4.47](#homework-4-47) to implement the t
 
 ## Homework 4.50 (\*\*)
 
-In [Section 3.6.8](./../ch03-machine-level-representation-of-programs/3.6%20Control.md#_3-6-8-switch-statements), we saw that a common way to implement `switch` statements is to create a set of code blocks and then index those blocks using a jump table. Consider the C code shown in [Figure 4.69](#figure-4-69) for a function `switchv`, along with associated test code.
+In [Section 3.6.8](./../ch03-machine-level-representation-of-programs/3.6%20Control.md#_3-6-8-switch-statements), we saw that a common way to implement `switch` statements is to create a set of code blocks and then index those blocks using a jump table. Consider the C code shown in [Figure 4.69](#fig-4-69) for a function `switchv`, along with associated test code.
 
 Implement `switchv` in Y86-64 using a jump table. Although the Y86-64 instruction set does not include an indirect jump instruction, you can get the same effect by pushing a computed address onto the stack and then executing the `ret` instruction. Implement test code similar to what is shown in C to demonstrate that your implementation of `switchv` will handle both the cases handled explicitly as well as those that trigger the `default` case.
 
-### Figure 4.69
+<div id="fig-4-69" class="anchor-block"></div>
 
 ```c
 #include <stdio.h>
@@ -111,7 +111,7 @@ int main() {
 
 ## Homework 4.51 (•)
 
-[Practice Problem 4.3](4.1%20The%20Y86-64%20Instruction%20Set%20Architecture.md#Practice%20Problem%204.3) introduced the `iaddq` instruction to add immediate data to a register. Describe the computations performed to implement this instruction. Use the computations for `irmovq` and `OPq` ([Figure 4.18](./4.3%20Sequential%20Y86-64%20Implementations.md#figure-4-18)) as a guide.
+[Practice Problem 4.3](4.1%20The%20Y86-64%20Instruction%20Set%20Architecture.md#Practice%20Problem%204.3) introduced the `iaddq` instruction to add immediate data to a register. Describe the computations performed to implement this instruction. Use the computations for `irmovq` and `OPq` ([Figure 4.18](./4.3%20Sequential%20Y86-64%20Implementations.md#fig-4-18)) as a guide.
 
 ## Homework 4.52 (\*\*)
 
@@ -119,7 +119,7 @@ The file `seq-full.hcl` contains the HCL description for SEQ, along with the dec
 
 ## Homework 4.53 (\*\*)
 
-Suppose we wanted to create a lower-cost pipelined processor based on the structure we devised for PIPE− ([Figure 4.41](./4.5%20Pipelined%20Y86-64%20Implementations.md#figure-4-41)), without any bypassing. This design would handle all data dependencies by stalling until the instruction generating a needed value has passed through the write-back stage.
+Suppose we wanted to create a lower-cost pipelined processor based on the structure we devised for PIPE− ([Figure 4.41](./4.5%20Pipelined%20Y86-64%20Implementations.md#fig-4-41)), without any bypassing. This design would handle all data dependencies by stalling until the instruction generating a needed value has passed through the write-back stage.
 
 The file `pipe-stall.hcl` contains a modified version of the HCL code for PIPE in which the bypassing logic has been disabled. That is, the signals `e_valA` and `e_valB` are simply declared as follows:
 
@@ -161,15 +161,15 @@ In our design of PIPE, we generate a stall whenever one instruction performs a l
     rmmovq  %rax,     0(%rdx)  # Store 2
 ```
 
-In lines 1 and 2, the `mrmovq` instruction reads a value from memory into `%rdx`, and the `pushq` instruction then pushes this value onto the stack. Our design for PIPE would stall the `pushq` instruction to avoid a load/use hazard. Observe, however, that the value of `%rdx` is not required by the `pushq` instruction until it reaches the memory stage. We can add an additional bypass path, as diagrammed in [Figure 4.70](#figure-4-70), to forward the memory output (signal `m_valM`) to the `valA` field in pipeline register `M`. On the next clock cycle, this forwarded value can then be written to memory. This technique is known as *load forwarding*.
+In lines 1 and 2, the `mrmovq` instruction reads a value from memory into `%rdx`, and the `pushq` instruction then pushes this value onto the stack. Our design for PIPE would stall the `pushq` instruction to avoid a load/use hazard. Observe, however, that the value of `%rdx` is not required by the `pushq` instruction until it reaches the memory stage. We can add an additional bypass path, as diagrammed in [Figure 4.70](#fig-4-70), to forward the memory output (signal `m_valM`) to the `valA` field in pipeline register `M`. On the next clock cycle, this forwarded value can then be written to memory. This technique is known as *load forwarding*.
 
 Note that the second example (lines 4 and 5) in the code sequence above cannot make use of load forwarding. The value loaded by the `popq` instruction is used as part of the address computation by the next instruction, and this value is required in the execute stage rather than the memory stage.
 
-A. Write a logic formula describing the detection condition for a load/use hazard, similar to the one given in [Figure 4.64](./4.5%20Pipelined%20Y86-64%20Implementations.md#figure-4-64), except that it will not cause a stall in cases where load forwarding can be used.
+A. Write a logic formula describing the detection condition for a load/use hazard, similar to the one given in [Figure 4.64](./4.5%20Pipelined%20Y86-64%20Implementations.md#fig-4-64), except that it will not cause a stall in cases where load forwarding can be used.
 
-B. The file `pipe-lf.hcl` contains a modified version of the control logic for PIPE. It contains the definition of a signal `e_valA` to implement the block labeled "Fwd A" in [Figure 4.70](#figure-4-70). It also has the conditions for a load/use hazard in the pipeline control logic set to zero, and so the pipeline control logic will not detect any forms of load/use hazards. Modify this HCL description to implement load forwarding. See the lab material for directions on how to generate a simulator for your solution and how to test it.
+B. The file `pipe-lf.hcl` contains a modified version of the control logic for PIPE. It contains the definition of a signal `e_valA` to implement the block labeled "Fwd A" in [Figure 4.70](#fig-4-70). It also has the conditions for a load/use hazard in the pipeline control logic set to zero, and so the pipeline control logic will not detect any forms of load/use hazards. Modify this HCL description to implement load forwarding. See the lab material for directions on how to generate a simulator for your solution and how to test it.
 
-### Figure 4.70
+<div id="fig-4-70" class="anchor-block"></div>
 
 ![](../../../public/figures/en/arch/pipe-lf.svg)
 
@@ -220,7 +220,7 @@ The challenge then becomes to devise a way to handle `popq`. One method is to us
 
 (See [Practice Problem 4.3](./4.1%20The%20Y86-64%20Instruction%20Set%20Architecture.md#practice-problem-4-3) for a description of the `iaddq` instruction.) Note the ordering of the two instructions to make sure `popq %rsp` works properly. You can do this by having the logic in the decode stage treat `popq` the same as it would the `iaddq` listed above, except that it predicts the next PC to be equal to the current PC. On the next cycle, the `popq` instruction is refetched, but the instruction code is converted to a special value `IPOP2`. This is treated as a special instruction that has the same behavior as the `mrmovq` instruction listed above.
 
-The file `pipe-lw.hcl` contains the modified write port logic described above. It contains a declaration of the constant `IPOP2` having hexadecimal value `E`. It also contains the definition of a signal `f_icode` that generates the `icode` field for pipeline register `D`. This definition can be modified to insert the instruction code `IPOP2` the second time the `popq` instruction is fetched. The HCL file also contains a declaration of the signal `f_pc`, the value of the program counter generated in the fetch stage by the block labeled "Select PC" ([Figure 4.57](./4.5%20Pipelined%20Y86-64%20Implementations.md#figure-4-57)).
+The file `pipe-lw.hcl` contains the modified write port logic described above. It contains a declaration of the constant `IPOP2` having hexadecimal value `E`. It also contains the definition of a signal `f_icode` that generates the `icode` field for pipeline register `D`. This definition can be modified to insert the instruction code `IPOP2` the second time the `popq` instruction is fetched. The HCL file also contains a declaration of the signal `f_pc`, the value of the program counter generated in the fetch stage by the block labeled "Select PC" ([Figure 4.57](./4.5%20Pipelined%20Y86-64%20Implementations.md#fig-4-57)).
 
 Modify the control logic in this file to process `popq` instructions in the manner we have described. See the lab material for directions on how to generate a simulator for your solution and how to test it.
 

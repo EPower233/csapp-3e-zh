@@ -744,7 +744,7 @@
     ]
   },
   {
-    "text": "Appendix & References",
+    "text": "Appendix",
     "collapsed": true,
     "items": [
       {
@@ -761,10 +761,6 @@
             "link": "/en/05-appendix-and-references/appendix-a-error-handling/A.2 Error-Handling Wrappers"
           }
         ]
-      },
-      {
-        "text": "References",
-        "link": "/en/05-appendix-and-references/References"
       }
     ]
   }

@@ -116,7 +116,7 @@ The `ctime_ts` function is not reentrant, because each invocation shares the sam
 
 ## Solution 12.13
 
-If we free the block immediately after the call to `pthread_create` in [line 14](12.7%20Other%20Concurrency%20Issues.md#Figure%2012.43), then we will introduce a new race, this time between the call to `free` in the main thread and the assignment statement in [line 24](12.7%20Other%20Concurrency%20Issues.md#Figure%2012.43) of the thread routine.
+If we free the block immediately after the call to `pthread_create` in [line 14](12.7%20Other%20Concurrency%20Issues.md#fig-12-43), then we will introduce a new race, this time between the call to `free` in the main thread and the assignment statement in [line 24](12.7%20Other%20Concurrency%20Issues.md#fig-12-43) of the thread routine.
 
 ## Solution 12.14
 
@@ -137,22 +137,30 @@ B. The advantage is that it reduces overhead by eliminating the calls to `malloc
 
 ## Solution 12.15
 
-A. The progress graph for the original program is shown in [Figure 12.48](#Figure%2012.48) on the next page.
+A. The progress graph for the original program is shown in [Figure 12.48](#fig-12-48) on the next page.
 
 B. The program always deadlocks, since any feasible trajectory is eventually trapped in a deadlock state.
 
 C. To eliminate the deadlock potential, initialize the binary semaphore $t$ to `1` instead of `0`.
 
-D. The progress graph for the corrected program is shown in [Figure 12.49](#Figure%2012.49).
+D. The progress graph for the corrected program is shown in [Figure 12.49](#fig-12-49).
 
-### Figure 12.48
+<div id="fig-12-48" class="anchor-block"></div>
 
 ![](../../../public/figures/en/conc/figure-12-48-deadlock-progress.svg)
 
+<div class="figure-caption">
+
 Figure 12.48 Progress graph for a program that deadlocks.
 
-### Figure 12.49
+</div>
+
+<div id="fig-12-49" class="anchor-block"></div>
 
 ![](../../../public/figures/en/conc/figure-12-49-deadlock-free-progress.svg)
 
+<div class="figure-caption">
+
 Figure 12.49 Progress graph for the corrected deadlock-free program.
+
+</div>

@@ -310,7 +310,7 @@ E. For case 3, will a larger block size help to reduce the miss rate? Why or why
 
 ## Homework 6.37 (**)
 
-This is another problem that tests your ability to analyze the cache behavior of C code. Assume we execute the three summation functions in [Figure 6.47](#figure-6-47) under the following conditions:
+This is another problem that tests your ability to analyze the cache behavior of C code. Assume we execute the three summation functions in [Figure 6.47](#fig-6-47) under the following conditions:
 
 - `sizeof(int) == 4`.
 - The machine has a 4 KB direct-mapped cache with a 16-byte block size.
@@ -325,7 +325,7 @@ Fill in the table for the approximate cache miss rate for the two cases `N = 64`
 | `sumB` | | |
 | `sumC` | | |
 
-### Figure 6.47
+<div id="fig-6-47" class="anchor-block"></div>
 
 ```c
 typedef int array_t[N][N];
@@ -364,7 +364,11 @@ int sumC(array_t a) {
 }
 ```
 
+<div class="figure-caption">
+
 Figure 6.47 Functions referenced in [Homework 6.37](#Homework%206.37%20%28%2A%2A%29).
+
+</div>
 
 ## Homework 6.38 (*)
 

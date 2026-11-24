@@ -263,9 +263,9 @@ The `mysystem` function executes `command` by invoking `/bin/sh -c command`, and
 
 ## Homework 8.23 (***)
 
-One of your colleagues is thinking of using signals to allow a parent process to count events that occur in a child process. The idea is to notify the parent each time an event occurs by sending it a signal and letting the parent's signal handler increment a global `counter` variable, which the parent can then inspect after the child has terminated. However, when he runs the test program in [Figure 8.45](#Figure%208.45) on his system, he discovers that when the parent calls `printf`, `counter` always has a value of 2, even though the child has sent five signals to the parent. Perplexed, he comes to you for help. Can you explain the bug?
+One of your colleagues is thinking of using signals to allow a parent process to count events that occur in a child process. The idea is to notify the parent each time an event occurs by sending it a signal and letting the parent's signal handler increment a global `counter` variable, which the parent can then inspect after the child has terminated. However, when he runs the test program in [Figure 8.45](#fig-8-45) on his system, he discovers that when the parent calls `printf`, `counter` always has a value of 2, even though the child has sent five signals to the parent. Perplexed, he comes to you for help. Can you explain the bug?
 
-### Figure 8.45
+<div id="fig-8-45" class="anchor-block"></div>
 
 ```c
 #include "csapp.h"
@@ -299,11 +299,15 @@ int main()
 }
 ```
 
+<div class="figure-caption">
+
 Figure 8.45 Counter program referenced in Problem 8.23.
+
+</div>
 
 ## Homework 8.24 (***)
 
-Modify the program in [Figure 8.18](./8.4%20Process%20Control.md#Figure%208.18) so that the following two conditions are met:
+Modify the program in [Figure 8.18](./8.4%20Process%20Control.md#fig-8-18) so that the following two conditions are met:
 
 1. Each child terminates abnormally after attempting to write to a location in the read-only text segment.
 
@@ -322,7 +326,7 @@ Write a version of the `fgets` function, called `tfgets`, that times out after 5
 
 ## Homework 8.26 (***)
 
-Using the example in [Figure 8.23](./8.4%20Process%20Control.md#Figure%208.23) as a starting point, write a shell program that supports job control. Your shell should have the following features:
+Using the example in [Figure 8.23](./8.4%20Process%20Control.md#fig-8-23) as a starting point, write a shell program that supports job control. Your shell should have the following features:
 
 - The command line typed by the user consists of a `name` and zero or more arguments, all separated by one or more spaces. If `name` is a built-in command, the shell handles it immediately and waits for the next command line. Otherwise, the shell assumes that `name` is an executable file, which it loads and runs in the context of an initial child process (job). The process group ID for the job is identical to the PID of the child.
 
@@ -340,9 +344,9 @@ Using the example in [Figure 8.23](./8.4%20Process%20Control.md#Figure%208.23) a
 
 - The shell reaps all of its zombie children. If any job terminates because it receives a signal that was not caught, then the shell prints a message to the terminal with the job's PID and a description of the offending signal.
 
-[Figure 8.46](#Figure%208.46) shows an example shell session.
+[Figure 8.46](#fig-8-46) shows an example shell session.
 
-### Figure 8.46
+<div id="fig-8-46" class="anchor-block"></div>
 
 ```console
 linux> ./shell                               # Run your shell program
@@ -373,6 +377,10 @@ Job 5036 terminated by signal: Terminated
 linux>                                       # Back to the Unix shell
 ```
 
+<div class="figure-caption">
+
 Figure 8.46 Example shell session for [Homework Problem 8.26](#Homework%208.26%20%28%2A%2A%2A%29).
 
-[^ch8-shell-note]: Note that this is a simplification of the way that real shells work. With real shells, the kernel responds to Ctrl+C (Ctrl+Z) by sending `SIGINT` (`SIGTSTP`) directly to each process in the terminal foreground process group. The shell manages the membership of this group using the `tcsetpgrp` function, and manages the attributes of the terminal using the `tcsetattr` function, both of which are outside the scope of this book. See [\[62\]](../../05-appendix-and-references/References.md#ref-62) for details.
+</div>
+
+[^ch8-shell-note]: Note that this is a simplification of the way that real shells work. With real shells, the kernel responds to Ctrl+C (Ctrl+Z) by sending `SIGINT` (`SIGTSTP`) directly to each process in the terminal foreground process group. The shell manages the membership of this group using the `tcsetpgrp` function, and manages the attributes of the terminal using the `tcsetattr` function, both of which are outside the scope of this book. See [\[62\]](./Bibliographic%20Notes.md#ref-62) for details.
