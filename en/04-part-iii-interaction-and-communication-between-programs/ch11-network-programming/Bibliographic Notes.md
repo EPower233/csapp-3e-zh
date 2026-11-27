@@ -24,7 +24,7 @@ Kerrisk is the bible for all aspects of Linux programming and provides a detaile
 
 <span id="ref-37"></span>**[37]** R. Fielding, J. Gettys, J. Mogul, H. Frystyk, L. Masinter, P. Leach, and T. Berners-Lee. Hypertext transfer protocol - HTTP/1.1. RFC 2616, 1999.
 
-<span id="ref-42"></span>**[42]** Google. IPv6 Adoption. Available at http://www.google.com/intl/en/ipv6/statistics.html.
+<span id="ref-42"></span>**[42]** Google. IPv6 Adoption. Available at <http://www.google.com/intl/en/ipv6/statistics.html>.
 
 <span id="ref-62"></span>**[62]** Michael Kerrisk. The Linux Programming Interface. No Starch Press, 2010.
 

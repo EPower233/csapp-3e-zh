@@ -16,7 +16,7 @@ hero:
 
 <div class="vp-doc home-book-note">
 
-Open any chapter from the Table of Contents. On wide viewports, click “中英对照” on paired sections for side-by-side bilingual reading.
+Open any chapter from the Table of Contents. On wide viewports, click “中英对照”on paired sections for side-by-side bilingual reading.
 
 [English TOC](./TOC.md) · [全书目录](/全书目录) · [CMU Official Site](https://csapp.cs.cmu.edu/3e/home.html)
 

@@ -15,7 +15,7 @@ pid_t Wait(int* status) {
 }
 ```
 
-图A-2 Unix风格的 `wait` 函数的包装函数
+图 A-2 Unix 风格的 `wait` 函数的包装函数
 
 ```c
 void Kill(pid_t pid, int signum) {
@@ -25,7 +25,7 @@ void Kill(pid_t pid, int signum) {
 }
 ```
 
-图A-3 Unix风格的 `kill` 函数的包装函数
+图 A-3 Unix 风格的 `kill` 函数的包装函数
 
 - Posix 风格的错误处理包装函数。图 A-4 展示了 Posix 风格的 `pthread_detach` 函数的包装函数。同大多数 Posix 风格的函数一样，它的错误返回码中不会包含有用的结果，所以成功时，包装函数返回 `void`。
 
@@ -39,7 +39,7 @@ void Pthread_detach(pthread_t tid) {
 }
 ```
 
-图A-4 Posix风格的 `pthread_detach` 函数的包装函数
+图 A-4 Posix 风格的 `pthread_detach` 函数的包装函数
 
 - GAI 风格的错误处理包装函数。图 A-5 展示了 GAI 风格的 `getaddrinfo` 函数的包装函数。
 
@@ -56,4 +56,4 @@ void Getaddrinfo(const char*            node,
 }
 ```
 
-图A-5 GAI风格的 `getaddrinfo` 函数的包装函数
+图 A-5 GAI 风格的 `getaddrinfo` 函数的包装函数

@@ -68,6 +68,11 @@ html.dark {
   overflow-wrap: break-word;
 }
 
+.vp-doc .book-table :is(th, td):empty,
+.vp-doc table :is(th, td):empty {
+  min-width: 44px;
+}
+
 .vp-doc .book-table--comparison > table {
   width: 100%;
   table-layout: fixed;

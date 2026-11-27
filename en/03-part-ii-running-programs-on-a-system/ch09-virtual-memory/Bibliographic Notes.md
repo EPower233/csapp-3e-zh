@@ -22,7 +22,7 @@ Knuth wrote the classic work on storage allocation in 1968 [\[64\]](#ref-64). Si
 
 <span id="ref-64"></span>**[64]** D. Knuth. The Art of Computer Programming, Volume 1: Fundamental Algorithms, Third Edition. Addison-Wesley, 1997.
 
-<span id="ref-67"></span>**[67]** D. Lea. A memory allocator. Available at http://gee.cs.oswego.edu/dl/html/malloc.html, 1996.
+<span id="ref-67"></span>**[67]** D. Lea. A memory allocator. Available at <http://gee.cs.oswego.edu/dl/html/malloc.html>, 1996.
 
 <span id="ref-102"></span>**[102]** A. Silberschatz, P. Galvin, and G. Gagne. Operating Systems Concepts, Ninth Edition. Wiley, 2014.
 

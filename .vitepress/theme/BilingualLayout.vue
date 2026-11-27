@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter, withBase } from 'vitepress'
-import Teek from 'vitepress-theme-teek'
+import Teek, { TkArticleCodeBlock } from 'vitepress-theme-teek'
 import bilingualMapRaw from '../bilingual-map.json'
 import { initBilingualSync } from './syncScroll'
 
@@ -201,6 +201,7 @@ onBeforeUnmount(() => {
           Failed to load paired edition ({{ peerError }}). Split view works best on built preview (`npm run build && npm run preview`) or deployed site.
         </div>
         <div v-else v-html="peerHtml" />
+        <TkArticleCodeBlock v-if="peerHtml && !peerLoading" />
       </div>
     </template>
   </Teek.Layout>

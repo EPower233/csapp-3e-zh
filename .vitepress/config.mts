@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url'
 import headingLinks from './heading-links.mts'
 import htmlTableInline from './html-table-inline.mts'
 import readableTables from './readable-tables.mts'
+import alertTitleInline from './alert-title-inline.mts'
 import footnote from 'markdown-it-footnote'
 import sidebarZh from './book-sidebar.json'
 import sidebarEn from './book-sidebar.en.json'
@@ -13,6 +14,8 @@ const englishTitle = "Computer Systems: A Programmer's Perspective"
 export default defineConfig({
   base,
   buildConcurrency: process.platform === 'win32' ? 1 : 8,
+  srcExclude: ['README.md'],
+  outDir: process.env.BOOK_OUT_DIR,
   title: '深入理解计算机系统',
   locales: {
     root: {
@@ -43,7 +46,17 @@ export default defineConfig({
       md.use(footnote)
       md.use(htmlTableInline)
       md.use(readableTables)
+      md.use(alertTitleInline)
       md.use(headingLinks, fileURLToPath(new URL('..', import.meta.url)))
+      const defaultCodeInline = md.renderer.rules.code_inline
+      md.renderer.rules.code_inline = (tokens, idx, options, env, self) => {
+        const rendered = defaultCodeInline
+          ? defaultCodeInline(tokens, idx, options, env, self)
+          : self.renderToken(tokens, idx, options)
+        return rendered.includes('{{') || rendered.includes('}}')
+          ? rendered.replace('<code', '<code v-pre')
+          : rendered
+      }
     },
   },
   postRender({ teleports }) {
@@ -63,6 +76,7 @@ export default defineConfig({
   },
   themeConfig: {
     teekHome: false,
+    codeBlock: { enabled: true, collapseHeight: 700 },
     themeEnhance: { enabled: true },
     // Fragment URLs are explicit navigation targets in the split reader.
     anchorScroll: false,
